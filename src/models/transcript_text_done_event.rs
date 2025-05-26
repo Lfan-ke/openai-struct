@@ -13,15 +13,15 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
-pub struct TranscriptTextDoneEvent {
-  /// The log probabilities of the individual tokens in the transcription. Only included if you [create a transcription](/docs/api-reference/audio/create-transcription) with the `include[]` parameter set to `logprobs`.
-  #[serde(rename = "logprobs")]
-  logprobs: Option<Vec<crate::models::TranscriptTextDeltaEventLogprobs>>,
-  /// The text that was transcribed.
-  #[serde(rename = "text")]
-  text: String,
-  /// The type of the event. Always `transcript.text.done`.
-  #[serde(rename = "type")]
-  _type: String
-}
+// #[derive(Debug, Serialize, Deserialize)]
+// pub struct TranscriptTextDoneEvent {
+//   /// The log probabilities of the individual tokens in the transcription. Only included if you [create a transcription](/docs/api-reference/audio/create-transcription) with the `include[]` parameter set to `logprobs`.
+//   #[serde(rename = "logprobs")]
+//   logprobs: Option<Vec<crate::models::TranscriptTextDeltaEventLogprobs>>,
+//   /// The text that was transcribed.
+//   #[serde(rename = "text")]
+//   text: String,
+//   /// The type of the event. Always `transcript.text.done`.
+//   #[serde(rename = "type")]
+//   _type: String
+// }

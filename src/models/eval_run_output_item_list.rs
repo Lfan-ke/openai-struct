@@ -13,21 +13,21 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
-pub struct EvalRunOutputItemList {
-  /// An array of eval run output item objects.
-  #[serde(rename = "data")]
-  data: Vec<crate::models::EvalRunOutputItem>,
-  /// The identifier of the first eval run output item in the data array.
-  #[serde(rename = "first_id")]
-  first_id: String,
-  /// Indicates whether there are more eval run output items available.
-  #[serde(rename = "has_more")]
-  has_more: bool,
-  /// The identifier of the last eval run output item in the data array.
-  #[serde(rename = "last_id")]
-  last_id: String,
-  /// The type of this object. It is always set to \"list\".
-  #[serde(rename = "object")]
-  object: String
-}
+// #[derive(Debug, Serialize, Deserialize)]
+// pub struct EvalRunOutputItemList {
+//   /// An array of eval run output item objects.
+//   #[serde(rename = "data")]
+//   data: Vec<crate::models::EvalRunOutputItem>,
+//   /// The identifier of the first eval run output item in the data array.
+//   #[serde(rename = "first_id")]
+//   first_id: String,
+//   /// Indicates whether there are more eval run output items available.
+//   #[serde(rename = "has_more")]
+//   has_more: bool,
+//   /// The identifier of the last eval run output item in the data array.
+//   #[serde(rename = "last_id")]
+//   last_id: String,
+//   /// The type of this object. It is always set to \"list\".
+//   #[serde(rename = "object")]
+//   object: String
+// }

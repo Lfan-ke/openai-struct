@@ -12,12 +12,12 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
-pub struct EvalJsonlFileContentSource {
-  /// The content of the jsonl file.
-  #[serde(rename = "content")]
-  content: Vec<crate::models::EvalJsonlFileContentSourceContent>,
-  /// The type of jsonl source. Always `file_content`.
-  #[serde(rename = "type")]
-  _type: String
-}
+// #[derive(Debug, Serialize, Deserialize)]
+// pub struct EvalJsonlFileContentSource {
+//   /// The content of the jsonl file.
+//   #[serde(rename = "content")]
+//   content: Vec<crate::models::EvalJsonlFileContentSourceContent>,
+//   /// The type of jsonl source. Always `file_content`.
+//   #[serde(rename = "type")]
+//   _type: String
+// }
