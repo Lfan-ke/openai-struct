@@ -11,17 +11,17 @@
 /// pub RunStepDeltaStepDetailsToolCallsFunctionObjectFunction : The definition of the function that was called.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct RunStepDeltaStepDetailsToolCallsFunctionObjectFunction {
-  /// The arguments passed to the function.
-  #[serde(rename = "arguments")]
-  pub arguments: Option<String>,
-  /// The name of the function.
-  #[serde(rename = "name")]
-  pub name: Option<String>,
-  /// The output of the function. This will be `null` if the outputs have not been [submitted](/docs/api-reference/runs/submitToolOutputs) yet.
-  #[serde(rename = "output")]
-  pub output: Option<String>
+    /// The arguments passed to the function.
+    #[serde(rename = "arguments")]
+    pub arguments: Option<String>,
+    /// The name of the function.
+    #[serde(rename = "name")]
+    pub name: Option<String>,
+    /// The output of the function. This will be `null` if the outputs have not been [submitted](/docs/api-reference/runs/submitToolOutputs) yet.
+    #[serde(rename = "output")]
+    pub output: Option<String>,
 }

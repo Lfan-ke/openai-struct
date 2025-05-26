@@ -11,20 +11,20 @@
 /// pub RealtimeServerEventResponseContentPartDonePart : The content part that is done.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct RealtimeServerEventResponseContentPartDonePart {
-  /// Base64-encoded audio data (if type is \"audio\").
-  #[serde(rename = "audio")]
-  pub audio: Option<String>,
-  /// The text content (if type is \"text\").
-  #[serde(rename = "text")]
-  pub text: Option<String>,
-  /// The transcript of the audio (if type is \"audio\").
-  #[serde(rename = "transcript")]
-  pub transcript: Option<String>,
-  /// The content type (\"text\", \"audio\").
-  #[serde(rename = "type")]
-  pub _type: Option<String>
+    /// Base64-encoded audio data (if type is \"audio\").
+    #[serde(rename = "audio")]
+    pub audio: Option<String>,
+    /// The text content (if type is \"text\").
+    #[serde(rename = "text")]
+    pub text: Option<String>,
+    /// The transcript of the audio (if type is \"audio\").
+    #[serde(rename = "transcript")]
+    pub transcript: Option<String>,
+    /// The content type (\"text\", \"audio\").
+    #[serde(rename = "type")]
+    pub _type: Option<String>,
 }

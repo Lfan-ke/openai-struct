@@ -11,12 +11,10 @@
 /// pub ReasoningEffort : **o-series models only**   Constrains effort on reasoning for  [reasoning models](https://platform.openai.com/docs/guides/reasoning). Currently supported values are `low`, `medium`, and `high`. Reducing reasoning effort can result in faster responses and fewer tokens used on reasoning in a response.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
-pub struct ReasoningEffort {
-}
-
+pub struct ReasoningEffort {}
 
 // TODO enum
 // List of ReasoningEffort

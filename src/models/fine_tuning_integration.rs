@@ -8,15 +8,14 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct FineTuningIntegration {
-  /// The type of the integration being enabled for the fine-tuning job
-  #[serde(rename = "type")]
-  pub _type: String,
-  #[serde(rename = "wandb")]
-  pub wandb: crate::models::CreateFineTuningJobRequestWandb
+    /// The type of the integration being enabled for the fine-tuning job
+    #[serde(rename = "type")]
+    pub _type: String,
+    #[serde(rename = "wandb")]
+    pub wandb: crate::models::CreateFineTuningJobRequestWandb,
 }

@@ -8,19 +8,18 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct CreateTranscriptionResponseJsonLogprobs {
-  /// The bytes of the token.
-  #[serde(rename = "bytes")]
-  pub bytes: Option<Vec<f32>>,
-  /// The log probability of the token.
-  #[serde(rename = "logprob")]
-  pub logprob: Option<f32>,
-  /// The token in the transcription.
-  #[serde(rename = "token")]
-  pub token: Option<String>
+    /// The bytes of the token.
+    #[serde(rename = "bytes")]
+    pub bytes: Option<Vec<f32>>,
+    /// The log probability of the token.
+    #[serde(rename = "logprob")]
+    pub logprob: Option<f32>,
+    /// The token in the transcription.
+    #[serde(rename = "token")]
+    pub token: Option<String>,
 }

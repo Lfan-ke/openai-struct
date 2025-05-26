@@ -11,11 +11,11 @@
 /// pub ResponseIncompleteDetails : Details about why the response is incomplete.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ResponseIncompleteDetails {
-  /// The reason why the response is incomplete.
-  #[serde(rename = "reason")]
-  pub reason: Option<String>
+    /// The reason why the response is incomplete.
+    #[serde(rename = "reason")]
+    pub reason: Option<String>,
 }

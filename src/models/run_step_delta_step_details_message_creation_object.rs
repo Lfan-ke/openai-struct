@@ -11,13 +11,14 @@
 /// pub RunStepDeltaStepDetailsMessageCreationObject : Details of the message creation by the run step.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct RunStepDeltaStepDetailsMessageCreationObject {
-  #[serde(rename = "message_creation")]
-  pub message_creation: Option<crate::models::RunStepDeltaStepDetailsMessageCreationObjectMessageCreation>,
-  /// Always `message_creation`.
-  #[serde(rename = "type")]
-  pub _type: String
+    #[serde(rename = "message_creation")]
+    pub message_creation:
+        Option<crate::models::RunStepDeltaStepDetailsMessageCreationObjectMessageCreation>,
+    /// Always `message_creation`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

@@ -11,14 +11,14 @@
 /// pub AuditLogCertificateCreated : The details for events with this `type`.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct AuditLogCertificateCreated {
-  /// The certificate ID.
-  #[serde(rename = "id")]
-  pub id: Option<String>,
-  /// The name of the certificate.
-  #[serde(rename = "name")]
-  pub name: Option<String>
+    /// The certificate ID.
+    #[serde(rename = "id")]
+    pub id: Option<String>,
+    /// The name of the certificate.
+    #[serde(rename = "name")]
+    pub name: Option<String>,
 }

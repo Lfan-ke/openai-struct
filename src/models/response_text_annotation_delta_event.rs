@@ -11,25 +11,25 @@
 /// pub ResponseTextAnnotationDeltaEvent : Emitted when a text annotation is added.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ResponseTextAnnotationDeltaEvent {
-  #[serde(rename = "annotation")]
-  pub annotation: crate::models::Annotation,
-  /// The index of the annotation that was added.
-  #[serde(rename = "annotation_index")]
-  pub annotation_index: i32,
-  /// The index of the content part that the text annotation was added to.
-  #[serde(rename = "content_index")]
-  pub content_index: i32,
-  /// The ID of the output item that the text annotation was added to.
-  #[serde(rename = "item_id")]
-  pub item_id: String,
-  /// The index of the output item that the text annotation was added to.
-  #[serde(rename = "output_index")]
-  pub output_index: i32,
-  /// The type of the event. Always `response.output_text.annotation.added`.
-  #[serde(rename = "type")]
-  pub _type: String
+    #[serde(rename = "annotation")]
+    pub annotation: crate::models::Annotation,
+    /// The index of the annotation that was added.
+    #[serde(rename = "annotation_index")]
+    pub annotation_index: i32,
+    /// The index of the content part that the text annotation was added to.
+    #[serde(rename = "content_index")]
+    pub content_index: i32,
+    /// The ID of the output item that the text annotation was added to.
+    #[serde(rename = "item_id")]
+    pub item_id: String,
+    /// The index of the output item that the text annotation was added to.
+    #[serde(rename = "output_index")]
+    pub output_index: i32,
+    /// The type of the event. Always `response.output_text.annotation.added`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

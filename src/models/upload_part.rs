@@ -11,20 +11,20 @@
 /// pub UploadPart : The upload Part represents a chunk of bytes we can add to an Upload object.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct UploadPart {
-  /// The Unix timestamp (in seconds) for when the Part was created.
-  #[serde(rename = "created_at")]
-  pub created_at: i32,
-  /// The upload Part unique identifier, which can be referenced in API endpoints.
-  #[serde(rename = "id")]
-  pub id: String,
-  /// The object type, which is always `upload.part`.
-  #[serde(rename = "object")]
-  pub object: String,
-  /// The ID of the Upload object that this Part was added to.
-  #[serde(rename = "upload_id")]
-  pub upload_id: String
+    /// The Unix timestamp (in seconds) for when the Part was created.
+    #[serde(rename = "created_at")]
+    pub created_at: i32,
+    /// The upload Part unique identifier, which can be referenced in API endpoints.
+    #[serde(rename = "id")]
+    pub id: String,
+    /// The object type, which is always `upload.part`.
+    #[serde(rename = "object")]
+    pub object: String,
+    /// The ID of the Upload object that this Part was added to.
+    #[serde(rename = "upload_id")]
+    pub upload_id: String,
 }

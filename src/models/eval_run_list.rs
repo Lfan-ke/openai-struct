@@ -11,23 +11,23 @@
 /// pub EvalRunList : An object representing a list of runs for an evaluation.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct EvalRunList {
-  /// An array of eval run objects.
-  #[serde(rename = "data")]
-  pub data: Vec<crate::models::EvalRun>,
-  /// The identifier of the first eval run in the data array.
-  #[serde(rename = "first_id")]
-  pub first_id: String,
-  /// Indicates whether there are more evals available.
-  #[serde(rename = "has_more")]
-  pub has_more: bool,
-  /// The identifier of the last eval run in the data array.
-  #[serde(rename = "last_id")]
-  pub last_id: String,
-  /// The type of this object. It is always set to \"list\".
-  #[serde(rename = "object")]
-  pub object: String
+    /// An array of eval run objects.
+    #[serde(rename = "data")]
+    pub data: Vec<crate::models::EvalRun>,
+    /// The identifier of the first eval run in the data array.
+    #[serde(rename = "first_id")]
+    pub first_id: String,
+    /// Indicates whether there are more evals available.
+    #[serde(rename = "has_more")]
+    pub has_more: bool,
+    /// The identifier of the last eval run in the data array.
+    #[serde(rename = "last_id")]
+    pub last_id: String,
+    /// The type of this object. It is always set to \"list\".
+    #[serde(rename = "object")]
+    pub object: String,
 }

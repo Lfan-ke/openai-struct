@@ -11,14 +11,14 @@
 /// pub ResponseCreatedEvent : An event that is emitted when a response is created.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ResponseCreatedEvent {
-  /// The response that was created.
-  #[serde(rename = "response")]
-  pub response: crate::models::Response,
-  /// The type of the event. Always `response.created`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// The response that was created.
+    #[serde(rename = "response")]
+    pub response: crate::models::Response,
+    /// The type of the event. Always `response.created`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

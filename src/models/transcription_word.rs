@@ -8,19 +8,18 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct TranscriptionWord {
-  /// End time of the word in seconds.
-  #[serde(rename = "end")]
-  pub end: f32,
-  /// Start time of the word in seconds.
-  #[serde(rename = "start")]
-  pub start: f32,
-  /// The text content of the word.
-  #[serde(rename = "word")]
-  pub word: String
+    /// End time of the word in seconds.
+    #[serde(rename = "end")]
+    pub end: f32,
+    /// Start time of the word in seconds.
+    #[serde(rename = "start")]
+    pub start: f32,
+    /// The text content of the word.
+    #[serde(rename = "word")]
+    pub word: String,
 }

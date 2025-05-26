@@ -11,11 +11,11 @@
 /// pub AuditLogApiKeyCreatedData : The payload used to create the API key.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct AuditLogApiKeyCreatedData {
-  /// A list of scopes allowed for the API key, e.g. `[\"api.model.request\"]`
-  #[serde(rename = "scopes")]
-  pub scopes: Option<Vec<String>>
+    /// A list of scopes allowed for the API key, e.g. `[\"api.model.request\"]`
+    #[serde(rename = "scopes")]
+    pub scopes: Option<Vec<String>>,
 }

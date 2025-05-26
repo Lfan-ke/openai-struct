@@ -11,17 +11,17 @@
 /// pub LogProbProperties : A log probability object.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct LogProbProperties {
-  /// The bytes that were used to generate the log probability.
-  #[serde(rename = "bytes")]
-  pub bytes: Vec<i32>,
-  /// The log probability of the token.
-  #[serde(rename = "logprob")]
-  pub logprob: f32,
-  /// The token that was used to generate the log probability.
-  #[serde(rename = "token")]
-  pub token: String
+    /// The bytes that were used to generate the log probability.
+    #[serde(rename = "bytes")]
+    pub bytes: Vec<i32>,
+    /// The log probability of the token.
+    #[serde(rename = "logprob")]
+    pub logprob: f32,
+    /// The token that was used to generate the log probability.
+    #[serde(rename = "token")]
+    pub token: String,
 }

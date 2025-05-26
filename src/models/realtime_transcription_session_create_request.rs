@@ -11,23 +11,25 @@
 /// pub RealtimeTranscriptionSessionCreateRequest : Realtime transcription session object configuration.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct RealtimeTranscriptionSessionCreateRequest {
-  /// The set of items to include in the transcription. Current available items are: - `item.input_audio_transcription.logprobs`
-  #[serde(rename = "include")]
-  pub include: Option<Vec<String>>,
-  /// The format of input audio. Options are `pcm16`, `g711_ulaw`, or `g711_alaw`. For `pcm16`, input audio must be 16-bit PCM at a 24kHz sample rate,  single channel (mono), and little-endian byte order.
-  #[serde(rename = "input_audio_format")]
-  pub input_audio_format: Option<String>,
-  #[serde(rename = "input_audio_noise_reduction")]
-  pub input_audio_noise_reduction: Option<crate::models::RealtimeSessionInputAudioNoiseReduction>,
-  #[serde(rename = "input_audio_transcription")]
-  pub input_audio_transcription: Option<crate::models::RealtimeTranscriptionSessionCreateRequestInputAudioTranscription>,
-  /// The set of modalities the model can respond with. To disable audio, set this to [\"text\"].
-  #[serde(rename = "modalities")]
-  pub modalities: Option<Value>,
-  #[serde(rename = "turn_detection")]
-  pub turn_detection: Option<crate::models::RealtimeTranscriptionSessionCreateRequestTurnDetection>
+    /// The set of items to include in the transcription. Current available items are: - `item.input_audio_transcription.logprobs`
+    #[serde(rename = "include")]
+    pub include: Option<Vec<String>>,
+    /// The format of input audio. Options are `pcm16`, `g711_ulaw`, or `g711_alaw`. For `pcm16`, input audio must be 16-bit PCM at a 24kHz sample rate,  single channel (mono), and little-endian byte order.
+    #[serde(rename = "input_audio_format")]
+    pub input_audio_format: Option<String>,
+    #[serde(rename = "input_audio_noise_reduction")]
+    pub input_audio_noise_reduction: Option<crate::models::RealtimeSessionInputAudioNoiseReduction>,
+    #[serde(rename = "input_audio_transcription")]
+    pub input_audio_transcription:
+        Option<crate::models::RealtimeTranscriptionSessionCreateRequestInputAudioTranscription>,
+    /// The set of modalities the model can respond with. To disable audio, set this to [\"text\"].
+    #[serde(rename = "modalities")]
+    pub modalities: Option<Value>,
+    #[serde(rename = "turn_detection")]
+    pub turn_detection:
+        Option<crate::models::RealtimeTranscriptionSessionCreateRequestTurnDetection>,
 }

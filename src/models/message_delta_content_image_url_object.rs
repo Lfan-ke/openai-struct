@@ -11,16 +11,16 @@
 /// pub MessageDeltaContentImageUrlObject : References an image URL in the content of a message.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MessageDeltaContentImageUrlObject {
-  #[serde(rename = "image_url")]
-  pub image_url: Option<crate::models::MessageDeltaContentImageUrlObjectImageUrl>,
-  /// The index of the content part in the message.
-  #[serde(rename = "index")]
-  pub index: i32,
-  /// Always `image_url`.
-  #[serde(rename = "type")]
-  pub _type: String
+    #[serde(rename = "image_url")]
+    pub image_url: Option<crate::models::MessageDeltaContentImageUrlObjectImageUrl>,
+    /// The index of the content part in the message.
+    #[serde(rename = "index")]
+    pub index: i32,
+    /// Always `image_url`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

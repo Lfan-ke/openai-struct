@@ -11,16 +11,16 @@
 /// pub MessageDeltaContentTextObject : The text content that is part of a message.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MessageDeltaContentTextObject {
-  /// The index of the content part in the message.
-  #[serde(rename = "index")]
-  pub index: i32,
-  #[serde(rename = "text")]
-  pub text: Option<crate::models::MessageDeltaContentTextObjectText>,
-  /// Always `text`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// The index of the content part in the message.
+    #[serde(rename = "index")]
+    pub index: i32,
+    #[serde(rename = "text")]
+    pub text: Option<crate::models::MessageDeltaContentTextObjectText>,
+    /// Always `text`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

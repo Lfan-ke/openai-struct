@@ -11,20 +11,20 @@
 /// pub CreateEvalCompletionsRunDataSource : A CompletionsRunDataSource object describing a model sampling configuration.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct CreateEvalCompletionsRunDataSource {
-  #[serde(rename = "input_messages")]
-  pub input_messages: Option<Value>,
-  /// The name of the model to use for generating completions (e.g. \"o3-mini\").
-  #[serde(rename = "model")]
-  pub model: Option<String>,
-  #[serde(rename = "sampling_params")]
-  pub sampling_params: Option<crate::models::CreateEvalCompletionsRunDataSourceSamplingParams>,
-  #[serde(rename = "source")]
-  pub source: Value,
-  /// The type of run data source. Always `completions`.
-  #[serde(rename = "type")]
-  pub _type: String
+    #[serde(rename = "input_messages")]
+    pub input_messages: Option<Value>,
+    /// The name of the model to use for generating completions (e.g. \"o3-mini\").
+    #[serde(rename = "model")]
+    pub model: Option<String>,
+    #[serde(rename = "sampling_params")]
+    pub sampling_params: Option<crate::models::CreateEvalCompletionsRunDataSourceSamplingParams>,
+    #[serde(rename = "source")]
+    pub source: Value,
+    /// The type of run data source. Always `completions`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

@@ -8,16 +8,15 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct EvalJsonlFileIdSource {
-  /// The identifier of the file.
-  #[serde(rename = "id")]
-  pub id: String,
-  /// The type of jsonl source. Always `file_id`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// The identifier of the file.
+    #[serde(rename = "id")]
+    pub id: String,
+    /// The type of jsonl source. Always `file_id`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

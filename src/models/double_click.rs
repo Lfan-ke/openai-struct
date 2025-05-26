@@ -11,17 +11,17 @@
 /// pub DoubleClick : A double click action.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct DoubleClick {
-  /// Specifies the event type. For a double click action, this property is  always set to `double_click`.
-  #[serde(rename = "type")]
-  pub _type: String,
-  /// The x-coordinate where the double click occurred.
-  #[serde(rename = "x")]
-  pub x: i32,
-  /// The y-coordinate where the double click occurred.
-  #[serde(rename = "y")]
-  pub y: i32
+    /// Specifies the event type. For a double click action, this property is  always set to `double_click`.
+    #[serde(rename = "type")]
+    pub _type: String,
+    /// The x-coordinate where the double click occurred.
+    #[serde(rename = "x")]
+    pub x: i32,
+    /// The y-coordinate where the double click occurred.
+    #[serde(rename = "y")]
+    pub y: i32,
 }

@@ -11,11 +11,11 @@
 /// pub ChatCompletionRequestAssistantMessageAudio : Data about a previous audio response from the model.  [Learn more](/docs/guides/audio).
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ChatCompletionRequestAssistantMessageAudio {
-  /// Unique identifier for a previous audio response from the model.
-  #[serde(rename = "id")]
-  pub id: String
+    /// Unique identifier for a previous audio response from the model.
+    #[serde(rename = "id")]
+    pub id: String,
 }

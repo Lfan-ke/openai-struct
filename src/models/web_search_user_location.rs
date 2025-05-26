@@ -11,13 +11,13 @@
 /// pub WebSearchUserLocation : Approximate location parameters for the search.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct WebSearchUserLocation {
-  #[serde(rename = "approximate")]
-  pub approximate: crate::models::WebSearchLocation,
-  /// The type of location approximation. Always `approximate`.
-  #[serde(rename = "type")]
-  pub _type: String
+    #[serde(rename = "approximate")]
+    pub approximate: crate::models::WebSearchLocation,
+    /// The type of location approximation. Always `approximate`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

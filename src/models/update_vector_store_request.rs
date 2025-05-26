@@ -8,17 +8,16 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct UpdateVectorStoreRequest {
-  #[serde(rename = "expires_after")]
-  pub expires_after: Option<crate::models::CreateRunRequestToolChoice>,
-  #[serde(rename = "metadata")]
-  pub metadata: Option<crate::models::Metadata>,
-  /// The name of the vector store.
-  #[serde(rename = "name")]
-  pub name: Option<String>
+    #[serde(rename = "expires_after")]
+    pub expires_after: Option<crate::models::CreateRunRequestToolChoice>,
+    #[serde(rename = "metadata")]
+    pub metadata: Option<crate::models::Metadata>,
+    /// The name of the vector store.
+    #[serde(rename = "name")]
+    pub name: Option<String>,
 }

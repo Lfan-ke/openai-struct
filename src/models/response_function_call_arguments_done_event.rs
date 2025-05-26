@@ -11,19 +11,19 @@
 /// pub ResponseFunctionCallArgumentsDoneEvent : Emitted when function-call arguments are finalized.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ResponseFunctionCallArgumentsDoneEvent {
-  /// The function-call arguments.
-  #[serde(rename = "arguments")]
-  pub arguments: String,
-  /// The ID of the item.
-  #[serde(rename = "item_id")]
-  pub item_id: String,
-  /// The index of the output item.
-  #[serde(rename = "output_index")]
-  pub output_index: i32,
-  #[serde(rename = "type")]
-  pub _type: String
+    /// The function-call arguments.
+    #[serde(rename = "arguments")]
+    pub arguments: String,
+    /// The ID of the item.
+    #[serde(rename = "item_id")]
+    pub item_id: String,
+    /// The index of the output item.
+    #[serde(rename = "output_index")]
+    pub output_index: i32,
+    #[serde(rename = "type")]
+    pub _type: String,
 }

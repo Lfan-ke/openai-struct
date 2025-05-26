@@ -8,17 +8,16 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct CreateVectorStoreFileBatchRequest {
-  #[serde(rename = "attributes")]
-  pub attributes: Option<crate::models::VectorStoreFileAttributes>,
-  #[serde(rename = "chunking_strategy")]
-  pub chunking_strategy: Option<crate::models::ChunkingStrategyRequestParam>,
-  /// A list of [File](/docs/api-reference/files) IDs that the vector store should use. Useful for tools like `file_search` that can access files.
-  #[serde(rename = "file_ids")]
-  pub file_ids: Vec<String>
+    #[serde(rename = "attributes")]
+    pub attributes: Option<crate::models::VectorStoreFileAttributes>,
+    #[serde(rename = "chunking_strategy")]
+    pub chunking_strategy: Option<crate::models::ChunkingStrategyRequestParam>,
+    /// A list of [File](/docs/api-reference/files) IDs that the vector store should use. Useful for tools like `file_search` that can access files.
+    #[serde(rename = "file_ids")]
+    pub file_ids: Vec<String>,
 }

@@ -11,11 +11,11 @@
 /// pub RunObjectRequiredActionSubmitToolOutputs : Details on the tool outputs needed for this run to continue.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct RunObjectRequiredActionSubmitToolOutputs {
-  /// A list of the relevant tool calls.
-  #[serde(rename = "tool_calls")]
-  pub tool_calls: Vec<crate::models::RunToolCallObject>
+    /// A list of the relevant tool calls.
+    #[serde(rename = "tool_calls")]
+    pub tool_calls: Vec<crate::models::RunToolCallObject>,
 }

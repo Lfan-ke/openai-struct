@@ -11,14 +11,14 @@
 /// pub ResponseCompletedEvent : Emitted when the model response is complete.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ResponseCompletedEvent {
-  /// Properties of the completed response.
-  #[serde(rename = "response")]
-  pub response: crate::models::Response,
-  /// The type of the event. Always `response.completed`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// Properties of the completed response.
+    #[serde(rename = "response")]
+    pub response: crate::models::Response,
+    /// The type of the event. Always `response.completed`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

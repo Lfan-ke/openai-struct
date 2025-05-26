@@ -11,13 +11,13 @@
 /// pub MessageContentImageFileObject : References an image [File](/docs/api-reference/files) in the content of a message.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MessageContentImageFileObject {
-  #[serde(rename = "image_file")]
-  pub image_file: crate::models::MessageContentImageFileObjectImageFile,
-  /// Always `image_file`.
-  #[serde(rename = "type")]
-  pub _type: String
+    #[serde(rename = "image_file")]
+    pub image_file: crate::models::MessageContentImageFileObjectImageFile,
+    /// Always `image_file`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

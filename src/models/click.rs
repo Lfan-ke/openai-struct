@@ -11,20 +11,20 @@
 /// pub Click : A click action.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Click {
-  /// Indicates which mouse button was pressed during the click. One of `left`, `right`, `wheel`, `back`, or `forward`.
-  #[serde(rename = "button")]
-  pub button: String,
-  /// Specifies the event type. For a click action, this property is  always set to `click`.
-  #[serde(rename = "type")]
-  pub _type: String,
-  /// The x-coordinate where the click occurred.
-  #[serde(rename = "x")]
-  pub x: i32,
-  /// The y-coordinate where the click occurred.
-  #[serde(rename = "y")]
-  pub y: i32
+    /// Indicates which mouse button was pressed during the click. One of `left`, `right`, `wheel`, `back`, or `forward`.
+    #[serde(rename = "button")]
+    pub button: String,
+    /// Specifies the event type. For a click action, this property is  always set to `click`.
+    #[serde(rename = "type")]
+    pub _type: String,
+    /// The x-coordinate where the click occurred.
+    #[serde(rename = "x")]
+    pub x: i32,
+    /// The y-coordinate where the click occurred.
+    #[serde(rename = "y")]
+    pub y: i32,
 }

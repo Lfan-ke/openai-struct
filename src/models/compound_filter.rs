@@ -11,14 +11,14 @@
 /// pub CompoundFilter : Combine multiple filters using `and` or `or`.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct CompoundFilter {
-  /// Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
-  #[serde(rename = "filters")]
-  pub filters: Vec<Value>,
-  /// Type of operation: `and` or `or`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
+    #[serde(rename = "filters")]
+    pub filters: Vec<Value>,
+    /// Type of operation: `and` or `or`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

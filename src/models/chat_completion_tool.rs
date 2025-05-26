@@ -8,15 +8,14 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ChatCompletionTool {
-  #[serde(rename = "function")]
-  pub function: crate::models::FunctionObject,
-  /// The type of the tool. Currently, only `function` is supported.
-  #[serde(rename = "type")]
-  pub _type: String
+    #[serde(rename = "function")]
+    pub function: crate::models::FunctionObject,
+    /// The type of the tool. Currently, only `function` is supported.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

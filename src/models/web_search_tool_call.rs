@@ -11,17 +11,17 @@
 /// pub WebSearchToolCall : The results of a web search tool call. See the  [web search guide](/docs/guides/tools-web-search) for more information.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct WebSearchToolCall {
-  /// The unique ID of the web search tool call.
-  #[serde(rename = "id")]
-  pub id: String,
-  /// The status of the web search tool call.
-  #[serde(rename = "status")]
-  pub status: String,
-  /// The type of the web search tool call. Always `web_search_call`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// The unique ID of the web search tool call.
+    #[serde(rename = "id")]
+    pub id: String,
+    /// The status of the web search tool call.
+    #[serde(rename = "status")]
+    pub status: String,
+    /// The type of the web search tool call. Always `web_search_call`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

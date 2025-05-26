@@ -11,14 +11,14 @@
 /// pub AuditLogActorUser : The user who performed the audit logged action.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct AuditLogActorUser {
-  /// The user email.
-  #[serde(rename = "email")]
-  pub email: Option<String>,
-  /// The user id.
-  #[serde(rename = "id")]
-  pub id: Option<String>
+    /// The user email.
+    #[serde(rename = "email")]
+    pub email: Option<String>,
+    /// The user id.
+    #[serde(rename = "id")]
+    pub id: Option<String>,
 }

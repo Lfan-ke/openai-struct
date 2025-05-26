@@ -8,17 +8,16 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ProjectApiKeyOwner {
-  #[serde(rename = "service_account")]
-  pub service_account: Option<crate::models::ProjectServiceAccount>,
-  /// `user` or `service_account`
-  #[serde(rename = "type")]
-  pub _type: Option<String>,
-  #[serde(rename = "user")]
-  pub user: Option<crate::models::ProjectUser>
+    #[serde(rename = "service_account")]
+    pub service_account: Option<crate::models::ProjectServiceAccount>,
+    /// `user` or `service_account`
+    #[serde(rename = "type")]
+    pub _type: Option<String>,
+    #[serde(rename = "user")]
+    pub user: Option<crate::models::ProjectUser>,
 }

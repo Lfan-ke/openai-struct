@@ -11,14 +11,14 @@
 /// pub CreateTranscriptionResponseJson : Represents a transcription response returned by model, based on the provided input.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct CreateTranscriptionResponseJson {
-  /// The log probabilities of the tokens in the transcription. Only returned with the models `gpt-4o-transcribe` and `gpt-4o-mini-transcribe` if `logprobs` is added to the `include` array.
-  #[serde(rename = "logprobs")]
-  pub logprobs: Option<Vec<crate::models::CreateTranscriptionResponseJsonLogprobs>>,
-  /// The transcribed text.
-  #[serde(rename = "text")]
-  pub text: String
+    /// The log probabilities of the tokens in the transcription. Only returned with the models `gpt-4o-transcribe` and `gpt-4o-mini-transcribe` if `logprobs` is added to the `include` array.
+    #[serde(rename = "logprobs")]
+    pub logprobs: Option<Vec<crate::models::CreateTranscriptionResponseJsonLogprobs>>,
+    /// The transcribed text.
+    #[serde(rename = "text")]
+    pub text: String,
 }

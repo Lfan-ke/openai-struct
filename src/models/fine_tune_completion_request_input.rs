@@ -11,14 +11,14 @@
 /// pub FineTuneCompletionRequestInput : The per-line training example of a fine-tuning input file for completions models
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct FineTuneCompletionRequestInput {
-  /// The desired completion for this training example.
-  #[serde(rename = "completion")]
-  pub completion: Option<String>,
-  /// The input prompt for this training example.
-  #[serde(rename = "prompt")]
-  pub prompt: Option<String>
+    /// The desired completion for this training example.
+    #[serde(rename = "completion")]
+    pub completion: Option<String>,
+    /// The input prompt for this training example.
+    #[serde(rename = "prompt")]
+    pub prompt: Option<String>,
 }

@@ -11,14 +11,14 @@
 /// pub RealtimeResponseStatusDetailsError : A description of the error that caused the response to fail,  populated when the `status` is `failed`.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct RealtimeResponseStatusDetailsError {
-  /// Error code, if any.
-  #[serde(rename = "code")]
-  pub code: Option<String>,
-  /// The type of error.
-  #[serde(rename = "type")]
-  pub _type: Option<String>
+    /// Error code, if any.
+    #[serde(rename = "code")]
+    pub code: Option<String>,
+    /// The type of error.
+    #[serde(rename = "type")]
+    pub _type: Option<String>,
 }

@@ -11,16 +11,16 @@
 /// pub UsageVectorStoresResult : The aggregated vector stores usage details of the specific time bucket.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct UsageVectorStoresResult {
-  #[serde(rename = "object")]
-  pub object: String,
-  /// When `group_by=project_id`, this field provides the project ID of the grouped usage result.
-  #[serde(rename = "project_id")]
-  pub project_id: Option<String>,
-  /// The vector stores usage in bytes.
-  #[serde(rename = "usage_bytes")]
-  pub usage_bytes: i32
+    #[serde(rename = "object")]
+    pub object: String,
+    /// When `group_by=project_id`, this field provides the project ID of the grouped usage result.
+    #[serde(rename = "project_id")]
+    pub project_id: Option<String>,
+    /// The vector stores usage in bytes.
+    #[serde(rename = "usage_bytes")]
+    pub usage_bytes: i32,
 }

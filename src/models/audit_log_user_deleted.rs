@@ -11,11 +11,11 @@
 /// pub AuditLogUserDeleted : The details for events with this `type`.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct AuditLogUserDeleted {
-  /// The user ID.
-  #[serde(rename = "id")]
-  pub id: Option<String>
+    /// The user ID.
+    #[serde(rename = "id")]
+    pub id: Option<String>,
 }

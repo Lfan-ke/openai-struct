@@ -11,11 +11,11 @@
 /// pub AuditLogInviteAccepted : The details for events with this `type`.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct AuditLogInviteAccepted {
-  /// The ID of the invite.
-  #[serde(rename = "id")]
-  pub id: Option<String>
+    /// The ID of the invite.
+    #[serde(rename = "id")]
+    pub id: Option<String>,
 }

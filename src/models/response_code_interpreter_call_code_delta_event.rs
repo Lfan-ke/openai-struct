@@ -11,17 +11,17 @@
 /// pub ResponseCodeInterpreterCallCodeDeltaEvent : Emitted when a partial code snippet is added by the code interpreter.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ResponseCodeInterpreterCallCodeDeltaEvent {
-  /// The partial code snippet added by the code interpreter.
-  #[serde(rename = "delta")]
-  pub delta: String,
-  /// The index of the output item that the code interpreter call is in progress.
-  #[serde(rename = "output_index")]
-  pub output_index: i32,
-  /// The type of the event. Always `response.code_interpreter_call.code.delta`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// The partial code snippet added by the code interpreter.
+    #[serde(rename = "delta")]
+    pub delta: String,
+    /// The index of the output item that the code interpreter call is in progress.
+    #[serde(rename = "output_index")]
+    pub output_index: i32,
+    /// The type of the event. Always `response.code_interpreter_call.code.delta`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

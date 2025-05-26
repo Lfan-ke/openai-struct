@@ -11,13 +11,13 @@
 /// pub CodeInterpreterFileOutput : The output of a code interpreter tool call that is a file.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct CodeInterpreterFileOutput {
-  #[serde(rename = "files")]
-  pub files: Vec<crate::models::CodeInterpreterFileOutputFiles>,
-  /// The type of the code interpreter file output. Always `files`.
-  #[serde(rename = "type")]
-  pub _type: String
+    #[serde(rename = "files")]
+    pub files: Vec<crate::models::CodeInterpreterFileOutputFiles>,
+    /// The type of the code interpreter file output. Always `files`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

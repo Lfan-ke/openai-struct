@@ -8,13 +8,12 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ProjectCreateRequest {
-  /// The friendly name of the project, this name appears in reports.
-  #[serde(rename = "name")]
-  pub name: String
+    /// The friendly name of the project, this name appears in reports.
+    #[serde(rename = "name")]
+    pub name: String,
 }

@@ -11,12 +11,10 @@
 /// pub ResponseErrorCode : The error code for the response.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
-pub struct ResponseErrorCode {
-}
-
+pub struct ResponseErrorCode {}
 
 // TODO enum
 // List of ResponseErrorCode

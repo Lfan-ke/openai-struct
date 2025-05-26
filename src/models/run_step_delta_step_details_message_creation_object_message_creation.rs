@@ -8,13 +8,12 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct RunStepDeltaStepDetailsMessageCreationObjectMessageCreation {
-  /// The ID of the message that was created by this run step.
-  #[serde(rename = "message_id")]
-  pub message_id: Option<String>
+    /// The ID of the message that was created by this run step.
+    #[serde(rename = "message_id")]
+    pub message_id: Option<String>,
 }

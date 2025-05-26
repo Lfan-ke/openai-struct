@@ -11,21 +11,21 @@
 /// pub ResponseUsage : Represents token usage details including input tokens, output tokens, a breakdown of output tokens, and the total tokens used.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ResponseUsage {
-  /// The number of input tokens.
-  #[serde(rename = "input_tokens")]
-  pub input_tokens: i32,
-  #[serde(rename = "input_tokens_details")]
-  pub input_tokens_details: crate::models::ResponseUsageInputTokensDetails,
-  /// The number of output tokens.
-  #[serde(rename = "output_tokens")]
-  pub output_tokens: i32,
-  #[serde(rename = "output_tokens_details")]
-  pub output_tokens_details: crate::models::ResponseUsageOutputTokensDetails,
-  /// The total number of tokens used.
-  #[serde(rename = "total_tokens")]
-  pub total_tokens: i32
+    /// The number of input tokens.
+    #[serde(rename = "input_tokens")]
+    pub input_tokens: i32,
+    #[serde(rename = "input_tokens_details")]
+    pub input_tokens_details: crate::models::ResponseUsageInputTokensDetails,
+    /// The number of output tokens.
+    #[serde(rename = "output_tokens")]
+    pub output_tokens: i32,
+    #[serde(rename = "output_tokens_details")]
+    pub output_tokens_details: crate::models::ResponseUsageOutputTokensDetails,
+    /// The total number of tokens used.
+    #[serde(rename = "total_tokens")]
+    pub total_tokens: i32,
 }

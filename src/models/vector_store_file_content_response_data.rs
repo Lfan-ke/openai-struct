@@ -8,16 +8,15 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct VectorStoreFileContentResponseData {
-  /// The text content
-  #[serde(rename = "text")]
-  pub text: Option<String>,
-  /// The content type (currently only `\"text\"`)
-  #[serde(rename = "type")]
-  pub _type: Option<String>
+    /// The text content
+    #[serde(rename = "text")]
+    pub text: Option<String>,
+    /// The content type (currently only `\"text\"`)
+    #[serde(rename = "type")]
+    pub _type: Option<String>,
 }

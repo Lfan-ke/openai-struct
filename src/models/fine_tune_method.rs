@@ -11,15 +11,15 @@
 /// pub FineTuneMethod : The method used for fine-tuning.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct FineTuneMethod {
-  #[serde(rename = "dpo")]
-  pub dpo: Option<crate::models::FineTuneDpoMethod>,
-  #[serde(rename = "supervised")]
-  pub supervised: Option<crate::models::FineTuneSupervisedMethod>,
-  /// The type of method. Is either `supervised` or `dpo`.
-  #[serde(rename = "type")]
-  pub _type: Option<String>
+    #[serde(rename = "dpo")]
+    pub dpo: Option<crate::models::FineTuneDpoMethod>,
+    #[serde(rename = "supervised")]
+    pub supervised: Option<crate::models::FineTuneSupervisedMethod>,
+    /// The type of method. Is either `supervised` or `dpo`.
+    #[serde(rename = "type")]
+    pub _type: Option<String>,
 }

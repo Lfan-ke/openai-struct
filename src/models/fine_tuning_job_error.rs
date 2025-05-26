@@ -11,17 +11,17 @@
 /// pub FineTuningJobError : For fine-tuning jobs that have `failed`, this will contain more information on the cause of the failure.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct FineTuningJobError {
-  /// A machine-readable error code.
-  #[serde(rename = "code")]
-  pub code: String,
-  /// A human-readable error message.
-  #[serde(rename = "message")]
-  pub message: String,
-  /// The parameter that was invalid, usually `training_file` or `validation_file`. This field will be null if the failure was not parameter-specific.
-  #[serde(rename = "param")]
-  pub param: String
+    /// A machine-readable error code.
+    #[serde(rename = "code")]
+    pub code: String,
+    /// A human-readable error message.
+    #[serde(rename = "message")]
+    pub message: String,
+    /// The parameter that was invalid, usually `training_file` or `validation_file`. This field will be null if the failure was not parameter-specific.
+    #[serde(rename = "param")]
+    pub param: String,
 }

@@ -8,20 +8,19 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ListCertificatesResponse {
-  #[serde(rename = "data")]
-  pub data: Vec<crate::models::Certificate>,
-  #[serde(rename = "first_id")]
-  pub first_id: Option<String>,
-  #[serde(rename = "has_more")]
-  pub has_more: bool,
-  #[serde(rename = "last_id")]
-  pub last_id: Option<String>,
-  #[serde(rename = "object")]
-  pub object: String
+    #[serde(rename = "data")]
+    pub data: Vec<crate::models::Certificate>,
+    #[serde(rename = "first_id")]
+    pub first_id: Option<String>,
+    #[serde(rename = "has_more")]
+    pub has_more: bool,
+    #[serde(rename = "last_id")]
+    pub last_id: Option<String>,
+    #[serde(rename = "object")]
+    pub object: String,
 }

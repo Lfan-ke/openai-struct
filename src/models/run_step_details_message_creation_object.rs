@@ -11,13 +11,13 @@
 /// pub RunStepDetailsMessageCreationObject : Details of the message creation by the run step.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct RunStepDetailsMessageCreationObject {
-  #[serde(rename = "message_creation")]
-  pub message_creation: crate::models::RunStepDetailsMessageCreationObjectMessageCreation,
-  /// Always `message_creation`.
-  #[serde(rename = "type")]
-  pub _type: String
+    #[serde(rename = "message_creation")]
+    pub message_creation: crate::models::RunStepDetailsMessageCreationObjectMessageCreation,
+    /// Always `message_creation`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

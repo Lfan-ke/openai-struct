@@ -11,13 +11,13 @@
 /// pub RunStepDetailsToolCallsFileSearchRankingOptionsObject : The ranking options for the file search.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct RunStepDetailsToolCallsFileSearchRankingOptionsObject {
-  #[serde(rename = "ranker")]
-  pub ranker: crate::models::FileSearchRanker,
-  /// The score threshold for the file search. All values must be a floating point number between 0 and 1.
-  #[serde(rename = "score_threshold")]
-  pub score_threshold: f32
+    #[serde(rename = "ranker")]
+    pub ranker: crate::models::FileSearchRanker,
+    /// The score threshold for the file search. All values must be a floating point number between 0 and 1.
+    #[serde(rename = "score_threshold")]
+    pub score_threshold: f32,
 }

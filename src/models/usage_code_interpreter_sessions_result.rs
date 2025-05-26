@@ -11,16 +11,16 @@
 /// pub UsageCodeInterpreterSessionsResult : The aggregated code interpreter sessions usage details of the specific time bucket.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct UsageCodeInterpreterSessionsResult {
-  /// The number of code interpreter sessions.
-  #[serde(rename = "num_sessions")]
-  pub num_sessions: Option<i32>,
-  #[serde(rename = "object")]
-  pub object: String,
-  /// When `group_by=project_id`, this field provides the project ID of the grouped usage result.
-  #[serde(rename = "project_id")]
-  pub project_id: Option<String>
+    /// The number of code interpreter sessions.
+    #[serde(rename = "num_sessions")]
+    pub num_sessions: Option<i32>,
+    #[serde(rename = "object")]
+    pub object: String,
+    /// When `group_by=project_id`, this field provides the project ID of the grouped usage result.
+    #[serde(rename = "project_id")]
+    pub project_id: Option<String>,
 }

@@ -8,16 +8,15 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ChatCompletionRequestMessageContentPartImageImageUrl {
-  /// Specifies the detail level of the image. Learn more in the [Vision guide](/docs/guides/vision#low-or-high-fidelity-image-understanding).
-  #[serde(rename = "detail")]
-  pub detail: Option<String>,
-  /// Either a URL of the image or the base64 encoded image data.
-  #[serde(rename = "url")]
-  pub url: String
+    /// Specifies the detail level of the image. Learn more in the [Vision guide](/docs/guides/vision#low-or-high-fidelity-image-understanding).
+    #[serde(rename = "detail")]
+    pub detail: Option<String>,
+    /// Either a URL of the image or the base64 encoded image data.
+    #[serde(rename = "url")]
+    pub url: String,
 }

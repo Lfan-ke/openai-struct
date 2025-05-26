@@ -11,14 +11,14 @@
 /// pub KeyPress : A collection of keypresses the model would like to perform.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct KeyPress {
-  /// The combination of keys the model is requesting to be pressed. This is an array of strings, each representing a key.
-  #[serde(rename = "keys")]
-  pub keys: Vec<String>,
-  /// Specifies the event type. For a keypress action, this property is  always set to `keypress`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// The combination of keys the model is requesting to be pressed. This is an array of strings, each representing a key.
+    #[serde(rename = "keys")]
+    pub keys: Vec<String>,
+    /// Specifies the event type. For a keypress action, this property is  always set to `keypress`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

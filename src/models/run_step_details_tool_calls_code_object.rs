@@ -11,16 +11,16 @@
 /// pub RunStepDetailsToolCallsCodeObject : Details of the Code Interpreter tool call the run step was involved in.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct RunStepDetailsToolCallsCodeObject {
-  #[serde(rename = "code_interpreter")]
-  pub code_interpreter: crate::models::RunStepDetailsToolCallsCodeObjectCodeInterpreter,
-  /// The ID of the tool call.
-  #[serde(rename = "id")]
-  pub id: String,
-  /// The type of tool call. This is always going to be `code_interpreter` for this type of tool call.
-  #[serde(rename = "type")]
-  pub _type: String
+    #[serde(rename = "code_interpreter")]
+    pub code_interpreter: crate::models::RunStepDetailsToolCallsCodeObjectCodeInterpreter,
+    /// The ID of the tool call.
+    #[serde(rename = "id")]
+    pub id: String,
+    /// The type of tool call. This is always going to be `code_interpreter` for this type of tool call.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

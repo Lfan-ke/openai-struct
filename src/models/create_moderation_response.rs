@@ -11,17 +11,17 @@
 /// pub CreateModerationResponse : Represents if a given text input is potentially harmful.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct CreateModerationResponse {
-  /// The unique identifier for the moderation request.
-  #[serde(rename = "id")]
-  pub id: String,
-  /// The model used to generate the moderation results.
-  #[serde(rename = "model")]
-  pub model: String,
-  /// A list of moderation objects.
-  #[serde(rename = "results")]
-  pub results: Vec<crate::models::CreateModerationResponseResults>
+    /// The unique identifier for the moderation request.
+    #[serde(rename = "id")]
+    pub id: String,
+    /// The model used to generate the moderation results.
+    #[serde(rename = "model")]
+    pub model: String,
+    /// A list of moderation objects.
+    #[serde(rename = "results")]
+    pub results: Vec<crate::models::CreateModerationResponseResults>,
 }

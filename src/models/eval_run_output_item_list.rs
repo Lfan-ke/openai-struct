@@ -11,7 +11,7 @@
 /// pub EvalRunOutputItemList : An object representing a list of output items for an evaluation run.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 // #[derive(Debug, Serialize, Deserialize)]
 // pub struct EvalRunOutputItemList {

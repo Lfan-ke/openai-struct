@@ -11,8 +11,7 @@
 /// pub CreateEvalItem : A chat message that makes up the prompt or context. May include variable references to the \"item\" namespace, ie {{item.name}}.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
-pub struct CreateEvalItem {
-}
+pub struct CreateEvalItem {}

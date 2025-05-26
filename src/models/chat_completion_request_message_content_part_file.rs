@@ -11,13 +11,13 @@
 /// pub ChatCompletionRequestMessageContentPartFile : Learn about [file inputs](/docs/guides/text) for text generation.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ChatCompletionRequestMessageContentPartFile {
-  #[serde(rename = "file")]
-  pub file: crate::models::ChatCompletionRequestMessageContentPartFileFile,
-  /// The type of the content part. Always `file`.
-  #[serde(rename = "type")]
-  pub _type: String
+    #[serde(rename = "file")]
+    pub file: crate::models::ChatCompletionRequestMessageContentPartFileFile,
+    /// The type of the content part. Always `file`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

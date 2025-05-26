@@ -11,14 +11,14 @@
 /// pub RefusalContent : A refusal from the model.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct RefusalContent {
-  /// The refusal explanationfrom the model.
-  #[serde(rename = "refusal")]
-  pub refusal: String,
-  /// The type of the refusal. Always `refusal`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// The refusal explanationfrom the model.
+    #[serde(rename = "refusal")]
+    pub refusal: String,
+    /// The type of the refusal. Always `refusal`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

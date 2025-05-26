@@ -11,16 +11,16 @@
 /// pub RunStepDeltaObject : Represents a run step delta i.e. any changed fields on a run step during streaming.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct RunStepDeltaObject {
-  #[serde(rename = "delta")]
-  pub delta: crate::models::RunStepDeltaObjectDelta,
-  /// The identifier of the run step, which can be referenced in API endpoints.
-  #[serde(rename = "id")]
-  pub id: String,
-  /// The object type, which is always `thread.run.step.delta`.
-  #[serde(rename = "object")]
-  pub object: String
+    #[serde(rename = "delta")]
+    pub delta: crate::models::RunStepDeltaObjectDelta,
+    /// The identifier of the run step, which can be referenced in API endpoints.
+    #[serde(rename = "id")]
+    pub id: String,
+    /// The object type, which is always `thread.run.step.delta`.
+    #[serde(rename = "object")]
+    pub object: String,
 }

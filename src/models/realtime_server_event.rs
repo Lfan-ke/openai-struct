@@ -11,8 +11,7 @@
 /// pub RealtimeServerEvent : A realtime server event.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
-pub struct RealtimeServerEvent {
-}
+pub struct RealtimeServerEvent {}

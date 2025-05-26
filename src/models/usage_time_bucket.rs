@@ -8,18 +8,17 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct UsageTimeBucket {
-  #[serde(rename = "end_time")]
-  pub end_time: i32,
-  #[serde(rename = "object")]
-  pub object: String,
-  #[serde(rename = "result")]
-  pub result: Vec<Value>,
-  #[serde(rename = "start_time")]
-  pub start_time: i32
+    #[serde(rename = "end_time")]
+    pub end_time: i32,
+    #[serde(rename = "object")]
+    pub object: String,
+    #[serde(rename = "result")]
+    pub result: Vec<Value>,
+    #[serde(rename = "start_time")]
+    pub start_time: i32,
 }

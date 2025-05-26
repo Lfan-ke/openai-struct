@@ -8,16 +8,15 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct EvalRunOutputItemSampleOutput {
-  /// The content of the message.
-  #[serde(rename = "content")]
-  pub content: Option<String>,
-  /// The role of the message (e.g. \"system\", \"assistant\", \"user\").
-  #[serde(rename = "role")]
-  pub role: Option<String>
+    /// The content of the message.
+    #[serde(rename = "content")]
+    pub content: Option<String>,
+    /// The role of the message (e.g. \"system\", \"assistant\", \"user\").
+    #[serde(rename = "role")]
+    pub role: Option<String>,
 }

@@ -11,18 +11,18 @@
 /// pub InputImageContent : An image input to the model. Learn about [image inputs](/docs/guides/vision).
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct InputImageContent {
-  /// The detail level of the image to be sent to the model. One of `high`, `low`, or `auto`. Defaults to `auto`.
-  #[serde(rename = "detail")]
-  pub detail: String,
-  #[serde(rename = "file_id")]
-  pub file_id: Option<Value>,
-  #[serde(rename = "image_url")]
-  pub image_url: Option<Value>,
-  /// The type of the input item. Always `input_image`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// The detail level of the image to be sent to the model. One of `high`, `low`, or `auto`. Defaults to `auto`.
+    #[serde(rename = "detail")]
+    pub detail: String,
+    #[serde(rename = "file_id")]
+    pub file_id: Option<Value>,
+    #[serde(rename = "image_url")]
+    pub image_url: Option<Value>,
+    /// The type of the input item. Always `input_image`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

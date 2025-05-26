@@ -8,15 +8,14 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MessageDeltaContentTextObjectText {
-  #[serde(rename = "annotations")]
-  pub annotations: Option<Vec<Value>>,
-  /// The data that makes up the text.
-  #[serde(rename = "value")]
-  pub value: Option<String>
+    #[serde(rename = "annotations")]
+    pub annotations: Option<Vec<Value>>,
+    /// The data that makes up the text.
+    #[serde(rename = "value")]
+    pub value: Option<String>,
 }

@@ -11,7 +11,7 @@
 /// pub EvalCustomDataSourceConfig : A CustomDataSourceConfig which specifies the schema of your `item` and optionally `sample` namespaces. The response schema defines the shape of the data that will be: - Used to define your testing criteria and - What data is required when creating a run
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 // #[derive(Debug, Serialize, Deserialize)]
 // pub struct EvalCustomDataSourceConfig {

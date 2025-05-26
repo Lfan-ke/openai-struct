@@ -11,23 +11,23 @@
 /// pub ResponseTextDeltaEvent : Emitted when there is an additional text delta.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ResponseTextDeltaEvent {
-  /// The index of the content part that the text delta was added to.
-  #[serde(rename = "content_index")]
-  pub content_index: i32,
-  /// The text delta that was added.
-  #[serde(rename = "delta")]
-  pub delta: String,
-  /// The ID of the output item that the text delta was added to.
-  #[serde(rename = "item_id")]
-  pub item_id: String,
-  /// The index of the output item that the text delta was added to.
-  #[serde(rename = "output_index")]
-  pub output_index: i32,
-  /// The type of the event. Always `response.output_text.delta`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// The index of the content part that the text delta was added to.
+    #[serde(rename = "content_index")]
+    pub content_index: i32,
+    /// The text delta that was added.
+    #[serde(rename = "delta")]
+    pub delta: String,
+    /// The ID of the output item that the text delta was added to.
+    #[serde(rename = "item_id")]
+    pub item_id: String,
+    /// The index of the output item that the text delta was added to.
+    #[serde(rename = "output_index")]
+    pub output_index: i32,
+    /// The type of the event. Always `response.output_text.delta`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

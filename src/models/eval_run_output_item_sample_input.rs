@@ -11,14 +11,14 @@
 /// pub EvalRunOutputItemSampleInput : An input message.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct EvalRunOutputItemSampleInput {
-  /// The content of the message.
-  #[serde(rename = "content")]
-  pub content: String,
-  /// The role of the message sender (e.g., system, user, developer).
-  #[serde(rename = "role")]
-  pub role: String
+    /// The content of the message.
+    #[serde(rename = "content")]
+    pub content: String,
+    /// The role of the message sender (e.g., system, user, developer).
+    #[serde(rename = "role")]
+    pub role: String,
 }

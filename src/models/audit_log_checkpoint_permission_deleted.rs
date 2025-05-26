@@ -11,11 +11,11 @@
 /// pub AuditLogCheckpointPermissionDeleted : The details for events with this `type`.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct AuditLogCheckpointPermissionDeleted {
-  /// The ID of the checkpoint permission.
-  #[serde(rename = "id")]
-  pub id: Option<String>
+    /// The ID of the checkpoint permission.
+    #[serde(rename = "id")]
+    pub id: Option<String>,
 }

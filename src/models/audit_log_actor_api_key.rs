@@ -11,18 +11,18 @@
 /// pub AuditLogActorApiKey : The API Key used to perform the audit logged action.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct AuditLogActorApiKey {
-  /// The tracking id of the API key.
-  #[serde(rename = "id")]
-  pub id: Option<String>,
-  #[serde(rename = "service_account")]
-  pub service_account: Option<crate::models::AuditLogActorServiceAccount>,
-  /// The type of API key. Can be either `user` or `service_account`.
-  #[serde(rename = "type")]
-  pub _type: Option<String>,
-  #[serde(rename = "user")]
-  pub user: Option<crate::models::AuditLogActorUser>
+    /// The tracking id of the API key.
+    #[serde(rename = "id")]
+    pub id: Option<String>,
+    #[serde(rename = "service_account")]
+    pub service_account: Option<crate::models::AuditLogActorServiceAccount>,
+    /// The type of API key. Can be either `user` or `service_account`.
+    #[serde(rename = "type")]
+    pub _type: Option<String>,
+    #[serde(rename = "user")]
+    pub user: Option<crate::models::AuditLogActorUser>,
 }

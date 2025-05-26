@@ -11,14 +11,14 @@
 /// pub Drag : A drag action.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Drag {
-  /// An array of coordinates representing the path of the drag action. Coordinates will appear as an array of objects, eg ``` [   { x: 100, y: 200 },   { x: 200, y: 300 } ] ```
-  #[serde(rename = "path")]
-  pub path: Vec<crate::models::Coordinate>,
-  /// Specifies the event type. For a drag action, this property is  always set to `drag`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// An array of coordinates representing the path of the drag action. Coordinates will appear as an array of objects, eg ``` [   { x: 100, y: 200 },   { x: 200, y: 300 } ] ```
+    #[serde(rename = "path")]
+    pub path: Vec<crate::models::Coordinate>,
+    /// Specifies the event type. For a drag action, this property is  always set to `drag`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

@@ -11,14 +11,14 @@
 /// pub ResponseReasoningSummaryPartAddedEventPart : The summary part that was added.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ResponseReasoningSummaryPartAddedEventPart {
-  /// The text of the summary part.
-  #[serde(rename = "text")]
-  pub text: String,
-  /// The type of the summary part. Always `summary_text`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// The text of the summary part.
+    #[serde(rename = "text")]
+    pub text: String,
+    /// The type of the summary part. Always `summary_text`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

@@ -11,17 +11,17 @@
 /// pub RunStepDeltaStepDetailsToolCallsCodeOutputLogsObject : Text output from the Code Interpreter tool call as part of a run step.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct RunStepDeltaStepDetailsToolCallsCodeOutputLogsObject {
-  /// The index of the output in the outputs array.
-  #[serde(rename = "index")]
-  pub index: i32,
-  /// The text output from the Code Interpreter tool call.
-  #[serde(rename = "logs")]
-  pub logs: Option<String>,
-  /// Always `logs`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// The index of the output in the outputs array.
+    #[serde(rename = "index")]
+    pub index: i32,
+    /// The text output from the Code Interpreter tool call.
+    #[serde(rename = "logs")]
+    pub logs: Option<String>,
+    /// Always `logs`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

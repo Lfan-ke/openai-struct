@@ -11,13 +11,13 @@
 /// pub AuditLogApiKeyCreated : The details for events with this `type`.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct AuditLogApiKeyCreated {
-  #[serde(rename = "data")]
-  pub data: Option<crate::models::AuditLogApiKeyCreatedData>,
-  /// The tracking ID of the API key.
-  #[serde(rename = "id")]
-  pub id: Option<String>
+    #[serde(rename = "data")]
+    pub data: Option<crate::models::AuditLogApiKeyCreatedData>,
+    /// The tracking ID of the API key.
+    #[serde(rename = "id")]
+    pub id: Option<String>,
 }

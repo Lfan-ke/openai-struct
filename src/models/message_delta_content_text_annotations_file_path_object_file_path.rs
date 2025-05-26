@@ -8,13 +8,12 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MessageDeltaContentTextAnnotationsFilePathObjectFilePath {
-  /// The ID of the file that was generated.
-  #[serde(rename = "file_id")]
-  pub file_id: Option<String>
+    /// The ID of the file that was generated.
+    #[serde(rename = "file_id")]
+    pub file_id: Option<String>,
 }

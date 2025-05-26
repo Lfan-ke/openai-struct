@@ -8,25 +8,24 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct VectorStoreFileBatchObjectFileCounts {
-  /// The number of files that where cancelled.
-  #[serde(rename = "cancelled")]
-  pub cancelled: i32,
-  /// The number of files that have been processed.
-  #[serde(rename = "completed")]
-  pub completed: i32,
-  /// The number of files that have failed to process.
-  #[serde(rename = "failed")]
-  pub failed: i32,
-  /// The number of files that are currently being processed.
-  #[serde(rename = "in_progress")]
-  pub in_progress: i32,
-  /// The total number of files.
-  #[serde(rename = "total")]
-  pub total: i32
+    /// The number of files that where cancelled.
+    #[serde(rename = "cancelled")]
+    pub cancelled: i32,
+    /// The number of files that have been processed.
+    #[serde(rename = "completed")]
+    pub completed: i32,
+    /// The number of files that have failed to process.
+    #[serde(rename = "failed")]
+    pub failed: i32,
+    /// The number of files that are currently being processed.
+    #[serde(rename = "in_progress")]
+    pub in_progress: i32,
+    /// The total number of files.
+    #[serde(rename = "total")]
+    pub total: i32,
 }

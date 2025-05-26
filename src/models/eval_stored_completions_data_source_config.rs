@@ -11,7 +11,7 @@
 /// pub EvalStoredCompletionsDataSourceConfig : A StoredCompletionsDataSourceConfig which specifies the metadata property of your stored completions query. This is usually metadata like `usecase=chatbot` or `prompt-version=v2`, etc. The schema returned by this data source config is used to defined what variables are available in your evals. `item` and `sample` are both defined when using this data source config.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 // #[derive(Debug, Serialize, Deserialize)]
 // pub struct EvalStoredCompletionsDataSourceConfig {

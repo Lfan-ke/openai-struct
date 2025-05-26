@@ -8,22 +8,21 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct CreateTranslationResponseVerboseJson {
-  /// The duration of the input audio.
-  #[serde(rename = "duration")]
-  pub duration: f32,
-  /// The language of the output translation (always `english`).
-  #[serde(rename = "language")]
-  pub language: String,
-  /// Segments of the translated text and their corresponding details.
-  #[serde(rename = "segments")]
-  pub segments: Option<Vec<crate::models::TranscriptionSegment>>,
-  /// The translated text.
-  #[serde(rename = "text")]
-  pub text: String
+    /// The duration of the input audio.
+    #[serde(rename = "duration")]
+    pub duration: f32,
+    /// The language of the output translation (always `english`).
+    #[serde(rename = "language")]
+    pub language: String,
+    /// Segments of the translated text and their corresponding details.
+    #[serde(rename = "segments")]
+    pub segments: Option<Vec<crate::models::TranscriptionSegment>>,
+    /// The translated text.
+    #[serde(rename = "text")]
+    pub text: String,
 }

@@ -8,16 +8,15 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ProjectUserCreateRequest {
-  /// `owner` or `member`
-  #[serde(rename = "role")]
-  pub role: String,
-  /// The ID of the user.
-  #[serde(rename = "user_id")]
-  pub user_id: String
+    /// `owner` or `member`
+    #[serde(rename = "role")]
+    pub role: String,
+    /// The ID of the user.
+    #[serde(rename = "user_id")]
+    pub user_id: String,
 }

@@ -11,23 +11,23 @@
 /// pub CodeInterpreterToolCall : A tool call to run code.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct CodeInterpreterToolCall {
-  /// The code to run.
-  #[serde(rename = "code")]
-  pub code: String,
-  /// The unique ID of the code interpreter tool call.
-  #[serde(rename = "id")]
-  pub id: String,
-  /// The results of the code interpreter tool call.
-  #[serde(rename = "results")]
-  pub results: Vec<crate::models::CodeInterpreterToolOutput>,
-  /// The status of the code interpreter tool call.
-  #[serde(rename = "status")]
-  pub status: String,
-  /// The type of the code interpreter tool call. Always `code_interpreter_call`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// The code to run.
+    #[serde(rename = "code")]
+    pub code: String,
+    /// The unique ID of the code interpreter tool call.
+    #[serde(rename = "id")]
+    pub id: String,
+    /// The results of the code interpreter tool call.
+    #[serde(rename = "results")]
+    pub results: Vec<crate::models::CodeInterpreterToolOutput>,
+    /// The status of the code interpreter tool call.
+    #[serde(rename = "status")]
+    pub status: String,
+    /// The type of the code interpreter tool call. Always `code_interpreter_call`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

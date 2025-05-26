@@ -11,8 +11,7 @@
 /// pub ParallelToolCalls : Whether to enable [parallel function calling](/docs/guides/function-calling#configuring-parallel-function-calling) during tool use.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
-pub struct ParallelToolCalls {
-}
+pub struct ParallelToolCalls {}

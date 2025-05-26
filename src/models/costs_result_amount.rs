@@ -11,14 +11,14 @@
 /// pub CostsResultAmount : The monetary value in its associated currency.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct CostsResultAmount {
-  /// Lowercase ISO-4217 currency e.g. \"usd\"
-  #[serde(rename = "currency")]
-  pub currency: Option<String>,
-  /// The numeric value of the cost.
-  #[serde(rename = "value")]
-  pub value: Option<f32>
+    /// Lowercase ISO-4217 currency e.g. \"usd\"
+    #[serde(rename = "currency")]
+    pub currency: Option<String>,
+    /// The numeric value of the cost.
+    #[serde(rename = "value")]
+    pub value: Option<f32>,
 }

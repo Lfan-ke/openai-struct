@@ -11,14 +11,14 @@
 /// pub ResponseAudioDeltaEvent : Emitted when there is a partial audio response.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ResponseAudioDeltaEvent {
-  /// A chunk of Base64 encoded response audio bytes.
-  #[serde(rename = "delta")]
-  pub delta: String,
-  /// The type of the event. Always `response.audio.delta`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// A chunk of Base64 encoded response audio bytes.
+    #[serde(rename = "delta")]
+    pub delta: String,
+    /// The type of the event. Always `response.audio.delta`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

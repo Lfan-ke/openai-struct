@@ -11,17 +11,17 @@
 /// pub ResponseOutputItemDoneEvent : Emitted when an output item is marked done.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ResponseOutputItemDoneEvent {
-  /// The output item that was marked done.
-  #[serde(rename = "item")]
-  pub item: crate::models::OutputItem,
-  /// The index of the output item that was marked done.
-  #[serde(rename = "output_index")]
-  pub output_index: i32,
-  /// The type of the event. Always `response.output_item.done`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// The output item that was marked done.
+    #[serde(rename = "item")]
+    pub item: crate::models::OutputItem,
+    /// The index of the output item that was marked done.
+    #[serde(rename = "output_index")]
+    pub output_index: i32,
+    /// The type of the event. Always `response.output_item.done`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

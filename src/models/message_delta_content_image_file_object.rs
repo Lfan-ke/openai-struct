@@ -11,16 +11,16 @@
 /// pub MessageDeltaContentImageFileObject : References an image [File](/docs/api-reference/files) in the content of a message.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MessageDeltaContentImageFileObject {
-  #[serde(rename = "image_file")]
-  pub image_file: Option<crate::models::MessageDeltaContentImageFileObjectImageFile>,
-  /// The index of the content part in the message.
-  #[serde(rename = "index")]
-  pub index: i32,
-  /// Always `image_file`.
-  #[serde(rename = "type")]
-  pub _type: String
+    #[serde(rename = "image_file")]
+    pub image_file: Option<crate::models::MessageDeltaContentImageFileObjectImageFile>,
+    /// The index of the content part in the message.
+    #[serde(rename = "index")]
+    pub index: i32,
+    /// Always `image_file`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

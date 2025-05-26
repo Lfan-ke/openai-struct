@@ -11,20 +11,20 @@
 /// pub FunctionTool : Defines a function in your own code the model can choose to call. Learn more about [function calling](https://platform.openai.com/docs/guides/function-calling).
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct FunctionTool {
-  #[serde(rename = "parameters")]
-  pub parameters: Value,
-  #[serde(rename = "description")]
-  pub description: Option<Value>,
-  /// The name of the function to call.
-  #[serde(rename = "name")]
-  pub name: String,
-  #[serde(rename = "strict")]
-  pub strict: Value,
-  /// The type of the function tool. Always `function`.
-  #[serde(rename = "type")]
-  pub _type: String
+    #[serde(rename = "parameters")]
+    pub parameters: Value,
+    #[serde(rename = "description")]
+    pub description: Option<Value>,
+    /// The name of the function to call.
+    #[serde(rename = "name")]
+    pub name: String,
+    #[serde(rename = "strict")]
+    pub strict: Value,
+    /// The type of the function tool. Always `function`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

@@ -11,17 +11,17 @@
 /// pub OutputAudio : An audio output from the model.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct OutputAudio {
-  /// Base64-encoded audio data from the model.
-  #[serde(rename = "data")]
-  pub data: String,
-  /// The transcript of the audio data from the model.
-  #[serde(rename = "transcript")]
-  pub transcript: String,
-  /// The type of the output audio. Always `output_audio`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// Base64-encoded audio data from the model.
+    #[serde(rename = "data")]
+    pub data: String,
+    /// The transcript of the audio data from the model.
+    #[serde(rename = "transcript")]
+    pub transcript: String,
+    /// The type of the output audio. Always `output_audio`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

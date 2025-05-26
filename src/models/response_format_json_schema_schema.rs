@@ -11,8 +11,7 @@
 /// pub ResponseFormatJsonSchemaSchema : The schema for the response format, described as a JSON Schema object. Learn how to build JSON schemas [here](pub https://json-schema.org/).
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
-pub struct ResponseFormatJsonSchemaSchema {
-}
+pub struct ResponseFormatJsonSchemaSchema {}

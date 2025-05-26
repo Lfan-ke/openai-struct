@@ -11,14 +11,14 @@
 /// pub ResponseInProgressEvent : Emitted when the response is in progress.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ResponseInProgressEvent {
-  /// The response that is in progress.
-  #[serde(rename = "response")]
-  pub response: crate::models::Response,
-  /// The type of the event. Always `response.in_progress`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// The response that is in progress.
+    #[serde(rename = "response")]
+    pub response: crate::models::Response,
+    /// The type of the event. Always `response.in_progress`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

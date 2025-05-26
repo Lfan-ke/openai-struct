@@ -11,17 +11,17 @@
 /// pub BatchRequestCounts : The request counts for different statuses within the batch.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct BatchRequestCounts {
-  /// Number of requests that have been completed successfully.
-  #[serde(rename = "completed")]
-  pub completed: i32,
-  /// Number of requests that have failed.
-  #[serde(rename = "failed")]
-  pub failed: i32,
-  /// Total number of requests in the batch.
-  #[serde(rename = "total")]
-  pub total: i32
+    /// Number of requests that have been completed successfully.
+    #[serde(rename = "completed")]
+    pub completed: i32,
+    /// Number of requests that have failed.
+    #[serde(rename = "failed")]
+    pub failed: i32,
+    /// Total number of requests in the batch.
+    #[serde(rename = "total")]
+    pub total: i32,
 }

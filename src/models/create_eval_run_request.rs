@@ -8,18 +8,17 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct CreateEvalRunRequest {
-  /// Details about the run's data source.
-  #[serde(rename = "data_source")]
-  pub data_source: Value,
-  #[serde(rename = "metadata")]
-  pub metadata: Option<crate::models::Metadata>,
-  /// The name of the run.
-  #[serde(rename = "name")]
-  pub name: Option<String>
+    /// Details about the run's data source.
+    #[serde(rename = "data_source")]
+    pub data_source: Value,
+    #[serde(rename = "metadata")]
+    pub metadata: Option<crate::models::Metadata>,
+    /// The name of the run.
+    #[serde(rename = "name")]
+    pub name: Option<String>,
 }

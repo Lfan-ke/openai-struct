@@ -11,16 +11,16 @@
 /// pub Reasoning : **o-series models only**  Configuration options for  [reasoning models](https://platform.openai.com/docs/guides/reasoning).
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Reasoning {
-  #[serde(rename = "effort")]
-  pub effort: Option<crate::models::ReasoningEffort>,
-  /// **Deprecated:** use `summary` instead.  A summary of the reasoning performed by the model. This can be useful for debugging and understanding the model's reasoning process. One of `auto`, `concise`, or `detailed`.
-  #[serde(rename = "generate_summary")]
-  pub generate_summary: Option<String>,
-  /// A summary of the reasoning performed by the model. This can be useful for debugging and understanding the model's reasoning process. One of `auto`, `concise`, or `detailed`.
-  #[serde(rename = "summary")]
-  pub summary: Option<String>
+    #[serde(rename = "effort")]
+    pub effort: Option<crate::models::ReasoningEffort>,
+    /// **Deprecated:** use `summary` instead.  A summary of the reasoning performed by the model. This can be useful for debugging and understanding the model's reasoning process. One of `auto`, `concise`, or `detailed`.
+    #[serde(rename = "generate_summary")]
+    pub generate_summary: Option<String>,
+    /// A summary of the reasoning performed by the model. This can be useful for debugging and understanding the model's reasoning process. One of `auto`, `concise`, or `detailed`.
+    #[serde(rename = "summary")]
+    pub summary: Option<String>,
 }

@@ -11,23 +11,23 @@
 /// pub ResponseRefusalDoneEvent : Emitted when refusal text is finalized.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ResponseRefusalDoneEvent {
-  /// The index of the content part that the refusal text is finalized.
-  #[serde(rename = "content_index")]
-  pub content_index: i32,
-  /// The ID of the output item that the refusal text is finalized.
-  #[serde(rename = "item_id")]
-  pub item_id: String,
-  /// The index of the output item that the refusal text is finalized.
-  #[serde(rename = "output_index")]
-  pub output_index: i32,
-  /// The refusal text that is finalized.
-  #[serde(rename = "refusal")]
-  pub refusal: String,
-  /// The type of the event. Always `response.refusal.done`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// The index of the content part that the refusal text is finalized.
+    #[serde(rename = "content_index")]
+    pub content_index: i32,
+    /// The ID of the output item that the refusal text is finalized.
+    #[serde(rename = "item_id")]
+    pub item_id: String,
+    /// The index of the output item that the refusal text is finalized.
+    #[serde(rename = "output_index")]
+    pub output_index: i32,
+    /// The refusal text that is finalized.
+    #[serde(rename = "refusal")]
+    pub refusal: String,
+    /// The type of the event. Always `response.refusal.done`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

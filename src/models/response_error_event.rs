@@ -11,20 +11,20 @@
 /// pub ResponseErrorEvent : Emitted when an error occurs.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ResponseErrorEvent {
-  /// The error code.
-  #[serde(rename = "code")]
-  pub code: String,
-  /// The error message.
-  #[serde(rename = "message")]
-  pub message: String,
-  /// The error parameter.
-  #[serde(rename = "param")]
-  pub param: String,
-  /// The type of the event. Always `error`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// The error code.
+    #[serde(rename = "code")]
+    pub code: String,
+    /// The error message.
+    #[serde(rename = "message")]
+    pub message: String,
+    /// The error parameter.
+    #[serde(rename = "param")]
+    pub param: String,
+    /// The type of the event. Always `error`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

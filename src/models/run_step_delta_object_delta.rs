@@ -11,11 +11,11 @@
 /// pub RunStepDeltaObjectDelta : The delta containing the fields that have changed on the run step.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct RunStepDeltaObjectDelta {
-  /// The details of the run step.
-  #[serde(rename = "step_details")]
-  pub step_details: Option<Value>
+    /// The details of the run step.
+    #[serde(rename = "step_details")]
+    pub step_details: Option<Value>,
 }

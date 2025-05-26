@@ -8,13 +8,12 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct AssistantsNamedToolChoiceFunction {
-  /// The name of the function to call.
-  #[serde(rename = "name")]
-  pub name: String
+    /// The name of the function to call.
+    #[serde(rename = "name")]
+    pub name: String,
 }

@@ -11,11 +11,11 @@
 /// pub AutoChunkingStrategyRequestParam : The default strategy. This strategy currently uses a `max_chunk_size_tokens` of `800` and `chunk_overlap_tokens` of `400`.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct AutoChunkingStrategyRequestParam {
-  /// Always `auto`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// Always `auto`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

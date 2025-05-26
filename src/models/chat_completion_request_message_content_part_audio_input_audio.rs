@@ -8,16 +8,15 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ChatCompletionRequestMessageContentPartAudioInputAudio {
-  /// Base64 encoded audio data.
-  #[serde(rename = "data")]
-  pub data: String,
-  /// The format of the encoded audio data. Currently supports \"wav\" and \"mp3\".
-  #[serde(rename = "format")]
-  pub format: String
+    /// Base64 encoded audio data.
+    #[serde(rename = "data")]
+    pub data: String,
+    /// The format of the encoded audio data. Currently supports \"wav\" and \"mp3\".
+    #[serde(rename = "format")]
+    pub format: String,
 }

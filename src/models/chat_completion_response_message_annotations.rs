@@ -11,13 +11,13 @@
 /// pub ChatCompletionResponseMessageAnnotations : A URL citation when using web search.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ChatCompletionResponseMessageAnnotations {
-  /// The type of the URL citation. Always `url_citation`.
-  #[serde(rename = "type")]
-  pub _type: String,
-  #[serde(rename = "url_citation")]
-  pub url_citation: crate::models::ChatCompletionResponseMessageUrlCitation
+    /// The type of the URL citation. Always `url_citation`.
+    #[serde(rename = "type")]
+    pub _type: String,
+    #[serde(rename = "url_citation")]
+    pub url_citation: crate::models::ChatCompletionResponseMessageUrlCitation,
 }

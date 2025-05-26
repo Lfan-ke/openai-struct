@@ -11,14 +11,14 @@
 /// pub CreateChatCompletionResponseLogprobs : Log probability information for the choice.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct CreateChatCompletionResponseLogprobs {
-  /// A list of message content tokens with log probability information.
-  #[serde(rename = "content")]
-  pub content: Vec<crate::models::ChatCompletionTokenLogprob>,
-  /// A list of message refusal tokens with log probability information.
-  #[serde(rename = "refusal")]
-  pub refusal: Vec<crate::models::ChatCompletionTokenLogprob>
+    /// A list of message content tokens with log probability information.
+    #[serde(rename = "content")]
+    pub content: Vec<crate::models::ChatCompletionTokenLogprob>,
+    /// A list of message refusal tokens with log probability information.
+    #[serde(rename = "refusal")]
+    pub refusal: Vec<crate::models::ChatCompletionTokenLogprob>,
 }

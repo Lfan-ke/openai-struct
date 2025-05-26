@@ -8,13 +8,12 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct CreateAssistantRequestToolResourcesCodeInterpreter {
-  /// A list of [file](/docs/api-reference/files) IDs made available to the `code_interpreter` tool. There can be a maximum of 20 files associated with the tool.
-  #[serde(rename = "file_ids")]
-  pub file_ids: Option<Vec<String>>
+    /// A list of [file](/docs/api-reference/files) IDs made available to the `code_interpreter` tool. There can be a maximum of 20 files associated with the tool.
+    #[serde(rename = "file_ids")]
+    pub file_ids: Option<Vec<String>>,
 }

@@ -11,11 +11,11 @@
 /// pub ResponseFormatText : Default response format. Used to generate text responses.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ResponseFormatText {
-  /// The type of response format being defined. Always `text`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// The type of response format being defined. Always `text`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

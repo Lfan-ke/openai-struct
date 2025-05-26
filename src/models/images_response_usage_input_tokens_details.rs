@@ -11,14 +11,14 @@
 /// pub ImagesResponseUsageInputTokensDetails : The input tokens detailed information for the image generation.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ImagesResponseUsageInputTokensDetails {
-  /// The number of image tokens in the input prompt.
-  #[serde(rename = "image_tokens")]
-  pub image_tokens: i32,
-  /// The number of text tokens in the input prompt.
-  #[serde(rename = "text_tokens")]
-  pub text_tokens: i32
+    /// The number of image tokens in the input prompt.
+    #[serde(rename = "image_tokens")]
+    pub image_tokens: i32,
+    /// The number of text tokens in the input prompt.
+    #[serde(rename = "text_tokens")]
+    pub text_tokens: i32,
 }

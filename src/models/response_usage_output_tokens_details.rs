@@ -11,11 +11,11 @@
 /// pub ResponseUsageOutputTokensDetails : A detailed breakdown of the output tokens.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ResponseUsageOutputTokensDetails {
-  /// The number of reasoning tokens.
-  #[serde(rename = "reasoning_tokens")]
-  pub reasoning_tokens: i32
+    /// The number of reasoning tokens.
+    #[serde(rename = "reasoning_tokens")]
+    pub reasoning_tokens: i32,
 }

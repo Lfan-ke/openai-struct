@@ -11,13 +11,13 @@
 /// pub ChatCompletionRequestMessageContentPartImage : Learn about [image inputs](/docs/guides/vision).
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ChatCompletionRequestMessageContentPartImage {
-  #[serde(rename = "image_url")]
-  pub image_url: crate::models::ChatCompletionRequestMessageContentPartImageImageUrl,
-  /// The type of the content part.
-  #[serde(rename = "type")]
-  pub _type: String
+    #[serde(rename = "image_url")]
+    pub image_url: crate::models::ChatCompletionRequestMessageContentPartImageImageUrl,
+    /// The type of the content part.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

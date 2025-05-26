@@ -11,14 +11,14 @@
 /// pub RunStepDeltaStepDetailsToolCallsObject : Details of the tool call.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct RunStepDeltaStepDetailsToolCallsObject {
-  /// An array of tool calls the run step was involved in. These can be associated with one of three types of tools: `code_interpreter`, `file_search`, or `function`.
-  #[serde(rename = "tool_calls")]
-  pub tool_calls: Option<Vec<Value>>,
-  /// Always `tool_calls`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// An array of tool calls the run step was involved in. These can be associated with one of three types of tools: `code_interpreter`, `file_search`, or `function`.
+    #[serde(rename = "tool_calls")]
+    pub tool_calls: Option<Vec<Value>>,
+    /// Always `tool_calls`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

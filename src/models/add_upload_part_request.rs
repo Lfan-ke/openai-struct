@@ -8,13 +8,12 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
 use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct AddUploadPartRequest {
-  /// The chunk of bytes for this Part.
-  #[serde(rename = "data")]
-  pub data: Vec<u8>
+    /// The chunk of bytes for this Part.
+    #[serde(rename = "data")]
+    pub data: Vec<u8>,
 }

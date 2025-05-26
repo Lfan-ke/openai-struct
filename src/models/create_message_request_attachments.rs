@@ -8,16 +8,15 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct CreateMessageRequestAttachments {
-  /// The ID of the file to attach to the message.
-  #[serde(rename = "file_id")]
-  pub file_id: Option<String>,
-  /// The tools to add this file to.
-  #[serde(rename = "tools")]
-  pub tools: Option<Vec<Value>>
+    /// The ID of the file to attach to the message.
+    #[serde(rename = "file_id")]
+    pub file_id: Option<String>,
+    /// The tools to add this file to.
+    #[serde(rename = "tools")]
+    pub tools: Option<Vec<Value>>,
 }

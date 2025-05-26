@@ -8,19 +8,18 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ChatCompletionRequestMessageContentPartFileFile {
-  /// The base64 encoded file data, used when passing the file to the model  as a string.
-  #[serde(rename = "file_data")]
-  pub file_data: Option<String>,
-  /// The ID of an uploaded file to use as input.
-  #[serde(rename = "file_id")]
-  pub file_id: Option<String>,
-  /// The name of the file, used when passing the file to the model as a  string.
-  #[serde(rename = "filename")]
-  pub filename: Option<String>
+    /// The base64 encoded file data, used when passing the file to the model  as a string.
+    #[serde(rename = "file_data")]
+    pub file_data: Option<String>,
+    /// The ID of an uploaded file to use as input.
+    #[serde(rename = "file_id")]
+    pub file_id: Option<String>,
+    /// The name of the file, used when passing the file to the model as a  string.
+    #[serde(rename = "filename")]
+    pub filename: Option<String>,
 }

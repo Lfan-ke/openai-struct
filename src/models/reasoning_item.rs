@@ -11,20 +11,20 @@
 /// pub ReasoningItem : A description of the chain of thought used by a reasoning model while generating a response.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ReasoningItem {
-  /// The unique identifier of the reasoning content.
-  #[serde(rename = "id")]
-  pub id: String,
-  /// The status of the item. One of `in_progress`, `completed`, or `incomplete`. Populated when items are returned via API.
-  #[serde(rename = "status")]
-  pub status: Option<String>,
-  /// Reasoning text contents.
-  #[serde(rename = "summary")]
-  pub summary: Vec<crate::models::ReasoningItemSummary>,
-  /// The type of the object. Always `reasoning`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// The unique identifier of the reasoning content.
+    #[serde(rename = "id")]
+    pub id: String,
+    /// The status of the item. One of `in_progress`, `completed`, or `incomplete`. Populated when items are returned via API.
+    #[serde(rename = "status")]
+    pub status: Option<String>,
+    /// Reasoning text contents.
+    #[serde(rename = "summary")]
+    pub summary: Vec<crate::models::ReasoningItemSummary>,
+    /// The type of the object. Always `reasoning`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

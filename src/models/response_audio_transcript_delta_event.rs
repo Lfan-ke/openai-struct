@@ -11,14 +11,14 @@
 /// pub ResponseAudioTranscriptDeltaEvent : Emitted when there is a partial transcript of audio.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ResponseAudioTranscriptDeltaEvent {
-  /// The partial transcript of the audio response.
-  #[serde(rename = "delta")]
-  pub delta: String,
-  /// The type of the event. Always `response.audio.transcript.delta`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// The partial transcript of the audio response.
+    #[serde(rename = "delta")]
+    pub delta: String,
+    /// The type of the event. Always `response.audio.transcript.delta`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

@@ -11,11 +11,11 @@
 /// pub Wait : A wait action.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Wait {
-  /// Specifies the event type. For a wait action, this property is  always set to `wait`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// Specifies the event type. For a wait action, this property is  always set to `wait`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

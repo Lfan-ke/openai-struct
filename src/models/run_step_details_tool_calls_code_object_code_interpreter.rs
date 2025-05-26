@@ -11,14 +11,14 @@
 /// pub RunStepDetailsToolCallsCodeObjectCodeInterpreter : The Code Interpreter tool call definition.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct RunStepDetailsToolCallsCodeObjectCodeInterpreter {
-  /// The input to the Code Interpreter tool call.
-  #[serde(rename = "input")]
-  pub input: String,
-  /// The outputs from the Code Interpreter tool call. Code Interpreter can output one or more items, including text (`logs`) or images (`image`). Each of these are represented by a different object type.
-  #[serde(rename = "outputs")]
-  pub outputs: Vec<Value>
+    /// The input to the Code Interpreter tool call.
+    #[serde(rename = "input")]
+    pub input: String,
+    /// The outputs from the Code Interpreter tool call. Code Interpreter can output one or more items, including text (`logs`) or images (`image`). Each of these are represented by a different object type.
+    #[serde(rename = "outputs")]
+    pub outputs: Vec<Value>,
 }

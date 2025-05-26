@@ -8,16 +8,15 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct InlineResponse2001 {
-  #[serde(rename = "deleted")]
-  pub deleted: Option<bool>,
-  #[serde(rename = "object")]
-  pub object: Option<String>,
-  #[serde(rename = "run_id")]
-  pub run_id: Option<String>
+    #[serde(rename = "deleted")]
+    pub deleted: Option<bool>,
+    #[serde(rename = "object")]
+    pub object: Option<String>,
+    #[serde(rename = "run_id")]
+    pub run_id: Option<String>,
 }

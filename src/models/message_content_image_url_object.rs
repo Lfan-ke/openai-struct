@@ -11,13 +11,13 @@
 /// pub MessageContentImageUrlObject : References an image URL in the content of a message.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MessageContentImageUrlObject {
-  #[serde(rename = "image_url")]
-  pub image_url: crate::models::MessageContentImageUrlObjectImageUrl,
-  /// The type of the content part.
-  #[serde(rename = "type")]
-  pub _type: String
+    #[serde(rename = "image_url")]
+    pub image_url: crate::models::MessageContentImageUrlObjectImageUrl,
+    /// The type of the content part.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

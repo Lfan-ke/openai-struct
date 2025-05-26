@@ -11,12 +11,10 @@
 /// pub ToolChoiceOptions : Controls which (if any) tool is called by the model.  `none` means the model will not call any tool and instead generates a message.  `auto` means the model can pick between generating a message or calling one or more tools.  `required` means the model must call one or more tools.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
-pub struct ToolChoiceOptions {
-}
-
+pub struct ToolChoiceOptions {}
 
 // TODO enum
 // List of ToolChoiceOptions

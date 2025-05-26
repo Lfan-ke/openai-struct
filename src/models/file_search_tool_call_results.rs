@@ -8,24 +8,23 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct FileSearchToolCallResults {
-  #[serde(rename = "attributes")]
-  pub attributes: Option<crate::models::VectorStoreFileAttributes>,
-  /// The unique ID of the file.
-  #[serde(rename = "file_id")]
-  pub file_id: Option<String>,
-  /// The name of the file.
-  #[serde(rename = "filename")]
-  pub filename: Option<String>,
-  /// The relevance score of the file - a value between 0 and 1.
-  #[serde(rename = "score")]
-  pub score: Option<f32>,
-  /// The text that was retrieved from the file.
-  #[serde(rename = "text")]
-  pub text: Option<String>
+    #[serde(rename = "attributes")]
+    pub attributes: Option<crate::models::VectorStoreFileAttributes>,
+    /// The unique ID of the file.
+    #[serde(rename = "file_id")]
+    pub file_id: Option<String>,
+    /// The name of the file.
+    #[serde(rename = "filename")]
+    pub filename: Option<String>,
+    /// The relevance score of the file - a value between 0 and 1.
+    #[serde(rename = "score")]
+    pub score: Option<f32>,
+    /// The text that was retrieved from the file.
+    #[serde(rename = "text")]
+    pub text: Option<String>,
 }

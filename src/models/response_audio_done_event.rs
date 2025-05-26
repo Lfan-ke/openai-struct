@@ -11,11 +11,11 @@
 /// pub ResponseAudioDoneEvent : Emitted when the audio response is complete.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ResponseAudioDoneEvent {
-  /// The type of the event. Always `response.audio.done`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// The type of the event. Always `response.audio.done`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

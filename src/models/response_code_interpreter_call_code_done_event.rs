@@ -11,17 +11,17 @@
 /// pub ResponseCodeInterpreterCallCodeDoneEvent : Emitted when code snippet output is finalized by the code interpreter.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ResponseCodeInterpreterCallCodeDoneEvent {
-  /// The final code snippet output by the code interpreter.
-  #[serde(rename = "code")]
-  pub code: String,
-  /// The index of the output item that the code interpreter call is in progress.
-  #[serde(rename = "output_index")]
-  pub output_index: i32,
-  /// The type of the event. Always `response.code_interpreter_call.code.done`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// The final code snippet output by the code interpreter.
+    #[serde(rename = "code")]
+    pub code: String,
+    /// The index of the output item that the code interpreter call is in progress.
+    #[serde(rename = "output_index")]
+    pub output_index: i32,
+    /// The type of the event. Always `response.code_interpreter_call.code.done`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

@@ -11,14 +11,14 @@
 /// pub RealtimeClientEventInputAudioBufferClear : Send this event to clear the audio bytes in the buffer. The server will  respond with an `input_audio_buffer.cleared` event.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct RealtimeClientEventInputAudioBufferClear {
-  /// Optional client-generated ID used to identify this event.
-  #[serde(rename = "event_id")]
-  pub event_id: Option<String>,
-  /// The event type, must be `input_audio_buffer.clear`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// Optional client-generated ID used to identify this event.
+    #[serde(rename = "event_id")]
+    pub event_id: Option<String>,
+    /// The event type, must be `input_audio_buffer.clear`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

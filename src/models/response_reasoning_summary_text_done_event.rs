@@ -11,23 +11,23 @@
 /// pub ResponseReasoningSummaryTextDoneEvent : Emitted when a reasoning summary text is completed.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ResponseReasoningSummaryTextDoneEvent {
-  /// The ID of the item this summary text is associated with.
-  #[serde(rename = "item_id")]
-  pub item_id: String,
-  /// The index of the output item this summary text is associated with.
-  #[serde(rename = "output_index")]
-  pub output_index: i32,
-  /// The index of the summary part within the reasoning summary.
-  #[serde(rename = "summary_index")]
-  pub summary_index: i32,
-  /// The full text of the completed reasoning summary.
-  #[serde(rename = "text")]
-  pub text: String,
-  /// The type of the event. Always `response.reasoning_summary_text.done`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// The ID of the item this summary text is associated with.
+    #[serde(rename = "item_id")]
+    pub item_id: String,
+    /// The index of the output item this summary text is associated with.
+    #[serde(rename = "output_index")]
+    pub output_index: i32,
+    /// The index of the summary part within the reasoning summary.
+    #[serde(rename = "summary_index")]
+    pub summary_index: i32,
+    /// The full text of the completed reasoning summary.
+    #[serde(rename = "text")]
+    pub text: String,
+    /// The type of the event. Always `response.reasoning_summary_text.done`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

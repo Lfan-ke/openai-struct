@@ -11,14 +11,14 @@
 /// pub RealtimeServerEventConversationCreatedConversation : The conversation resource.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct RealtimeServerEventConversationCreatedConversation {
-  /// The unique ID of the conversation.
-  #[serde(rename = "id")]
-  pub id: Option<String>,
-  /// The object type, must be `realtime.conversation`.
-  #[serde(rename = "object")]
-  pub object: Option<String>
+    /// The unique ID of the conversation.
+    #[serde(rename = "id")]
+    pub id: Option<String>,
+    /// The object type, must be `realtime.conversation`.
+    #[serde(rename = "object")]
+    pub object: Option<String>,
 }

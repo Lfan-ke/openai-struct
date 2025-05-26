@@ -11,13 +11,13 @@
 /// pub MessageContentTextObject : The text content that is part of a message.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MessageContentTextObject {
-  #[serde(rename = "text")]
-  pub text: crate::models::MessageContentTextObjectText,
-  /// Always `text`.
-  #[serde(rename = "type")]
-  pub _type: String
+    #[serde(rename = "text")]
+    pub text: crate::models::MessageContentTextObjectText,
+    /// Always `text`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

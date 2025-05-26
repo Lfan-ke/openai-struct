@@ -11,14 +11,14 @@
 /// pub CreateEmbeddingResponseUsage : The usage information for the request.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct CreateEmbeddingResponseUsage {
-  /// The number of tokens used by the prompt.
-  #[serde(rename = "prompt_tokens")]
-  pub prompt_tokens: i32,
-  /// The total number of tokens used by the request.
-  #[serde(rename = "total_tokens")]
-  pub total_tokens: i32
+    /// The number of tokens used by the prompt.
+    #[serde(rename = "prompt_tokens")]
+    pub prompt_tokens: i32,
+    /// The total number of tokens used by the request.
+    #[serde(rename = "total_tokens")]
+    pub total_tokens: i32,
 }

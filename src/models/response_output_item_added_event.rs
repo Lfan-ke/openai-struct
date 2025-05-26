@@ -11,17 +11,17 @@
 /// pub ResponseOutputItemAddedEvent : Emitted when a new output item is added.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ResponseOutputItemAddedEvent {
-  /// The output item that was added.
-  #[serde(rename = "item")]
-  pub item: crate::models::OutputItem,
-  /// The index of the output item that was added.
-  #[serde(rename = "output_index")]
-  pub output_index: i32,
-  /// The type of the event. Always `response.output_item.added`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// The output item that was added.
+    #[serde(rename = "item")]
+    pub item: crate::models::OutputItem,
+    /// The index of the output item that was added.
+    #[serde(rename = "output_index")]
+    pub output_index: i32,
+    /// The type of the event. Always `response.output_item.added`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

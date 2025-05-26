@@ -8,17 +8,16 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct InviteDeleteResponse {
-  #[serde(rename = "deleted")]
-  pub deleted: bool,
-  #[serde(rename = "id")]
-  pub id: String,
-  /// The object type, which is always `organization.invite.deleted`
-  #[serde(rename = "object")]
-  pub object: String
+    #[serde(rename = "deleted")]
+    pub deleted: bool,
+    #[serde(rename = "id")]
+    pub id: String,
+    /// The object type, which is always `organization.invite.deleted`
+    #[serde(rename = "object")]
+    pub object: String,
 }

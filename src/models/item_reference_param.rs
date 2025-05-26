@@ -11,13 +11,13 @@
 /// pub ItemReferenceParam : An internal identifier for an item to reference.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ItemReferenceParam {
-  /// The ID of the item to reference.
-  #[serde(rename = "id")]
-  pub id: String,
-  #[serde(rename = "type")]
-  pub _type: Option<Value>
+    /// The ID of the item to reference.
+    #[serde(rename = "id")]
+    pub id: String,
+    #[serde(rename = "type")]
+    pub _type: Option<Value>,
 }

@@ -11,12 +11,12 @@
 /// pub CreateAssistantRequestToolResources : A set of resources that are used by the assistant's tools. The resources are specific to the type of tool. For example, the `code_interpreter` tool requires a list of file IDs, while the `file_search` tool requires a list of vector store IDs.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct CreateAssistantRequestToolResources {
-  #[serde(rename = "code_interpreter")]
-  pub code_interpreter: Option<crate::models::CreateAssistantRequestToolResourcesCodeInterpreter>,
-  #[serde(rename = "file_search")]
-  pub file_search: Option<crate::models::CreateAssistantRequestToolResourcesFileSearch>
+    #[serde(rename = "code_interpreter")]
+    pub code_interpreter: Option<crate::models::CreateAssistantRequestToolResourcesCodeInterpreter>,
+    #[serde(rename = "file_search")]
+    pub file_search: Option<crate::models::CreateAssistantRequestToolResourcesFileSearch>,
 }

@@ -11,8 +11,7 @@
 /// pub RealtimeClientEvent : A realtime client event.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
-pub struct RealtimeClientEvent {
-}
+pub struct RealtimeClientEvent {}

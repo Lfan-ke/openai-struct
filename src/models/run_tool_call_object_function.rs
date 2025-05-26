@@ -11,14 +11,14 @@
 /// pub RunToolCallObjectFunction : The function definition.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct RunToolCallObjectFunction {
-  /// The arguments that the model expects you to pass to the function.
-  #[serde(rename = "arguments")]
-  pub arguments: String,
-  /// The name of the function.
-  #[serde(rename = "name")]
-  pub name: String
+    /// The arguments that the model expects you to pass to the function.
+    #[serde(rename = "arguments")]
+    pub arguments: String,
+    /// The name of the function.
+    #[serde(rename = "name")]
+    pub name: String,
 }

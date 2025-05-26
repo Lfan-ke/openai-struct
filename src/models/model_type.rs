@@ -11,14 +11,14 @@
 /// pub ModelType : An action to type in text.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ModelType {
-  /// The text to type.
-  #[serde(rename = "text")]
-  pub text: String,
-  /// Specifies the event type. For a type action, this property is  always set to `type`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// The text to type.
+    #[serde(rename = "text")]
+    pub text: String,
+    /// Specifies the event type. For a type action, this property is  always set to `type`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

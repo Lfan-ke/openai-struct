@@ -11,8 +11,7 @@
 /// pub StopConfiguration : Not supported with latest reasoning models `o3` and `o4-mini`.  Up to 4 sequences where the API will stop generating further tokens. The returned text will not contain the stop sequence.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
-pub struct StopConfiguration {
-}
+pub struct StopConfiguration {}

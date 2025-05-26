@@ -11,13 +11,13 @@
 /// pub AuditLogUserUpdated : The details for events with this `type`.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct AuditLogUserUpdated {
-  #[serde(rename = "changes_requested")]
-  pub changes_requested: Option<crate::models::AuditLogUserUpdatedChangesRequested>,
-  /// The project ID.
-  #[serde(rename = "id")]
-  pub id: Option<String>
+    #[serde(rename = "changes_requested")]
+    pub changes_requested: Option<crate::models::AuditLogUserUpdatedChangesRequested>,
+    /// The project ID.
+    #[serde(rename = "id")]
+    pub id: Option<String>,
 }

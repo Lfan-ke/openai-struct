@@ -8,15 +8,14 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct RunStepDetailsToolCallsCodeOutputImageObject {
-  #[serde(rename = "image")]
-  pub image: crate::models::RunStepDetailsToolCallsCodeOutputImageObjectImage,
-  /// Always `image`.
-  #[serde(rename = "type")]
-  pub _type: String
+    #[serde(rename = "image")]
+    pub image: crate::models::RunStepDetailsToolCallsCodeOutputImageObjectImage,
+    /// Always `image`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

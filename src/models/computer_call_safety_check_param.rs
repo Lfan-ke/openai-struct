@@ -11,15 +11,15 @@
 /// pub ComputerCallSafetyCheckParam : A pending safety check for the computer call.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ComputerCallSafetyCheckParam {
-  #[serde(rename = "code")]
-  pub code: Option<Value>,
-  /// The ID of the pending safety check.
-  #[serde(rename = "id")]
-  pub id: String,
-  #[serde(rename = "message")]
-  pub message: Option<Value>
+    #[serde(rename = "code")]
+    pub code: Option<Value>,
+    /// The ID of the pending safety check.
+    #[serde(rename = "id")]
+    pub id: String,
+    #[serde(rename = "message")]
+    pub message: Option<Value>,
 }

@@ -11,17 +11,17 @@
 /// pub ResponseFileSearchCallSearchingEvent : Emitted when a file search is currently searching.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ResponseFileSearchCallSearchingEvent {
-  /// The ID of the output item that the file search call is initiated.
-  #[serde(rename = "item_id")]
-  pub item_id: String,
-  /// The index of the output item that the file search call is searching.
-  #[serde(rename = "output_index")]
-  pub output_index: i32,
-  /// The type of the event. Always `response.file_search_call.searching`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// The ID of the output item that the file search call is initiated.
+    #[serde(rename = "item_id")]
+    pub item_id: String,
+    /// The index of the output item that the file search call is searching.
+    #[serde(rename = "output_index")]
+    pub output_index: i32,
+    /// The type of the event. Always `response.file_search_call.searching`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

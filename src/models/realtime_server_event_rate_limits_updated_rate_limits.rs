@@ -8,22 +8,21 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct RealtimeServerEventRateLimitsUpdatedRateLimits {
-  /// The maximum allowed value for the rate limit.
-  #[serde(rename = "limit")]
-  pub limit: Option<i32>,
-  /// The name of the rate limit (`requests`, `tokens`).
-  #[serde(rename = "name")]
-  pub name: Option<String>,
-  /// The remaining value before the limit is reached.
-  #[serde(rename = "remaining")]
-  pub remaining: Option<i32>,
-  /// Seconds until the rate limit resets.
-  #[serde(rename = "reset_seconds")]
-  pub reset_seconds: Option<f32>
+    /// The maximum allowed value for the rate limit.
+    #[serde(rename = "limit")]
+    pub limit: Option<i32>,
+    /// The name of the rate limit (`requests`, `tokens`).
+    #[serde(rename = "name")]
+    pub name: Option<String>,
+    /// The remaining value before the limit is reached.
+    #[serde(rename = "remaining")]
+    pub remaining: Option<i32>,
+    /// Seconds until the rate limit resets.
+    #[serde(rename = "reset_seconds")]
+    pub reset_seconds: Option<f32>,
 }

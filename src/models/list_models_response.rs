@@ -8,14 +8,13 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ListModelsResponse {
-  #[serde(rename = "data")]
-  pub data: Vec<crate::models::Model>,
-  #[serde(rename = "object")]
-  pub object: String
+    #[serde(rename = "data")]
+    pub data: Vec<crate::models::Model>,
+    #[serde(rename = "object")]
+    pub object: String,
 }

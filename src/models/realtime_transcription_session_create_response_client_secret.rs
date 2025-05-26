@@ -11,14 +11,14 @@
 /// pub RealtimeTranscriptionSessionCreateResponseClientSecret : Ephemeral key returned by the API. Only present when the session is created on the server via REST API.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct RealtimeTranscriptionSessionCreateResponseClientSecret {
-  /// Timestamp for when the token expires. Currently, all tokens expire after one minute.
-  #[serde(rename = "expires_at")]
-  pub expires_at: i32,
-  /// Ephemeral key usable in client environments to authenticate connections to the Realtime API. Use this in client-side environments rather than a standard API token, which should only be used server-side.
-  #[serde(rename = "value")]
-  pub value: String
+    /// Timestamp for when the token expires. Currently, all tokens expire after one minute.
+    #[serde(rename = "expires_at")]
+    pub expires_at: i32,
+    /// Ephemeral key usable in client environments to authenticate connections to the Realtime API. Use this in client-side environments rather than a standard API token, which should only be used server-side.
+    #[serde(rename = "value")]
+    pub value: String,
 }

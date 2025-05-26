@@ -11,10 +11,10 @@
 /// pub FineTuneSupervisedMethod : Configuration for the supervised fine-tuning method.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct FineTuneSupervisedMethod {
-  #[serde(rename = "hyperparameters")]
-  pub hyperparameters: Option<crate::models::FineTuneSupervisedMethodHyperparameters>
+    #[serde(rename = "hyperparameters")]
+    pub hyperparameters: Option<crate::models::FineTuneSupervisedMethodHyperparameters>,
 }

@@ -11,12 +11,10 @@
 /// pub ChatCompletionRole : The role of the author of a message
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
-pub struct ChatCompletionRole {
-}
-
+pub struct ChatCompletionRole {}
 
 // TODO enum
 // List of ChatCompletionRole

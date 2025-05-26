@@ -11,8 +11,7 @@
 /// pub ChunkingStrategyRequestParam : The chunking strategy used to chunk the file(s). If not set, will use the `auto` strategy.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
-pub struct ChunkingStrategyRequestParam {
-}
+pub struct ChunkingStrategyRequestParam {}

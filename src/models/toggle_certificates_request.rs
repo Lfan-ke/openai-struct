@@ -8,12 +8,11 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ToggleCertificatesRequest {
-  #[serde(rename = "certificate_ids")]
-  pub certificate_ids: Vec<String>
+    #[serde(rename = "certificate_ids")]
+    pub certificate_ids: Vec<String>,
 }

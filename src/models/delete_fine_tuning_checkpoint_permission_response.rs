@@ -8,19 +8,18 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct DeleteFineTuningCheckpointPermissionResponse {
-  /// Whether the fine-tuned model checkpoint permission was successfully deleted.
-  #[serde(rename = "deleted")]
-  pub deleted: bool,
-  /// The ID of the fine-tuned model checkpoint permission that was deleted.
-  #[serde(rename = "id")]
-  pub id: String,
-  /// The object type, which is always \"checkpoint.permission\".
-  #[serde(rename = "object")]
-  pub object: String
+    /// Whether the fine-tuned model checkpoint permission was successfully deleted.
+    #[serde(rename = "deleted")]
+    pub deleted: bool,
+    /// The ID of the fine-tuned model checkpoint permission that was deleted.
+    #[serde(rename = "id")]
+    pub id: String,
+    /// The object type, which is always \"checkpoint.permission\".
+    #[serde(rename = "object")]
+    pub object: String,
 }

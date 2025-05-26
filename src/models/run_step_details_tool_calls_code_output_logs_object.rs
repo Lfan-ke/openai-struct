@@ -11,14 +11,14 @@
 /// pub RunStepDetailsToolCallsCodeOutputLogsObject : Text output from the Code Interpreter tool call as part of a run step.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct RunStepDetailsToolCallsCodeOutputLogsObject {
-  /// The text output from the Code Interpreter tool call.
-  #[serde(rename = "logs")]
-  pub logs: String,
-  /// Always `logs`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// The text output from the Code Interpreter tool call.
+    #[serde(rename = "logs")]
+    pub logs: String,
+    /// Always `logs`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

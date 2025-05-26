@@ -11,23 +11,23 @@
 /// pub OutputMessage : An output message from the model.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct OutputMessage {
-  /// The content of the output message.
-  #[serde(rename = "content")]
-  pub content: Vec<crate::models::OutputContent>,
-  /// The unique ID of the output message.
-  #[serde(rename = "id")]
-  pub id: String,
-  /// The role of the output message. Always `assistant`.
-  #[serde(rename = "role")]
-  pub role: String,
-  /// The status of the message input. One of `in_progress`, `completed`, or `incomplete`. Populated when input items are returned via API.
-  #[serde(rename = "status")]
-  pub status: String,
-  /// The type of the output message. Always `message`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// The content of the output message.
+    #[serde(rename = "content")]
+    pub content: Vec<crate::models::OutputContent>,
+    /// The unique ID of the output message.
+    #[serde(rename = "id")]
+    pub id: String,
+    /// The role of the output message. Always `assistant`.
+    #[serde(rename = "role")]
+    pub role: String,
+    /// The status of the message input. One of `in_progress`, `completed`, or `incomplete`. Populated when input items are returned via API.
+    #[serde(rename = "status")]
+    pub status: String,
+    /// The type of the output message. Always `message`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

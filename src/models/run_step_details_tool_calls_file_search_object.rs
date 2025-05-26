@@ -8,18 +8,17 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct RunStepDetailsToolCallsFileSearchObject {
-  #[serde(rename = "file_search")]
-  pub file_search: crate::models::RunStepDetailsToolCallsFileSearchObjectFileSearch,
-  /// The ID of the tool call object.
-  #[serde(rename = "id")]
-  pub id: String,
-  /// The type of tool call. This is always going to be `file_search` for this type of tool call.
-  #[serde(rename = "type")]
-  pub _type: String
+    #[serde(rename = "file_search")]
+    pub file_search: crate::models::RunStepDetailsToolCallsFileSearchObjectFileSearch,
+    /// The ID of the tool call object.
+    #[serde(rename = "id")]
+    pub id: String,
+    /// The type of tool call. This is always going to be `file_search` for this type of tool call.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

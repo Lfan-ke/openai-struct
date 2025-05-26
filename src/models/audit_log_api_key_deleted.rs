@@ -11,11 +11,11 @@
 /// pub AuditLogApiKeyDeleted : The details for events with this `type`.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct AuditLogApiKeyDeleted {
-  /// The tracking ID of the API key.
-  #[serde(rename = "id")]
-  pub id: Option<String>
+    /// The tracking ID of the API key.
+    #[serde(rename = "id")]
+    pub id: Option<String>,
 }

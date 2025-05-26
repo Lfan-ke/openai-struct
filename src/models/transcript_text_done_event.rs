@@ -11,7 +11,7 @@
 /// pub TranscriptTextDoneEvent : Emitted when the transcription is complete. Contains the complete transcription text. Only emitted when you [create a transcription](/docs/api-reference/audio/create-transcription) with the `Stream` parameter set to `true`.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 // #[derive(Debug, Serialize, Deserialize)]
 // pub struct TranscriptTextDoneEvent {

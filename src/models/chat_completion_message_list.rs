@@ -11,23 +11,23 @@
 /// pub ChatCompletionMessageList : An object representing a list of chat completion messages.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ChatCompletionMessageList {
-  /// An array of chat completion message objects.
-  #[serde(rename = "data")]
-  pub data: Vec<Value>,
-  /// The identifier of the first chat message in the data array.
-  #[serde(rename = "first_id")]
-  pub first_id: String,
-  /// Indicates whether there are more chat messages available.
-  #[serde(rename = "has_more")]
-  pub has_more: bool,
-  /// The identifier of the last chat message in the data array.
-  #[serde(rename = "last_id")]
-  pub last_id: String,
-  /// The type of this object. It is always set to \"list\".
-  #[serde(rename = "object")]
-  pub object: String
+    /// An array of chat completion message objects.
+    #[serde(rename = "data")]
+    pub data: Vec<Value>,
+    /// The identifier of the first chat message in the data array.
+    #[serde(rename = "first_id")]
+    pub first_id: String,
+    /// Indicates whether there are more chat messages available.
+    #[serde(rename = "has_more")]
+    pub has_more: bool,
+    /// The identifier of the last chat message in the data array.
+    #[serde(rename = "last_id")]
+    pub last_id: String,
+    /// The type of this object. It is always set to \"list\".
+    #[serde(rename = "object")]
+    pub object: String,
 }

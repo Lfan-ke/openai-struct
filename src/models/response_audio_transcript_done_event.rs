@@ -11,11 +11,11 @@
 /// pub ResponseAudioTranscriptDoneEvent : Emitted when the full audio transcript is completed.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ResponseAudioTranscriptDoneEvent {
-  /// The type of the event. Always `response.audio.transcript.done`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// The type of the event. Always `response.audio.transcript.done`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

@@ -11,16 +11,16 @@
 /// pub MessageDeltaObject : Represents a message delta i.e. any changed fields on a message during streaming.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MessageDeltaObject {
-  #[serde(rename = "delta")]
-  pub delta: crate::models::MessageDeltaObjectDelta,
-  /// The identifier of the message, which can be referenced in API endpoints.
-  #[serde(rename = "id")]
-  pub id: String,
-  /// The object type, which is always `thread.message.delta`.
-  #[serde(rename = "object")]
-  pub object: String
+    #[serde(rename = "delta")]
+    pub delta: crate::models::MessageDeltaObjectDelta,
+    /// The identifier of the message, which can be referenced in API endpoints.
+    #[serde(rename = "id")]
+    pub id: String,
+    /// The object type, which is always `thread.message.delta`.
+    #[serde(rename = "object")]
+    pub object: String,
 }

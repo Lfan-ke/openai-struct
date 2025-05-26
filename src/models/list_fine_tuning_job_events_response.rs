@@ -8,16 +8,15 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ListFineTuningJobEventsResponse {
-  #[serde(rename = "data")]
-  pub data: Vec<crate::models::FineTuningJobEvent>,
-  #[serde(rename = "has_more")]
-  pub has_more: bool,
-  #[serde(rename = "object")]
-  pub object: String
+    #[serde(rename = "data")]
+    pub data: Vec<crate::models::FineTuningJobEvent>,
+    #[serde(rename = "has_more")]
+    pub has_more: bool,
+    #[serde(rename = "object")]
+    pub object: String,
 }

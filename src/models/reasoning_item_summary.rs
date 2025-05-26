@@ -8,16 +8,15 @@
  * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
  */
 
-
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ReasoningItemSummary {
-  /// A short summary of the reasoning used by the model when generating the response.
-  #[serde(rename = "text")]
-  pub text: String,
-  /// The type of the object. Always `summary_text`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// A short summary of the reasoning used by the model when generating the response.
+    #[serde(rename = "text")]
+    pub text: String,
+    /// The type of the object. Always `summary_text`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

@@ -11,17 +11,17 @@
 /// pub RealtimeServerEventOutputAudioBufferStarted : **WebRTC Only:** Emitted when the server begins streaming audio to the client. This event is emitted after an audio content part has been added (`response.content_part.added`) to the response. [Learn more](/docs/guides/realtime-model-capabilities#client-and-server-events-for-audio-in-webrtc).
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct RealtimeServerEventOutputAudioBufferStarted {
-  /// The unique ID of the server event.
-  #[serde(rename = "event_id")]
-  pub event_id: String,
-  /// The unique ID of the response that produced the audio.
-  #[serde(rename = "response_id")]
-  pub response_id: String,
-  /// The event type, must be `output_audio_buffer.started`.
-  #[serde(rename = "type")]
-  pub _type: String
+    /// The unique ID of the server event.
+    #[serde(rename = "event_id")]
+    pub event_id: String,
+    /// The unique ID of the response that produced the audio.
+    #[serde(rename = "response_id")]
+    pub response_id: String,
+    /// The event type, must be `output_audio_buffer.started`.
+    #[serde(rename = "type")]
+    pub _type: String,
 }

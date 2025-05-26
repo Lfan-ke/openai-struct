@@ -11,10 +11,10 @@
 /// pub AuditLogCertificatesActivated : The details for events with this `type`.
 
 #[allow(unused_imports)]
-use  serde_json::Value;
+use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct AuditLogCertificatesActivated {
-  #[serde(rename = "certificates")]
-  pub certificates: Option<Vec<crate::models::AuditLogCertificatesActivatedCertificates>>
+    #[serde(rename = "certificates")]
+    pub certificates: Option<Vec<crate::models::AuditLogCertificatesActivatedCertificates>>,
 }
