@@ -12,10 +12,10 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
-pub struct EvalJsonlFileContentSourceContent {
-  #[serde(rename = "item")]
-  item: ::std::collections::HashMap<String, crate::models::Object>,
-  #[serde(rename = "sample")]
-  sample: Option<::std::collections::HashMap<String, crate::models::Object>>
-}
+// #[derive(Debug, Serialize, Deserialize)]
+// pub struct EvalJsonlFileContentSourceContent {
+//   #[serde(rename = "item")]
+//   item: ::std::collections::HashMap<String, crate::models::Object>,
+//   #[serde(rename = "sample")]
+//   sample: Option<::std::collections::HashMap<String, crate::models::Object>>
+// }

@@ -12,15 +12,15 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
-pub struct TranscriptTextDeltaEventLogprobs {
-  /// The bytes that were used to generate the log probability.
-  #[serde(rename = "bytes")]
-  bytes: Option<Vec<crate::models::Object>>,
-  /// The log probability of the token.
-  #[serde(rename = "logprob")]
-  logprob: Option<f32>,
-  /// The token that was used to generate the log probability.
-  #[serde(rename = "token")]
-  token: Option<String>
-}
+// #[derive(Debug, Serialize, Deserialize)]
+// pub struct TranscriptTextDeltaEventLogprobs {
+//   /// The bytes that were used to generate the log probability.
+//   #[serde(rename = "bytes")]
+//   bytes: Option<Vec<crate::models::Object>>,
+//   /// The log probability of the token.
+//   #[serde(rename = "logprob")]
+//   logprob: Option<f32>,
+//   /// The token that was used to generate the log probability.
+//   #[serde(rename = "token")]
+//   token: Option<String>
+// }

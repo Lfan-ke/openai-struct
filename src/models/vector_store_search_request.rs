@@ -12,21 +12,21 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
-pub struct VectorStoreSearchRequest {
-  /// A filter to apply based on file attributes.
-  #[serde(rename = "filters")]
-  filters: Option<Value>,
-  /// The maximum number of results to return. This number should be between 1 and 50 inclusive.
-  #[serde(rename = "max_num_results")]
-  max_num_results: Option<i32>,
-  /// A query string for a search
-  #[serde(rename = "query")]
-  query: Value,
-  /// Ranking options for search.
-  #[serde(rename = "ranking_options")]
-  ranking_options: Option<::std::collections::HashMap<String, crate::models::Object>>,
-  /// Whether to rewrite the natural language query for vector search.
-  #[serde(rename = "rewrite_query")]
-  rewrite_query: Option<bool>
-}
+// #[derive(Debug, Serialize, Deserialize)]
+// pub struct VectorStoreSearchRequest {
+//   /// A filter to apply based on file attributes.
+//   #[serde(rename = "filters")]
+//   filters: Option<Value>,
+//   /// The maximum number of results to return. This number should be between 1 and 50 inclusive.
+//   #[serde(rename = "max_num_results")]
+//   max_num_results: Option<i32>,
+//   /// A query string for a search
+//   #[serde(rename = "query")]
+//   query: Value,
+//   /// Ranking options for search.
+//   #[serde(rename = "ranking_options")]
+//   ranking_options: Option<::std::collections::HashMap<String, crate::models::Object>>,
+//   /// Whether to rewrite the natural language query for vector search.
+//   #[serde(rename = "rewrite_query")]
+//   rewrite_query: Option<bool>
+// }

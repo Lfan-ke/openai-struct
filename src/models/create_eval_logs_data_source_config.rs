@@ -13,12 +13,12 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
-pub struct CreateEvalLogsDataSourceConfig {
-  /// Metadata filters for the logs data source.
-  #[serde(rename = "metadata")]
-  metadata: Option<::std::collections::HashMap<String, crate::models::Object>>,
-  /// The type of data source. Always `logs`.
-  #[serde(rename = "type")]
-  _type: String
-}
+// #[derive(Debug, Serialize, Deserialize)]
+// pub struct CreateEvalLogsDataSourceConfig {
+//   /// Metadata filters for the logs data source.
+//   #[serde(rename = "metadata")]
+//   metadata: Option<::std::collections::HashMap<String, crate::models::Object>>,
+//   /// The type of data source. Always `logs`.
+//   #[serde(rename = "type")]
+//   _type: String
+// }

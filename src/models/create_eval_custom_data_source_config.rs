@@ -13,15 +13,15 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
-pub struct CreateEvalCustomDataSourceConfig {
-  /// Whether the eval should expect you to populate the sample namespace (ie, by generating responses off of your data source)
-  #[serde(rename = "include_sample_schema")]
-  include_sample_schema: Option<bool>,
-  /// The json schema for each row in the data source.
-  #[serde(rename = "item_schema")]
-  item_schema: ::std::collections::HashMap<String, crate::models::Object>,
-  /// The type of data source. Always `custom`.
-  #[serde(rename = "type")]
-  _type: String
-}
+// #[derive(Debug, Serialize, Deserialize)]
+// pub struct CreateEvalCustomDataSourceConfig {
+//   /// Whether the eval should expect you to populate the sample namespace (ie, by generating responses off of your data source)
+//   #[serde(rename = "include_sample_schema")]
+//   include_sample_schema: Option<bool>,
+//   /// The json schema for each row in the data source.
+//   #[serde(rename = "item_schema")]
+//   item_schema: ::std::collections::HashMap<String, crate::models::Object>,
+//   /// The type of data source. Always `custom`.
+//   #[serde(rename = "type")]
+//   _type: String
+// }

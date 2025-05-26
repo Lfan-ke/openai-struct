@@ -13,14 +13,14 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
-pub struct EvalStoredCompletionsDataSourceConfig {
-  #[serde(rename = "metadata")]
-  metadata: Option<crate::models::Metadata>,
-  /// The json schema for the run data source items. Learn how to build JSON schemas [here](https://json-schema.org/).
-  #[serde(rename = "schema")]
-  schema: ::std::collections::HashMap<String, crate::models::Object>,
-  /// The type of data source. Always `stored_completions`.
-  #[serde(rename = "type")]
-  _type: String
-}
+// #[derive(Debug, Serialize, Deserialize)]
+// pub struct EvalStoredCompletionsDataSourceConfig {
+//   #[serde(rename = "metadata")]
+//   metadata: Option<crate::models::Metadata>,
+//   /// The json schema for the run data source items. Learn how to build JSON schemas [here](https://json-schema.org/).
+//   #[serde(rename = "schema")]
+//   schema: ::std::collections::HashMap<String, crate::models::Object>,
+//   /// The type of data source. Always `stored_completions`.
+//   #[serde(rename = "type")]
+//   _type: String
+// }
