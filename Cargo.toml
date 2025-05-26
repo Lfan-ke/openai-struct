@@ -1,0 +1,10 @@
+[package]
+name = "openai-api"
+version = "0.0.1"
+edition = "2024"
+authors = ["Leo Cheng <chengkelfan@qq.com>"]
+
+
+[dependencies]
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = { version = "1.0.140", features = ["default"] }
