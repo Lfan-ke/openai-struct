@@ -14,6 +14,6 @@ npm install @openapitools/openapi-generator-cli -g
 
 openapi-generator-cli validate -i openapi.yaml
 
-openapi-generator-cli generate -i openapi.yaml -g rust -o ./rust-client
-openapi-generator-cli generate -i openapi.yaml -g rust-server -o ./rust-server
+openapi-generator-cli generate -i openapi.yaml -g rust -o ./rust-client --skip-validate-spec
+openapi-generator-cli generate -i openapi.yaml -g rust-server -o ./rust-server --skip-validate-spec
 ```

@@ -8,3 +8,5 @@ authors = ["Leo Cheng <chengkelfan@qq.com>"]
 [dependencies]
 serde = { version = "1.0.219", features = ["derive"] }
 serde_json = { version = "1.0.140", features = ["default"] }
+serde_yaml = { version = "0.9.34" }
+serde_derive = { version = "1.0.219" }
