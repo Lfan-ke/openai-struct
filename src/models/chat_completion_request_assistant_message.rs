@@ -13,7 +13,7 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, PartialEq)]
 pub struct ChatCompletionRequestAssistantMessage {
     #[serde(rename = "audio")]
     pub audio: Option<crate::models::ChatCompletionRequestAssistantMessageAudio>,

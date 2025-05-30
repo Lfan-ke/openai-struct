@@ -11,7 +11,7 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone, PartialEq)]
 pub struct ChatCompletionMessageToolCall {
     #[serde(rename = "function")]
     pub function: crate::models::ChatCompletionMessageToolCallFunction,

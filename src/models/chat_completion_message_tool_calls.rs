@@ -12,6 +12,9 @@
 
 #[allow(unused_imports)]
 use serde_json::Value;
+use crate::ChatCompletionMessageToolCall;
+// #[derive(Debug, Serialize, Deserialize, PartialEq)]
+// pub struct ChatCompletionMessageToolCalls {}
 
-#[derive(Debug, Serialize, Deserialize)]
-pub struct ChatCompletionMessageToolCalls {}
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+pub struct ChatCompletionMessageToolCalls(Vec<ChatCompletionMessageToolCall>);
