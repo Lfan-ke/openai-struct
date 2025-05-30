@@ -1,6 +1,6 @@
 [package]
 name = "openai-struct"
-version = "0.0.3"
+version = "0.0.2"
 edition = "2024"
 authors = ["Leo Cheng <chengkelfan@qq.com>"]
 description = "利用openai的openapi生成的rust结构体"
