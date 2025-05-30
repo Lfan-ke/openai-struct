@@ -19,7 +19,4 @@ pub struct ChatCompletionRequestFunctionMessage {
     /// The name of the function to call.
     #[serde(rename = "name")]
     pub name: String,
-    /// The role of the messages author, in this case `function`.
-    #[serde(rename = "role")]
-    pub role: String,
 }

@@ -21,7 +21,4 @@ pub struct ChatCompletionRequestUserMessage {
     /// An optional name for the participant. Provides the model information to differentiate between participants of the same role.
     #[serde(rename = "name")]
     pub name: Option<String>,
-    /// The role of the messages author, in this case `user`.
-    #[serde(rename = "role")]
-    pub role: String,
 }

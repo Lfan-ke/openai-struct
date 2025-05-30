@@ -28,9 +28,6 @@ pub struct ChatCompletionRequestAssistantMessage {
     /// The refusal message by the assistant.
     #[serde(rename = "refusal")]
     pub refusal: Option<String>,
-    /// The role of the messages author, in this case `assistant`.
-    #[serde(rename = "role")]
-    pub role: String,
     #[serde(rename = "tool_calls")]
     pub tool_calls: Option<crate::models::ChatCompletionMessageToolCalls>,
 }

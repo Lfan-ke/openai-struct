@@ -16,9 +16,6 @@ pub struct ChatCompletionRequestToolMessage {
     /// The contents of the tool message.
     #[serde(rename = "content")]
     pub content: Value,
-    /// The role of the messages author, in this case `tool`.
-    #[serde(rename = "role")]
-    pub role: String,
     /// Tool call that this message is responding to.
     #[serde(rename = "tool_call_id")]
     pub tool_call_id: String,
