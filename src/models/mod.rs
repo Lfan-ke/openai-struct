@@ -1337,5 +1337,8 @@ pub use self::web_search_tool_call::WebSearchToolCall;
 mod web_search_user_location;
 pub use self::web_search_user_location::WebSearchUserLocation;
 
+pub mod finish_reason;
+pub use finish_reason::FinishReason;
+
 // TODO(farcaller): sort out files
 pub struct File;
