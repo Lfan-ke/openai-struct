@@ -13,8 +13,6 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-use serde_with::serde_as;
-
 #[derive(Debug, Serialize, Deserialize)]
 pub struct CreateChatCompletionResponse {
     /// A list of chat completion choices. Can be more than one if `n` is greater than 1.
@@ -30,8 +28,8 @@ pub struct CreateChatCompletionResponse {
     #[serde(rename = "model")]
     pub model: String,
     /// The object type, which is always `chat.completion`.
-    #[serde_as(default = "\"chat.completion\".to_string()")]
     #[serde(rename = "object")]
+    #[serde(default = "default_object")]
     pub object: String,
     #[serde(rename = "service_tier")]
     pub service_tier: Option<crate::models::ServiceTier>,
@@ -40,4 +38,8 @@ pub struct CreateChatCompletionResponse {
     pub system_fingerprint: Option<String>,
     #[serde(rename = "usage")]
     pub usage: Option<crate::models::CompletionUsage>,
+}
+
+fn default_object() -> String {
+    "chat.completion".into()
 }

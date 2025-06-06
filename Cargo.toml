@@ -12,4 +12,3 @@ keywords = ["codegen", "openai", "openapi"]
 serde = { version = "1.0.219", features = ["derive"] }
 serde_json = { version = "1.0.140", features = ["default"] }
 serde_derive = { version = "1.0.219" }
-serde_with = "2.3.3"
