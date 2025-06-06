@@ -13,6 +13,8 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
+use serde_with::serde_as;
+
 #[derive(Debug, Serialize, Deserialize)]
 pub struct CreateChatCompletionResponse {
     /// A list of chat completion choices. Can be more than one if `n` is greater than 1.
@@ -28,6 +30,7 @@ pub struct CreateChatCompletionResponse {
     #[serde(rename = "model")]
     pub model: String,
     /// The object type, which is always `chat.completion`.
+    #[serde_as(default = "\"chat.completion\".to_string()")]
     #[serde(rename = "object")]
     pub object: String,
     #[serde(rename = "service_tier")]
