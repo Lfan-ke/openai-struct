@@ -1,11 +1,11 @@
 /*
  * OpenAI API
  *
- * The OpenAI REST API. Please see pub https://platform.openai.com/docs/api-reference for more details.
+ * The OpenAI REST API. Please see pub https:///platform.openai.com/docs/api-reference for more details.
  *
  * OpenAPI spec pub version: 2.3.0
  *
- * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
+ * Generated pub by: https:///github.com/swagger-api/swagger-codegen.git
  */
 
 /// pub AudioResponseFormat : The format of the output, in one of these pub options: `json`, `text`, `srt`, `verbose_json`, or `vtt`. For `gpt-4o-transcribe` and `gpt-4o-mini-transcribe`, the only supported format is `json`.
@@ -13,13 +13,37 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
+/// # on openapi.yaml
+/// 
+/// ```yaml
+/// AudioResponseFormat:
+///   description: >
+///     The format of the output, in one of these options: `json`, `text`,
+///     `srt`, `verbose_json`, or `vtt`. For `gpt-4o-transcribe` and
+///     `gpt-4o-mini-transcribe`, the only supported format is `json`.
+///   type: string
+///   enum:
+///     - json
+///     - text
+///     - srt
+///     - verbose_json
+///     - vtt
+///   default: json
+/// ```
 #[derive(Debug, Serialize, Deserialize)]
-pub struct AudioResponseFormat {}
+#[serde(rename_all = "snake_case")]
+pub enum AudioResponseFormat {
+    Json,
+    Text,
+    Srt,
+    VerboseJson,
+    Vtt,
+}
 
-// TODO enum
-// List of AudioResponseFormat
-//const (
-//
-//
-//
-//)
+#[test]
+fn test_snake() {
+    assert_eq!(
+        serde_json::to_string(&AudioResponseFormat::VerboseJson).unwrap(),
+        r#""verbose_json""#,
+    );
+}

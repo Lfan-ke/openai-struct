@@ -13,5 +13,25 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
+use crate::{
+    InputContent,
+    OutputContent,
+};
+
+/// # on openapi.yaml
+/// 
+/// ```yaml
+/// Content:
+///   description: |
+///     Multi-modal input and output contents.
+///   oneOf:
+///     - title: Input content types
+///       $ref: "#/components/schemas/InputContent"
+///     - title: Output content types
+///       $ref: "#/components/schemas/OutputContent"
+/// ```
 #[derive(Debug, Serialize, Deserialize)]
-pub struct Content {}
+pub enum Content {
+    Input(InputContent),
+    Output(OutputContent),
+}

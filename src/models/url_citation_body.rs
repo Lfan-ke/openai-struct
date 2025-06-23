@@ -24,9 +24,6 @@ pub struct UrlCitationBody {
     /// The title of the web resource.
     #[serde(rename = "title")]
     pub title: String,
-    /// The type of the URL citation. Always `url_citation`.
-    #[serde(rename = "type")]
-    pub _type: String,
     /// The URL of the web resource.
     #[serde(rename = "url")]
     pub url: String,

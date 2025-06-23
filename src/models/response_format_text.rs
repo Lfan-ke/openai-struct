@@ -13,9 +13,24 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
+/// # on openapi.yaml
+///
+/// ```yaml
+/// ResponseFormatText:
+///   type: object
+///   title: Text
+///   description: |
+///     Default response format. Used to generate text responses.
+///   properties:
+///     type:
+///       type: string
+///       description: The type of response format being defined. Always `text`.
+///       enum:
+///         - text
+///       x-stainless-const: true
+///   required:
+///     - type
+/// ```
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ResponseFormatText {
-    /// The type of response format being defined. Always `text`.
-    #[serde(rename = "type")]
-    pub _type: String,
 }

@@ -11,6 +11,29 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
+/// # on openapi.yaml
+/// 
+/// ```yaml
+/// ApiKeyList:
+///   type: object
+///   properties:
+///     object:
+///       type: string
+///       example: list
+///     data:
+///       type: array
+///       items:
+///         $ref: "#/components/schemas/AdminApiKey"
+///     has_more:
+///       type: boolean
+///       example: false
+///     first_id:
+///       type: string
+///       example: key_abc
+///     last_id:
+///       type: string
+///       example: key_xyz
+/// ```
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ApiKeyList {
     #[serde(rename = "data")]

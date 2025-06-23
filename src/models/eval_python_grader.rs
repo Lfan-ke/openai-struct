@@ -29,5 +29,10 @@ pub struct EvalPythonGrader {
     pub source: String,
     /// The object type, which is always `python`.
     #[serde(rename = "type")]
+    #[serde(default = "default_type")]
     pub _type: String,
+}
+
+fn default_type() -> String {
+    "python".into()
 }

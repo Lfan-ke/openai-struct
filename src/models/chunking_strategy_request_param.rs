@@ -13,5 +13,25 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
+use crate::{
+    AutoChunkingStrategyRequestParam,
+    StaticChunkingStrategyRequestParam,
+};
+
+/// # on openapi.yaml
+/// 
+/// ```yaml
+/// ChunkingStrategyRequestParam:
+///   type: object
+///   description:
+///     The chunking strategy used to chunk the file(s). If not set, will
+///     use the `auto` strategy.
+///   oneOf:
+///     - $ref: "#/components/schemas/AutoChunkingStrategyRequestParam"
+///     - $ref: "#/components/schemas/StaticChunkingStrategyRequestParam"
+/// ```
 #[derive(Debug, Serialize, Deserialize)]
-pub struct ChunkingStrategyRequestParam {}
+pub enum ChunkingStrategyRequestParam {
+    Auto(AutoChunkingStrategyRequestParam),
+    Static(StaticChunkingStrategyRequestParam),
+}

@@ -13,13 +13,35 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
+/// # on openapi.yaml
+/// 
+/// ```yaml
+/// ChatCompletionRole:
+///   type: string
+///   description: The role of the author of a message
+///   enum:
+///     - developer
+///     - system
+///     - user
+///     - assistant
+///     - tool
+///     - function
+/// ```
 #[derive(Debug, Serialize, Deserialize)]
-pub struct ChatCompletionRole {}
+#[serde(rename_all = "snake_case")]
+pub enum ChatCompletionRole {
+    Developer,
+    System,
+    User,
+    Assistant,
+    Tool,
+    Function,
+}
 
-// TODO enum
-// List of ChatCompletionRole
-//const (
-//
-//
-//
-//)
+#[test]
+fn test_role() {
+    assert_eq!(
+        serde_json::to_string(&ChatCompletionRole::Developer).unwrap(),
+        r#""developer""#
+    );
+}

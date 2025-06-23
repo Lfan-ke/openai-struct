@@ -29,11 +29,21 @@ pub struct EvalScoreModelGrader {
     pub pass_threshold: Option<f32>,
     /// The range of the score. Defaults to `[0, 1]`.
     #[serde(rename = "range")]
+    #[serde(default = "default_range")]
     pub range: Option<Vec<f32>>,
     /// The sampling parameters for the model.
     #[serde(rename = "sampling_params")]
     pub sampling_params: Option<Value>,
     /// The object type, which is always `score_model`.
     #[serde(rename = "type")]
+    #[serde(default = "default_type")]
     pub _type: String,
+}
+
+fn default_type() -> String {
+    "score_model".into()
+}
+
+fn default_range() -> Option<Vec<f32>> {
+    Some(vec![0f32, 1f32])
 }

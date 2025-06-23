@@ -17,7 +17,8 @@ use serde_json::Value;
 pub struct FileSearchRankingOptions {
     #[serde(rename = "ranker")]
     pub ranker: Option<crate::models::FileSearchRanker>,
-    /// The score threshold for the file search. All values must be a floating point number between 0 and 1.
+    /// The score threshold for the file search.
+    /// All values must be a floating point number between 0 and 1.
     #[serde(rename = "score_threshold")]
     pub score_threshold: f32,
 }

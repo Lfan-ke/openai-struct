@@ -19,5 +19,10 @@ pub struct ChatCompletionRequestMessageContentPartAudio {
     pub input_audio: crate::models::ChatCompletionRequestMessageContentPartAudioInputAudio,
     /// The type of the content part. Always `input_audio`.
     #[serde(rename = "type")]
+    #[serde(default = "default_type")]
     pub _type: String,
+}
+
+fn default_type() -> String {
+    "input_audio".into()
 }

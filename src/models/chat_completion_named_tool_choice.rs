@@ -19,5 +19,10 @@ pub struct ChatCompletionNamedToolChoice {
     pub function: crate::models::AssistantsNamedToolChoiceFunction,
     /// The type of the tool. Currently, only `function` is supported.
     #[serde(rename = "type")]
+    #[serde(default = "default_type")]
     pub _type: String,
+}
+
+fn default_type() -> String {
+    "function".into()
 }

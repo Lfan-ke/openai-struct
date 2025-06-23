@@ -11,5 +11,22 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
+use crate::{
+    InputTextContent, InputImageContent, InputFileContent, 
+};
+
+/// # on openapi.yaml
+/// 
+/// ```yaml
+/// InputContent:
+///   oneOf:
+///     - $ref: "#/components/schemas/InputTextContent"
+///     - $ref: "#/components/schemas/InputImageContent"
+///     - $ref: "#/components/schemas/InputFileContent"
+/// ```
 #[derive(Debug, Serialize, Deserialize)]
-pub struct InputContent {}
+pub enum InputContent {
+    Text(InputTextContent),
+    Image(InputImageContent),
+    File(InputFileContent),
+}

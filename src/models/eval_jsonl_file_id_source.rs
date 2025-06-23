@@ -18,5 +18,10 @@ pub struct EvalJsonlFileIdSource {
     pub id: String,
     /// The type of jsonl source. Always `file_id`.
     #[serde(rename = "type")]
+    #[serde(default = "default_type")]
     pub _type: String,
+}
+
+fn default_type() -> String {
+    "file_id".into()
 }

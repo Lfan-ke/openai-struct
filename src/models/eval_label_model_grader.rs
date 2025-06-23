@@ -31,5 +31,10 @@ pub struct EvalLabelModelGrader {
     pub passing_labels: Vec<String>,
     /// The object type, which is always `label_model`.
     #[serde(rename = "type")]
+    #[serde(default = "default_type")]
     pub _type: String,
+}
+
+fn default_type() -> String {
+    "label_model".into()
 }

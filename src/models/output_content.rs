@@ -11,5 +11,20 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
+use crate::{
+    OutputTextContent, RefusalContent, 
+};
+
+/// # on openapi.yaml
+/// 
+/// ```yaml
+/// OutputContent:
+///   oneOf:
+///     - $ref: "#/components/schemas/OutputTextContent"
+///     - $ref: "#/components/schemas/RefusalContent"
+/// ```
 #[derive(Debug, Serialize, Deserialize)]
-pub struct OutputContent {}
+pub enum OutputContent {
+    OutputText(OutputTextContent),
+    RefusalContent(RefusalContent),
+}

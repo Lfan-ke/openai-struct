@@ -11,6 +11,22 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
+/// # on openapi.yaml
+/// 
+/// ```yaml
+/// AssistantToolsFileSearchTypeOnly:
+///   type: object
+///   title: FileSearch tool
+///   properties:
+///     type:
+///       type: string
+///       description: "The type of tool being defined: `file_search`"
+///       enum:
+///         - file_search
+///       x-stainless-const: true
+///   required:
+///     - type
+/// ```
 #[derive(Debug, Serialize, Deserialize)]
 pub struct AssistantToolsFileSearchTypeOnly {
     /// The type of tool being defined: `file_search`

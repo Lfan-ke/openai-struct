@@ -21,7 +21,4 @@ pub struct FilePath {
     /// The index of the file in the list of files.
     #[serde(rename = "index")]
     pub index: i32,
-    /// The type of the file path. Always `file_path`.
-    #[serde(rename = "type")]
-    pub _type: String,
 }

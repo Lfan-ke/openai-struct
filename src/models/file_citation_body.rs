@@ -21,7 +21,4 @@ pub struct FileCitationBody {
     /// The index of the file in the list of files.
     #[serde(rename = "index")]
     pub index: i32,
-    /// The type of the file citation. Always `file_citation`.
-    #[serde(rename = "type")]
-    pub _type: String,
 }

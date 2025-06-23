@@ -25,8 +25,13 @@ pub struct FileSearchTool {
     pub ranking_options: Option<crate::models::RankingOptions>,
     /// The type of the file search tool. Always `file_search`.
     #[serde(rename = "type")]
+    #[serde(default = "default_type")]
     pub _type: String,
     /// The IDs of the vector stores to search.
     #[serde(rename = "vector_store_ids")]
     pub vector_store_ids: Vec<String>,
+}
+
+fn default_type() -> String {
+    "file_search".into()
 }

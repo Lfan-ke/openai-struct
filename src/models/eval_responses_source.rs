@@ -47,8 +47,13 @@ pub struct EvalResponsesSource {
     pub top_p: Option<f32>,
     /// The type of run data source. Always `responses`.
     #[serde(rename = "type")]
+    #[serde(default = "default_type")]
     pub _type: String,
     /// List of user identifiers. This is a query parameter used to select responses.
     #[serde(rename = "users")]
     pub users: Option<Vec<String>>,
+}
+
+fn default_type() -> String {
+    "responses".into()
 }

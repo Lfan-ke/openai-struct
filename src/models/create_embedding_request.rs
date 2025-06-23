@@ -11,6 +11,7 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
+/// todo：长改看
 #[derive(Debug, Serialize, Deserialize)]
 pub struct CreateEmbeddingRequest {
     /// The number of dimensions the resulting output embeddings should have. Only supported in `text-embedding-3` and later models.

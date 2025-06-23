@@ -20,5 +20,10 @@ pub struct Drag {
     pub path: Vec<crate::models::Coordinate>,
     /// Specifies the event type. For a drag action, this property is  always set to `drag`.
     #[serde(rename = "type")]
+    #[serde(default = "default_type")]
     pub _type: String,
+}
+
+fn default_type() -> String {
+    "drag".into()
 }

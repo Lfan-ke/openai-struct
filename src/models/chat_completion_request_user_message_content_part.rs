@@ -11,5 +11,27 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
+use crate::{
+    ChatCompletionRequestMessageContentPartText,
+    ChatCompletionRequestMessageContentPartImage,
+    ChatCompletionRequestMessageContentPartAudio,
+    ChatCompletionRequestMessageContentPartFile,
+};
+
+/// # on openapi.yaml
+/// 
+/// ```yaml
+/// ChatCompletionRequestUserMessageContentPart:
+///   oneOf:
+///     - $ref: "#/components/schemas/ChatCompletionRequestMessageContentPartText"
+///     - $ref: "#/components/schemas/ChatCompletionRequestMessageContentPartImage"
+///     - $ref: "#/components/schemas/ChatCompletionRequestMessageContentPartAudio"
+///     - $ref: "#/components/schemas/ChatCompletionRequestMessageContentPartFile"
+/// ```
 #[derive(Debug, Serialize, Deserialize)]
-pub struct ChatCompletionRequestUserMessageContentPart {}
+pub enum ChatCompletionRequestUserMessageContentPart {
+    Text(ChatCompletionRequestMessageContentPartText),
+    Image(ChatCompletionRequestMessageContentPartImage),
+    Audio(ChatCompletionRequestMessageContentPartAudio),
+    File(ChatCompletionRequestMessageContentPartFile),
+}

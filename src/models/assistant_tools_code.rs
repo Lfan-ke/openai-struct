@@ -11,6 +11,22 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
+/// # on openapi.yaml
+/// 
+/// ```yaml
+/// AssistantToolsCode:
+///   type: object
+///   title: Code interpreter tool
+///   properties:
+///     type:
+///       type: string
+///       description: "The type of tool being defined: `code_interpreter`"
+///       enum:
+///         - code_interpreter
+///       x-stainless-const: true
+///   required:
+///     - type
+/// ```
 #[derive(Debug, Serialize, Deserialize)]
 pub struct AssistantToolsCode {
     /// The type of tool being defined: `code_interpreter`

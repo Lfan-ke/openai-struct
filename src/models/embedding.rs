@@ -23,5 +23,10 @@ pub struct Embedding {
     pub index: i32,
     /// The object type, which is always \"embedding\".
     #[serde(rename = "object")]
+    #[serde(default = "default_object")]
     pub object: String,
+}
+
+fn default_object() -> String {
+    "embedding".into()
 }

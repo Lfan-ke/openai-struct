@@ -11,6 +11,7 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
+/// todo: 太长，之后再看
 #[derive(Debug, Serialize, Deserialize)]
 pub struct CreateAssistantRequest {
     /// The description of the assistant. The maximum length is 512 characters.

@@ -13,6 +13,28 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
+/// # on openapi.yaml
+/// 
+/// ```yaml
+/// ErrorEvent:
+///   type: object
+///   properties:
+///     event:
+///       type: string
+///       enum:
+///         - error
+///       x-stainless-const: true
+///     data:
+///       $ref: "#/components/schemas/Error"
+///   required:
+///     - event
+///     - data
+///   description:
+///     Occurs when an [error](/docs/guides/error-codes#api-errors) occurs.
+///     This can happen due to an internal server error or a timeout.
+///   x-oaiMeta:
+///     dataDescription: "`data` is an [error](/docs/guides/error-codes#api-errors)"
+/// ```
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ErrorEvent {
     #[serde(rename = "data")]

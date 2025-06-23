@@ -23,5 +23,10 @@ pub struct EvalItem {
     pub role: String,
     /// The type of the message input. Always `message`.
     #[serde(rename = "type")]
+    #[serde(default = "default_type")]
     pub _type: Option<String>,
+}
+
+fn default_type() -> Option<String> {
+    Some("message".into())
 }

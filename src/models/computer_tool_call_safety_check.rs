@@ -1,11 +1,11 @@
 /*
  * OpenAI API
  *
- * The OpenAI REST API. Please see pub https://platform.openai.com/docs/api-reference for more details.
+ * The OpenAI REST API. Please see pub https:///platform.openai.com/docs/api-reference for more details.
  *
  * OpenAPI spec pub version: 2.3.0
  *
- * Generated pub by: https://github.com/swagger-api/swagger-codegen.git
+ * Generated pub by: https:///github.com/swagger-api/swagger-codegen.git
  */
 
 /// pub ComputerToolCallSafetyCheck : A pending safety check for the computer call.
@@ -13,6 +13,28 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
+/// # on openapi.yaml
+/// 
+/// ```yaml
+/// ComputerToolCallSafetyCheck:
+///   type: object
+///   description: |
+///     A pending safety check for the computer call.
+///   properties:
+///     id:
+///       type: string
+///       description: The ID of the pending safety check.
+///     code:
+///       type: string
+///       description: The type of the pending safety check.
+///     message:
+///       type: string
+///       description: Details about the pending safety check.
+///   required:
+///     - id
+///     - code
+///     - message
+/// ```
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ComputerToolCallSafetyCheck {
     /// The type of the pending safety check.

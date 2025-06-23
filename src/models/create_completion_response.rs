@@ -13,6 +13,7 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
+/// todo: 长，改天看
 #[derive(Debug, Serialize, Deserialize)]
 pub struct CreateCompletionResponse {
     /// The list of completion choices the model generated for the input prompt.

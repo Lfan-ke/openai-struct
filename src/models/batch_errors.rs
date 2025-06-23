@@ -17,5 +17,10 @@ pub struct BatchErrors {
     pub data: Option<Vec<crate::models::BatchErrorsData>>,
     /// The object type, which is always `list`.
     #[serde(rename = "object")]
+    #[serde(default = "default_object")]
     pub object: Option<String>,
+}
+
+fn default_object() -> Option<String> {
+    Some("auto".into())
 }

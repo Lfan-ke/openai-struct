@@ -11,6 +11,7 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
+/// todo: 太长，之后看！
 #[derive(Debug, Serialize, Deserialize)]
 pub struct CreateChatCompletionRequest {
     #[serde(rename = "metadata")]

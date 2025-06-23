@@ -28,6 +28,11 @@ pub struct EvalStringCheckGrader {
     #[serde(rename = "reference")]
     pub reference: String,
     /// The object type, which is always `string_check`.
+    #[serde(default = "default_type")]
     #[serde(rename = "type")]
     pub _type: String,
+}
+
+fn default_type() -> String {
+    "string_check".into()
 }

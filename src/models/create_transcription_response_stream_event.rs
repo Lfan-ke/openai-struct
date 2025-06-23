@@ -11,5 +11,20 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
+// use crate::{
+//     TranscriptTextDeltaEvent,
+//     TranscriptTextDoneEvent,
+// };
+
+/// # on openapi.yaml
+/// 
+/// ```yaml
+/// CreateTranscriptionResponseStreamEvent:
+///   anyOf:
+///     - $ref: "#/components/schemas/TranscriptTextDeltaEvent"
+///     - $ref: "#/components/schemas/TranscriptTextDoneEvent"
+///   discriminator:
+///     propertyName: type
+/// ```
 #[derive(Debug, Serialize, Deserialize)]
-pub struct CreateTranscriptionResponseStreamEvent {}
+pub enum CreateTranscriptionResponseStreamEvent {}

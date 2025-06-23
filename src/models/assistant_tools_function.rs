@@ -11,6 +11,25 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
+/// # on openapi.yaml
+/// 
+/// ```yaml
+/// AssistantToolsFunction:
+///   type: object
+///   title: Function tool
+///   properties:
+///     type:
+///       type: string
+///       description: "The type of tool being defined: `function`"
+///       enum:
+///         - function
+///       x-stainless-const: true
+///     function:
+///       $ref: "#/components/schemas/FunctionObject"
+///   required:
+///     - type
+///     - function
+/// ```
 #[derive(Debug, Serialize, Deserialize)]
 pub struct AssistantToolsFunction {
     #[serde(rename = "function")]

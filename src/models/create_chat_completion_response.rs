@@ -13,6 +13,7 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
+/// todo: 过长之后看
 #[derive(Debug, Serialize, Deserialize)]
 pub struct CreateChatCompletionResponse {
     /// A list of chat completion choices. Can be more than one if `n` is greater than 1.

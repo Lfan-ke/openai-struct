@@ -11,5 +11,21 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
+use crate::{
+    CodeInterpreterTextOutput,
+    CodeInterpreterFileOutput,
+};
+
+/// # on openapi.yaml
+/// 
+/// ```yaml
+/// CodeInterpreterToolOutput:
+///   oneOf:
+///     - $ref: "#/components/schemas/CodeInterpreterTextOutput"
+///     - $ref: "#/components/schemas/CodeInterpreterFileOutput"
+/// ```
 #[derive(Debug, Serialize, Deserialize)]
-pub struct CodeInterpreterToolOutput {}
+pub enum CodeInterpreterToolOutput {
+    TextOutput(CodeInterpreterTextOutput),
+    FileOutput(CodeInterpreterFileOutput),
+}

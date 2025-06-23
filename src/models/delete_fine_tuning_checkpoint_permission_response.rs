@@ -21,5 +21,10 @@ pub struct DeleteFineTuningCheckpointPermissionResponse {
     pub id: String,
     /// The object type, which is always \"checkpoint.permission\".
     #[serde(rename = "object")]
+    #[serde(default = "default_object")]
     pub object: String,
+}
+
+fn default_object() -> String {
+    "checkpoint.permission".into()
 }

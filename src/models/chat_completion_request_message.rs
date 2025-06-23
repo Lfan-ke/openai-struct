@@ -47,18 +47,15 @@ fn test_serde_chat_completion_request_message() {
         }
     );
     
-    // 序列化测试
     let serialized = serde_json::to_string(&tmp).unwrap();
     assert_eq!(
         serialized, 
         r#"{"role":"user","content":"once upon a time","name":null}"#
     );
     
-    // 反序列化测试（明确指定类型）
     let deserialized: ChatCompletionRequestMessage = serde_json::from_str(&serialized).unwrap();
     assert_eq!(tmp, deserialized);
     
-    // 直接反序列化测试
     let emm: ChatCompletionRequestMessage = serde_json::from_str(
         r#"{"content":"once upon a time","name":null,"role":"user"}"#
     ).unwrap();

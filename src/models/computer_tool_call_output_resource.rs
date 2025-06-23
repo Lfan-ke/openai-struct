@@ -11,6 +11,21 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
+/// # on openapi.yaml
+/// 
+/// ```yaml
+/// ComputerToolCallOutputResource:
+///   allOf:
+///     - $ref: "#/components/schemas/ComputerToolCallOutput"
+///     - type: object
+///       properties:
+///         id:
+///           type: string
+///           description: |
+///             The unique ID of the computer call tool output.
+///       required:
+///         - id
+/// ```
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ComputerToolCallOutputResource {
     /// The safety checks reported by the API that have been acknowledged by the  developer.
@@ -29,5 +44,10 @@ pub struct ComputerToolCallOutputResource {
     pub status: Option<String>,
     /// The type of the computer tool call output. Always `computer_call_output`.
     #[serde(rename = "type")]
+    #[serde(default =  "default_type")]
     pub _type: String,
+}
+
+fn default_type() -> String {
+    "computer_call_output".into()
 }

@@ -31,5 +31,10 @@ pub struct EvalStoredCompletionsSource {
     pub model: Option<String>,
     /// The type of source. Always `stored_completions`.
     #[serde(rename = "type")]
+    #[serde(default = "default_type")]
     pub _type: String,
+}
+
+fn default_type() -> String {
+    "stored_completions".into()
 }

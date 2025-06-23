@@ -17,6 +17,7 @@ use serde_json::Value;
 pub struct DoubleClick {
     /// Specifies the event type. For a double click action, this property is  always set to `double_click`.
     #[serde(rename = "type")]
+    #[serde(default = "default_type")]
     pub _type: String,
     /// The x-coordinate where the double click occurred.
     #[serde(rename = "x")]
@@ -24,4 +25,8 @@ pub struct DoubleClick {
     /// The y-coordinate where the double click occurred.
     #[serde(rename = "y")]
     pub y: i32,
+}
+
+fn default_type() -> String {
+    "double_click".into()
 }

@@ -13,13 +13,34 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
+/// # on openapi.yaml
+///
+/// ```yaml
+/// FileSearchRanker:
+///   type: string
+///   description:
+///     The ranker to use for the file search. If not specified will use
+///     the `auto` ranker.
+///   enum:
+///     - auto
+///     - default_2024_08_21
+/// ```
 #[derive(Debug, Serialize, Deserialize)]
-pub struct FileSearchRanker {}
+#[serde(rename_all = "snake_case")]
+pub enum FileSearchRanker {
+    Auto,
+    #[serde(rename = "default_2024_08_21")]
+    Default20240821,
+}
 
-// TODO enum
-// List of FileSearchRanker
-//const (
-//
-//
-//
-//)
+#[test]
+fn test_ranker() {
+    assert_eq!(
+        serde_json::to_string(&FileSearchRanker::Auto).unwrap(),
+        "\"auto\""
+    );
+    assert_eq!(
+        serde_json::to_string(&FileSearchRanker::Default20240821).unwrap(),
+        "\"default_2024_08_21\""
+    );
+}

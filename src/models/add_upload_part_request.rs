@@ -11,9 +11,20 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-/// On OpenApi.yaml:
+/// # on openapi.yaml:
+/// 
 /// ```yaml
-///
+/// AddUploadPartRequest:
+///   type: object
+///   additionalProperties: false
+///   properties:
+///     data:
+///       description: |
+///         The chunk of bytes for this Part.
+///       type: string
+///       format: binary
+///   required:
+///     - data
 /// ```
 #[derive(Debug, Serialize, Deserialize)]
 pub struct AddUploadPartRequest {

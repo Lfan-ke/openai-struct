@@ -39,6 +39,7 @@ pub struct EvalRun {
     pub name: String,
     /// The type of the object. Always \"eval.run\".
     #[serde(rename = "object")]
+    #[serde(default = "default_object")]
     pub object: String,
     /// Usage statistics for each model during the evaluation run.
     #[serde(rename = "per_model_usage")]
@@ -54,4 +55,8 @@ pub struct EvalRun {
     /// The status of the evaluation run.
     #[serde(rename = "status")]
     pub status: String,
+}
+
+fn default_object() -> String {
+    "eval.run".into()
 }

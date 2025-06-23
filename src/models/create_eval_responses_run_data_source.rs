@@ -26,5 +26,10 @@ pub struct CreateEvalResponsesRunDataSource {
     pub source: Value,
     /// The type of run data source. Always `completions`.
     #[serde(rename = "type")]
+    #[serde(default = "default_type")]
     pub _type: String,
+}
+
+fn default_type() -> String {
+    "completions".into()
 }

@@ -9,6 +9,6 @@ repository = "https://github.com/Lfan-ke/openai-api.git"
 keywords = ["codegen", "openai", "openapi"]
 
 [dependencies]
-serde = { version = "1.0.219", features = ["derive"] }
-serde_json = { version = "1.0.140", features = ["default"] }
-serde_derive = { version = "1.0.219" }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = { version = "1.0", features = ["default"] }
+serde_derive = { version = "1.0" }

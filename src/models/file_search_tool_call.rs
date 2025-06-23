@@ -26,8 +26,13 @@ pub struct FileSearchToolCall {
     pub results: Option<Vec<crate::models::FileSearchToolCallResults>>,
     /// The status of the file search tool call. One of `in_progress`,  `searching`, `incomplete` or `failed`,
     #[serde(rename = "status")]
+    #[serde(default = "default_type")]
     pub status: String,
     /// The type of the file search tool call. Always `file_search_call`.
     #[serde(rename = "type")]
     pub _type: String,
+}
+
+fn default_type() -> String {
+    "file_search_call".into()
 }

@@ -25,7 +25,12 @@ pub struct ThreadObject {
     pub metadata: crate::models::Metadata,
     /// The object type, which is always `thread`.
     #[serde(rename = "object")]
+    #[serde(default = "default_object")]
     pub object: String,
     #[serde(rename = "tool_resources")]
     pub tool_resources: crate::models::ModifyThreadRequestToolResources,
+}
+
+fn default_object() -> String {
+    return "thread".into()
 }

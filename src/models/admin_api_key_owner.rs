@@ -11,6 +11,11 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
+/// # on openapi.yaml
+/// 
+/// ```yaml
+/// 
+/// ```
 #[derive(Debug, Serialize, Deserialize)]
 pub struct AdminApiKeyOwner {
     /// The Unix timestamp (in seconds) of when the user was created
@@ -24,6 +29,7 @@ pub struct AdminApiKeyOwner {
     pub name: Option<String>,
     /// The object type, which is always organization.user
     #[serde(rename = "object")]
+    #[serde(default = "default_object")]
     pub object: Option<String>,
     /// Always `owner`
     #[serde(rename = "role")]
@@ -31,4 +37,8 @@ pub struct AdminApiKeyOwner {
     /// Always `user`
     #[serde(rename = "type")]
     pub _type: Option<String>,
+}
+
+fn default_object() -> Option<String> {
+    Some("organization.user".into())
 }

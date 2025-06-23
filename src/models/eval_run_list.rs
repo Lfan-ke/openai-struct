@@ -29,5 +29,10 @@ pub struct EvalRunList {
     pub last_id: String,
     /// The type of this object. It is always set to \"list\".
     #[serde(rename = "object")]
+    #[serde(default = "default_object")]
     pub object: String,
+}
+
+fn default_object() -> String {
+    "list".into()
 }

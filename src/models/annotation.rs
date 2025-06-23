@@ -11,5 +11,30 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
+use crate::{
+    FileCitationBody,
+    UrlCitationBody,
+    FilePath,
+};
+
+/// # on openapi.yaml
+/// 
+/// ```yaml
+/// Annotation:
+///   oneOf:
+///     - $ref: "#/components/schemas/FileCitationBody"
+///     - $ref: "#/components/schemas/UrlCitationBody"
+///     - $ref: "#/components/schemas/FilePath"
+///   discriminator:
+///     propertyName: type
+/// ```
 #[derive(Debug, Serialize, Deserialize)]
-pub struct Annotation {}
+#[serde(tag = "type")]
+pub enum Annotation {
+    #[serde(rename = "file_citation")]
+    FileCitation(FileCitationBody),
+    #[serde(rename = "url_citation")]
+    UrlCitation(UrlCitationBody),
+    #[serde(rename = "file_path")]
+    FilePath(FilePath),
+}
