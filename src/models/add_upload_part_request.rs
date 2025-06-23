@@ -11,6 +11,10 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
+/// On OpenApi.yaml:
+/// ```yaml
+///
+/// ```
 #[derive(Debug, Serialize, Deserialize)]
 pub struct AddUploadPartRequest {
     /// The chunk of bytes for this Part.
