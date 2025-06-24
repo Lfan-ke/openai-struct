@@ -13,13 +13,10 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-use crate::{
-    AutoChunkingStrategyRequestParam,
-    StaticChunkingStrategyRequestParam,
-};
+use crate::{AutoChunkingStrategyRequestParam, StaticChunkingStrategyRequestParam};
 
 /// # on openapi.yaml
-/// 
+///
 /// ```yaml
 /// ChunkingStrategyRequestParam:
 ///   type: object

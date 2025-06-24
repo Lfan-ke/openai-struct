@@ -17,3 +17,5 @@ openapi-generator-cli validate -i openapi.yaml
 openapi-generator-cli generate -i openapi.yaml -g rust -o ./rust-client --skip-validate-spec
 openapi-generator-cli generate -i openapi.yaml -g rust-server -o ./rust-server --skip-validate-spec
 ```
+
+> todo: 创建`dev`分支，以及完善`CI`

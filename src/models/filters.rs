@@ -11,5 +11,18 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
+use crate::{ComparisonFilter, CompoundFilter};
+
+/// # on openapi.yaml
+///
+/// ```yaml
+/// Filters:
+///   anyOf:
+///     - $ref: "#/components/schemas/ComparisonFilter"
+///     - $ref: "#/components/schemas/CompoundFilter"
+/// ```
 #[derive(Debug, Serialize, Deserialize)]
-pub struct Filters {}
+pub enum Filters {
+    Comparison(ComparisonFilter),
+    Compound(CompoundFilter),
+}

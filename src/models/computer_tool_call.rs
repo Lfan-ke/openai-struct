@@ -14,14 +14,14 @@
 use serde_json::Value;
 
 /// # on openapi.yaml
-/// 
+///
 /// ```yaml
 /// ComputerToolCall:
 ///   type: object
 ///   title: Computer tool call
 ///   description: >
 ///     A tool call to a computer use tool. See the
-/// 
+///
 ///     [computer use guide](/docs/guides/tools-computer-use) for more
 ///     information.
 ///   properties:

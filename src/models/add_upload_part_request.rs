@@ -12,7 +12,7 @@
 use serde_json::Value;
 
 /// # on openapi.yaml:
-/// 
+///
 /// ```yaml
 /// AddUploadPartRequest:
 ///   type: object

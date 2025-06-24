@@ -13,13 +13,10 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-use crate::{
-    InputContent,
-    OutputContent,
-};
+use crate::{InputContent, OutputContent};
 
 /// # on openapi.yaml
-/// 
+///
 /// ```yaml
 /// Content:
 ///   description: |

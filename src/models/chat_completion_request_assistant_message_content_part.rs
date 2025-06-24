@@ -12,12 +12,11 @@
 use serde_json::Value;
 
 use crate::{
-    ChatCompletionRequestMessageContentPartText,
-    ChatCompletionRequestMessageContentPartRefusal,
+    ChatCompletionRequestMessageContentPartRefusal, ChatCompletionRequestMessageContentPartText,
 };
 
 /// # on openapi.yaml
-/// 
+///
 /// ```yaml
 /// ChatCompletionRequestAssistantMessageContentPart:
 ///   oneOf:

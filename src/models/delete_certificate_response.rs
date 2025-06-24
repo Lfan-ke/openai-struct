@@ -18,7 +18,7 @@ pub struct DeleteCertificateResponse {
     pub id: String,
     /// The object type, must be `certificate.deleted`.
     #[serde(rename = "object")]
-    #[serde(default =  "default_object")]
+    #[serde(default = "default_object")]
     pub object: String,
 }
 

@@ -19,7 +19,7 @@ pub struct ChatCompletionDeleted {
     /// The ID of the chat completion that was deleted.
     #[serde(rename = "id")]
     pub id: String,
-    /// The type of object being deleted.
+    /// The type of object being deleted. enum: - chat.completion.deleted.
     #[serde(rename = "object")]
     pub object: String,
 }

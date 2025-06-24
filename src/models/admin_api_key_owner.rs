@@ -12,9 +12,9 @@
 use serde_json::Value;
 
 /// # on openapi.yaml
-/// 
+///
 /// ```yaml
-/// 
+///
 /// ```
 #[derive(Debug, Serialize, Deserialize)]
 pub struct AdminApiKeyOwner {

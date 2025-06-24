@@ -14,7 +14,7 @@
 use serde_json::Value;
 
 /// # on openapi.yaml
-/// 
+///
 /// ```yaml
 /// AuditLogEventType:
 ///   type: string

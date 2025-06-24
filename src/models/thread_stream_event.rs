@@ -11,10 +11,10 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-use crate::{ThreadObject};
+use crate::ThreadObject;
 
 /// # on openapi.yaml
-/// 
+///
 /// ```yaml
 /// ThreadStreamEvent:
 ///   oneOf:

@@ -14,7 +14,7 @@
 use serde_json::Value;
 
 /// # on openapi.yaml
-/// 
+///
 /// ```yaml
 /// ComputerToolCallOutput:
 ///   type: object
@@ -44,7 +44,7 @@ use serde_json::Value;
 ///       description: >
 ///         The safety checks reported by the API that have been acknowledged by
 ///         the
-/// 
+///
 ///         developer.
 ///       items:
 ///         $ref: "#/components/schemas/ComputerToolCallSafetyCheck"
@@ -55,7 +55,7 @@ use serde_json::Value;
 ///       description: >
 ///         The status of the message input. One of `in_progress`, `completed`,
 ///         or
-/// 
+///
 ///         `incomplete`. Populated when input items are returned via API.
 ///       enum:
 ///         - in_progress

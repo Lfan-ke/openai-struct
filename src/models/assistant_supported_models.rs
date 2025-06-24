@@ -12,7 +12,7 @@
 use serde_json::Value;
 
 /// # on openapi.yaml
-/// 
+///
 /// ```yaml
 /// AssistantSupportedModels:
 ///   type: string
@@ -134,9 +134,7 @@ pub enum AssistantSupportedModels {
 #[test]
 fn test_serialize() {
     assert_eq!(
-        serde_json::to_string(
-            &AssistantSupportedModels::Gpt4_1Mini
-        ).unwrap(),
+        serde_json::to_string(&AssistantSupportedModels::Gpt4_1Mini).unwrap(),
         r#""gpt-4.1-mini""#
     );
 }

@@ -32,5 +32,4 @@ use serde_json::Value;
 ///     - type
 /// ```
 #[derive(Debug, Serialize, Deserialize)]
-pub struct ResponseFormatText {
-}
+pub struct ResponseFormatText {}

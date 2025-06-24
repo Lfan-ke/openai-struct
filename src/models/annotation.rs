@@ -11,14 +11,10 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-use crate::{
-    FileCitationBody,
-    UrlCitationBody,
-    FilePath,
-};
+use crate::{FileCitationBody, FilePath, UrlCitationBody};
 
 /// # on openapi.yaml
-/// 
+///
 /// ```yaml
 /// Annotation:
 ///   oneOf:

@@ -14,7 +14,7 @@
 use serde_json::Value;
 
 /// # on openapi.yaml
-/// 
+///
 /// ```yaml
 /// ComputerScreenshotImage:
 ///   type: object
@@ -29,7 +29,7 @@ use serde_json::Value;
 ///       description: >
 ///         Specifies the event type. For a computer screenshot, this property
 ///         is
-/// 
+///
 ///         always set to `computer_screenshot`.
 ///       x-stainless-const: true
 ///     image_url:

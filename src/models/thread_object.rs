@@ -32,5 +32,5 @@ pub struct ThreadObject {
 }
 
 fn default_object() -> String {
-    return "thread".into()
+    return "thread".into();
 }

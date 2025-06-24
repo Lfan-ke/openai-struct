@@ -14,7 +14,7 @@
 use serde_json::Value;
 
 /// # on openapi.yaml
-/// 
+///
 /// ```yaml
 /// CompoundFilter:
 ///   $recursiveAnchor: true
@@ -48,7 +48,7 @@ use serde_json::Value;
 pub struct CompoundFilter {
     /// Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
     #[serde(rename = "filters")]
-    pub filters: Vec<Value>,    // 又一个`value`得改 - todo
+    pub filters: Vec<Value>, // 又一个`value`得改 - todo
     /// Type of operation: `and` or `or`.
     #[serde(rename = "type")]
     pub _type: String,

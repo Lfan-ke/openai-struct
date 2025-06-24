@@ -17,7 +17,7 @@ use serde_json::Value;
 // };
 
 /// # on openapi.yaml
-/// 
+///
 /// ```yaml
 /// CreateTranscriptionResponseStreamEvent:
 ///   anyOf:

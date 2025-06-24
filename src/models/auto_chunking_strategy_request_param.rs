@@ -14,7 +14,7 @@
 use serde_json::Value;
 
 /// # on openapi.yaml
-/// 
+///
 /// ```yaml
 /// AutoChunkingStrategyRequestParam:
 ///   type: object
@@ -54,7 +54,11 @@ fn default_type() -> String {
 
 #[test]
 fn test_param() {
-    assert_eq!(serde_json::to_string(
-        &AutoChunkingStrategyRequestParam {..Default::default()}
-    ).unwrap(), r#"{"type":"auto"}"#);
+    assert_eq!(
+        serde_json::to_string(&AutoChunkingStrategyRequestParam {
+            ..Default::default()
+        })
+        .unwrap(),
+        r#"{"type":"auto"}"#
+    );
 }

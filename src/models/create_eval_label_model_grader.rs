@@ -36,6 +36,6 @@ pub struct CreateEvalLabelModelGrader {
     pub _type: String,
 }
 
-fn default_type() ->  String {
+fn default_type() -> String {
     "label_model".into()
 }

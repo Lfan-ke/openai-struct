@@ -11,12 +11,10 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-use crate::{
-    OutputTextContent, RefusalContent, 
-};
+use crate::{OutputTextContent, RefusalContent};
 
 /// # on openapi.yaml
-/// 
+///
 /// ```yaml
 /// OutputContent:
 ///   oneOf:

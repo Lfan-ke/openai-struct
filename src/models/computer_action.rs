@@ -12,12 +12,18 @@
 use serde_json::Value;
 
 use crate::{
-    Click, DoubleClick, Drag, KeyPress, Screenshot, Scroll, Wait,
+    Click,
+    DoubleClick,
+    Drag,
+    KeyPress,
+    Screenshot,
+    Scroll,
+    Wait,
     // Type, Move,
 };
 
 /// # on openapi.yaml
-/// 
+///
 /// ```yaml
 /// ComputerAction:
 ///   oneOf:
@@ -33,9 +39,13 @@ use crate::{
 /// ```
 #[derive(Debug, Serialize, Deserialize)]
 pub enum ComputerAction {
-    Click(Click), DoubleClick(DoubleClick),
-    Drag(Drag), KeyPress(KeyPress),
-    Screenshot(Screenshot), Scroll(Scroll),
+    Click(Click),
+    DoubleClick(DoubleClick),
+    Drag(Drag),
+    KeyPress(KeyPress),
+    Screenshot(Screenshot),
+    Scroll(Scroll),
     Wait(Wait),
-    Type, Move,
+    Type,
+    Move,
 }

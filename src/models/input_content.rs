@@ -11,12 +11,10 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-use crate::{
-    InputTextContent, InputImageContent, InputFileContent, 
-};
+use crate::{InputFileContent, InputImageContent, InputTextContent};
 
 /// # on openapi.yaml
-/// 
+///
 /// ```yaml
 /// InputContent:
 ///   oneOf:

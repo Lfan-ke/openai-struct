@@ -12,14 +12,12 @@
 use serde_json::Value;
 
 use crate::{
-    ChatCompletionRequestMessageContentPartText,
-    ChatCompletionRequestMessageContentPartImage,
-    ChatCompletionRequestMessageContentPartAudio,
-    ChatCompletionRequestMessageContentPartFile,
+    ChatCompletionRequestMessageContentPartAudio, ChatCompletionRequestMessageContentPartFile,
+    ChatCompletionRequestMessageContentPartImage, ChatCompletionRequestMessageContentPartText,
 };
 
 /// # on openapi.yaml
-/// 
+///
 /// ```yaml
 /// ChatCompletionRequestUserMessageContentPart:
 ///   oneOf:

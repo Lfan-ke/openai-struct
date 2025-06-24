@@ -14,7 +14,7 @@
 use serde_json::Value;
 
 /// # on openapi.yaml
-/// 
+///
 /// ```yaml
 /// Certificate:
 ///   type: object
@@ -28,14 +28,14 @@ use serde_json::Value;
 ///         - organization.project.certificate
 ///       description: >
 ///         The object type.
-/// 
-/// 
+///
+///
 ///         - If creating, updating, or getting a specific certificate, the
 ///         object type is `certificate`.
-/// 
+///
 ///         - If listing, activating, or deactivating certificates for the
 ///         organization, the object type is `organization.certificate`.
-/// 
+///
 ///         - If listing, activating, or deactivating certificates for a
 ///         project, the object type is `organization.project.certificate`.
 ///       x-stainless-const: true

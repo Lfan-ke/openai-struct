@@ -11,12 +11,10 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-use crate::{
-    ChatCompletionRequestMessageContentPartText,
-};
+use crate::ChatCompletionRequestMessageContentPartText;
 
 /// # on openapi.yaml
-/// 
+///
 /// ```yaml
 /// ChatCompletionRequestSystemMessageContentPart:
 ///   oneOf:

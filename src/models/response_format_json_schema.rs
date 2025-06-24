@@ -14,7 +14,7 @@
 use serde_json::Value;
 
 /// # on openapi.yaml
-/// 
+///
 /// ```yaml
 /// ResponseFormatJsonSchema:
 ///   type: object
@@ -40,14 +40,14 @@ use serde_json::Value;
 ///           description: >
 ///             A description of what the response format is for, used by the
 ///             model to
-/// 
+///
 ///             determine how to respond in the format.
 ///         name:
 ///           type: string
 ///           description: >
 ///             The name of the response format. Must be a-z, A-Z, 0-9, or
 ///             contain
-/// 
+///
 ///             underscores and dashes, with a maximum length of 64.
 ///         schema:
 ///           $ref: "#/components/schemas/ResponseFormatJsonSchemaSchema"
@@ -58,15 +58,15 @@ use serde_json::Value;
 ///           description: >
 ///             Whether to enable strict schema adherence when generating the
 ///             output.
-/// 
+///
 ///             If set to true, the model will always follow the exact schema
 ///             defined
-/// 
+///
 ///             in the `schema` field. Only a subset of JSON Schema is supported
 ///             when
-/// 
+///
 ///             `strict` is `true`. To learn more, read the [Structured Outputs
-/// 
+///
 ///             guide](/docs/guides/structured-outputs).
 ///       required:
 ///         - name

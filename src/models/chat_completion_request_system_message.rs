@@ -14,7 +14,7 @@
 use serde_json::Value;
 
 /// # on openapi.yaml
-/// 
+///
 /// ```yaml
 /// ChatCompletionRequestSystemMessage:
 ///   type: object
@@ -22,10 +22,10 @@ use serde_json::Value;
 ///   description: >
 ///     Developer-provided instructions that the model should follow, regardless
 ///     of
-/// 
+///
 ///     messages sent by the user. With o1 models and newer, use `developer`
 ///     messages
-/// 
+///
 ///     for this purpose instead.
 ///   properties:
 ///     content:

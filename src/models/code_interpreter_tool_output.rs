@@ -11,13 +11,10 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-use crate::{
-    CodeInterpreterTextOutput,
-    CodeInterpreterFileOutput,
-};
+use crate::{CodeInterpreterFileOutput, CodeInterpreterTextOutput};
 
 /// # on openapi.yaml
-/// 
+///
 /// ```yaml
 /// CodeInterpreterToolOutput:
 ///   oneOf:

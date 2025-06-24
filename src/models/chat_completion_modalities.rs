@@ -14,28 +14,28 @@
 use serde_json::Value;
 
 /// # on openapi.yaml
-/// 
+///
 /// ```yaml
 /// ChatCompletionModalities:
 ///   type: array
 ///   nullable: true
 ///   description: >
 ///     Output types that you would like the model to generate for this request.
-/// 
+///
 ///     Most models are capable of generating text, which is the default:
-/// 
-/// 
+///
+///
 ///     `["text"]`
-/// 
-/// 
+///
+///
 ///     The `gpt-4o-audio-preview` model can also be used to [generate
 ///     audio](/docs/guides/audio). To
-/// 
+///
 ///     request that this model generate both text and audio responses, you can
-/// 
+///
 ///     use:
-/// 
-/// 
+///
+///
 ///     `["text", "audio"]`
 ///   items:
 ///     type: string
@@ -44,9 +44,8 @@ use serde_json::Value;
 ///       - audio
 /// ```
 #[derive(Debug, Serialize, Deserialize)]
-pub struct ChatCompletionModalities (
-    #[serde(default = "default_modalities")]
-    Vec<ChatCompletionModality>,
+pub struct ChatCompletionModalities(
+    #[serde(default = "default_modalities")] Vec<ChatCompletionModality>,
 );
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
@@ -65,8 +64,10 @@ fn default_modalities() -> Vec<ChatCompletionModality> {
 fn test_mode() {
     assert_eq!(
         serde_json::to_string(&ChatCompletionModalities(vec![
-            ChatCompletionModality::Text, ChatCompletionModality::Audio
-        ])).unwrap(),
+            ChatCompletionModality::Text,
+            ChatCompletionModality::Audio
+        ]))
+        .unwrap(),
         r#"["text","audio"]"#
     );
 }

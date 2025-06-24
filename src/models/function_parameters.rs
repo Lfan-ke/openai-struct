@@ -14,23 +14,23 @@
 use serde_json::Value;
 
 /// # on openapi.yaml
-/// 
+///
 /// ```yaml
 /// FunctionParameters:
 ///   type: object
 ///   description: >-
 ///     The parameters the functions accepts, described as a JSON Schema object.
 ///     See the [guide](/docs/guides/function-calling) for examples, and the
-///     [JSON Schema
-///     reference](https:///json-schema.org/understanding-json-schema/) for
+///     [JSON Schema reference](https:///json-schema.org/understanding-json-schema/) for
 ///     documentation about the format.
-/// 
-/// 
+///
+///
 ///     Omitting `parameters` defines a function with an empty parameter list.
 ///   additionalProperties: true
 /// ```
 #[derive(Debug, Serialize, Deserialize)]
 pub struct FunctionParameters {
+    /// json object.
     #[serde(default)]
     pub schema: Value,
 }
