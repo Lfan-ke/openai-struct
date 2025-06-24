@@ -40,6 +40,31 @@ use serde_json::Value;
 ///     name: The chat message object used to configure an individual run
 /// ```
 #[derive(Debug, Serialize, Deserialize)]
-pub struct CreateEvalItem {}
+pub enum CreateEvalItem {
+    ItemObject(ItemObject),
+    EvalItem(crate::EvalItem),
+}
 
-// todo: oneOf
+/// # on openapi.yaml
+///
+/// ```yaml
+/// - type: object
+///   title: SimpleInputMessage
+///   properties:
+///     role:
+///       type: string
+///       description: The role of the message (e.g. "system", "assistant", "user").
+///     content:
+///       type: string
+///       description: The content of the message.
+///   required:
+///     - role
+///     - content
+/// ```
+#[derive(Debug, Serialize, Deserialize)]
+pub struct ItemObject {
+    /// The role of the message (e.g. "system", "assistant", "user").
+    role: String,
+    /// The content of the message.
+    content: String,
+}

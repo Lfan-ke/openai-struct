@@ -14,7 +14,7 @@
 use serde_json::Value;
 
 /// # on openapi.yaml
-/// 
+///
 /// ```yaml
 ///     ReasoningEffort:
 ///       type: string
@@ -26,7 +26,7 @@ use serde_json::Value;
 ///       nullable: true
 ///       description: |
 ///         **o-series models only**
-/// 
+///
 ///         Constrains effort on reasoning for
 ///         [reasoning models](https://platform.openai.com/docs/guides/reasoning).
 ///         Currently supported values are `low`, `medium`, and `high`. Reducing
@@ -36,7 +36,9 @@ use serde_json::Value;
 #[derive(Debug, Serialize, Deserialize)]
 #[serde(rename_all = "lowercase")]
 pub enum ReasoningEffort {
-    Low, Medium, High,
+    Low,
+    Medium,
+    High,
 }
 
 impl Default for ReasoningEffort {
