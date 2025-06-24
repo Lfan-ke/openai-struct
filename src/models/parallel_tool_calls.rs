@@ -13,5 +13,14 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
-pub struct ParallelToolCalls {}
+/// # on openai.yaml
+///
+/// ```yaml
+/// ParallelToolCalls:
+///   description: Whether to enable [parallel function
+///     calling](/docs/guides/function-calling#configuring-parallel-function-calling)
+///     during tool use.
+///   type: boolean
+///   default: true
+/// ```
+pub type ParallelToolCalls = bool;

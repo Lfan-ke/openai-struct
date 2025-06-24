@@ -13,13 +13,33 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
+/// # on openai.yaml
+///
+/// ```yaml
+/// WebSearchContextSize:
+///   type: string
+///   description: >
+///     High level guidance for the amount of context window space to use for
+///     the
+///
+///     search. One of `low`, `medium`, or `high`. `medium` is the default.
+///   enum:
+///     - low
+///     - medium
+///     - high
+///   default: medium
+/// ```
 #[derive(Debug, Serialize, Deserialize)]
-pub struct WebSearchContextSize {}
+#[serde(untagged)]
+#[serde(rename_all = "lowercase")]
+pub enum WebSearchContextSize {
+    Low,
+    Medium,
+    High,
+}
 
-// TODO enum
-// List of WebSearchContextSize
-//const (
-//
-//
-//
-//)
+impl Default for WebSearchContextSize {
+    fn default() -> WebSearchContextSize {
+        Self::Medium
+    }
+}

@@ -12,4 +12,17 @@
 use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
-pub struct VoiceIdsShared {}
+#[serde(rename_all = "lowercase")]
+pub enum VoiceIdsShared {
+    Alloy,
+    Ash,
+    Ballad,
+    Coral,
+    Echo,
+    Fable,
+    Onyx,
+    Nova,
+    Sage,
+    Shimmer,
+    Verse,
+}

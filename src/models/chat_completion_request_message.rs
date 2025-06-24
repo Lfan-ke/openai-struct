@@ -36,21 +36,21 @@ pub enum ChatCompletionRequestMessage {
 #[test]
 fn test_serde_chat_completion_request_message() {
     let tmp = ChatCompletionRequestMessage::User(ChatCompletionRequestUserMessage {
-        content: crate::ChatCompletionRequestUserMessageContent::Text("once upon a time".into()),
+        content: crate::ChatCompletionRequestUserMessageContent::Text("once upon a time...".into()),
         name: None,
     });
 
     let serialized = serde_json::to_string(&tmp).unwrap();
     assert_eq!(
         serialized,
-        r#"{"role":"user","content":"once upon a time","name":null}"#
+        r#"{"role":"user","content":"once upon a time...","name":null}"#
     );
 
     let deserialized: ChatCompletionRequestMessage = serde_json::from_str(&serialized).unwrap();
     assert_eq!(tmp, deserialized);
 
     let emm: ChatCompletionRequestMessage =
-        serde_json::from_str(r#"{"content":"once upon a time","name":null,"role":"user"}"#)
+        serde_json::from_str(r#"{"content":"once upon a time...","name":null,"role":"user"}"#)
             .unwrap();
     assert_eq!(tmp, emm);
 }

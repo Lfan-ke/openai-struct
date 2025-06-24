@@ -28,9 +28,4 @@ use serde_json::Value;
 ///     Omitting `parameters` defines a function with an empty parameter list.
 ///   additionalProperties: true
 /// ```
-#[derive(Debug, Serialize, Deserialize)]
-pub struct FunctionParameters {
-    /// json object.
-    #[serde(default)]
-    pub schema: Value,
-}
+pub type FunctionParameters = serde_json::Value;

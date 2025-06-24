@@ -21,6 +21,12 @@ pub enum ServiceTier {
     Flex,
 }
 
+impl Default for ServiceTier {
+    fn default() -> ServiceTier {
+        ServiceTier::Default
+    }
+}
+
 #[test]
 fn test_tier() {
     assert_eq!(
