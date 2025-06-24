@@ -112,3 +112,41 @@ pub enum CreateChatCompletionRequestResponseFormat {
     JsonSchema(crate::ResponseFormatJsonSchema),
     JsonObject(crate::ResponseFormatJsonObject),
 }
+
+impl Default for CreateChatCompletionRequest {
+    fn default() -> CreateChatCompletionRequest {
+        Self {
+            metadata: None,
+            service_tier: None,
+            temperature: None,
+            top_p: None,
+            user: None,
+            audio: None,
+            frequency_penalty: None,
+            function_call: None,
+            functions: None,
+            logit_bias: None,
+            logprobs: None,
+            max_completion_tokens: None,
+            max_tokens: None,
+            messages: vec![],
+            modalities: None,
+            model: crate::AssistantSupportedModels::Gpt4_1,
+            n: None,
+            parallel_tool_calls: None,
+            prediction: None,
+            presence_penalty: None,
+            reasoning_effort: None,
+            response_format: None,
+            seed: None,
+            stop: None,
+            store: None,
+            stream: None,
+            stream_options: None,
+            tool_choice: None,
+            tools: None,
+            top_logprobs: None,
+            web_search_options: None,
+        }
+    }
+}
