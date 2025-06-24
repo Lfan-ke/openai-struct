@@ -22,4 +22,3 @@ pub struct CreateAssistantRequestToolResourcesFileSearchVectorStores {
     #[serde(rename = "metadata")]
     pub metadata: Option<crate::models::Metadata>,
 }
-
