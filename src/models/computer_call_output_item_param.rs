@@ -70,16 +70,18 @@ use serde_json::Value;
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ComputerCallOutputItemParam {
     #[serde(rename = "acknowledged_safety_checks")]
-    pub acknowledged_safety_checks: Option<Value>,
+    pub acknowledged_safety_checks: Option<Vec<crate::ComputerCallSafetyCheckParam>>,
     /// The ID of the computer tool call that produced the output.
     #[serde(rename = "call_id")]
     pub call_id: String,
+    /// type: "null" or type: string of The ID of the computer tool call output.
     #[serde(rename = "id")]
-    pub id: Option<Value>,
+    pub id: Option<String>,
     #[serde(rename = "output")]
     pub output: crate::models::ComputerScreenshotImage,
+    /// anyOf: string`in_progress`、string`completed`、string`incomplete` or Option`null`
     #[serde(rename = "status")]
-    pub status: Option<Value>,
+    pub status: Option<String>,
     /// The type of the computer tool call output. Always `computer_call_output`.
     #[serde(rename = "type")]
     #[serde(default = "default_type")]

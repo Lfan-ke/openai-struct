@@ -39,8 +39,16 @@ pub struct CreateAssistantRequest {
     pub tool_resources: Option<crate::models::CreateAssistantRequestToolResources>,
     /// A list of tool enabled on the assistant. There can be a maximum of 128 tools per assistant. Tools can be of types `code_interpreter`, `file_search`, or `function`.
     #[serde(rename = "tools")]
-    pub tools: Option<Vec<Value>>,
+    pub tools: Option<Vec<CreateAssistantRequestTool>>,
     /// An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered.  We generally recommend altering this or temperature but not both.
     #[serde(rename = "top_p")]
     pub top_p: Option<f32>,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(untagged)]
+pub enum CreateAssistantRequestTool {
+    Code(crate::AssistantToolsCode),
+    FileSearch(crate::AssistantToolsFileSearch),
+    Function(crate::AssistantToolsFunction),
 }
