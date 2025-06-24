@@ -13,5 +13,15 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
-pub struct ResponseFormatJsonSchemaSchema {}
+/// # on openapi.yaml
+///
+/// ```yaml
+/// ResponseFormatJsonSchemaSchema:
+///   type: object
+///   title: JSON schema
+///   description: |
+///     The schema for the response format, described as a JSON Schema object.
+///     Learn how to build JSON schemas [here](https://json-schema.org/).
+///   additionalProperties: true
+/// ```
+pub type ResponseFormatJsonSchemaSchema = serde_json::Value;

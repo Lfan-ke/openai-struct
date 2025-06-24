@@ -11,7 +11,6 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-/// todo: 太长，之后再看
 #[derive(Debug, Serialize, Deserialize)]
 pub struct CreateAssistantRequest {
     /// The description of the assistant. The maximum length is 512 characters.
@@ -24,7 +23,7 @@ pub struct CreateAssistantRequest {
     pub metadata: Option<crate::models::Metadata>,
     /// ID of the model to use. You can use the [List models](/docs/api-reference/models/list) API to see all of your available models, or see our [Model overview](/docs/models) for descriptions of them.
     #[serde(rename = "model")]
-    pub model: Value,
+    pub model: crate::AssistantSupportedModels,
     /// The name of the assistant. The maximum length is 256 characters.
     #[serde(rename = "name")]
     pub name: Option<String>,

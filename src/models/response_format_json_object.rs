@@ -40,5 +40,6 @@ use serde_json::Value;
 ///   required:
 ///     - type
 /// ```
-#[derive(Debug, Serialize, Deserialize)]
-pub struct ResponseFormatJsonObject {}
+// #[derive(Debug, Serialize, Deserialize)]
+// pub struct ResponseFormatJsonObject {}
+pub type ResponseFormatJsonObject = serde_json::Value;

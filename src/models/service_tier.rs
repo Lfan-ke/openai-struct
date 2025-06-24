@@ -14,12 +14,17 @@
 use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize)]
-pub struct ServiceTier {}
+#[serde(rename_all = "lowercase")]
+pub enum ServiceTier {
+    Auto,
+    Default,
+    Flex,
+}
 
-// TODO enum
-// List of ServiceTier
-//const (
-//
-//
-//
-//)
+#[test]
+fn test_tier() {
+    assert_eq!(
+        serde_json::to_value(ServiceTier::Auto).unwrap().to_string(),
+        r#""auto""#.to_string()
+    );
+}

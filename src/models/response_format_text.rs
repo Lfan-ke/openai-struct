@@ -32,4 +32,15 @@ use serde_json::Value;
 ///     - type
 /// ```
 #[derive(Debug, Serialize, Deserialize)]
-pub struct ResponseFormatText {}
+#[serde(rename_all = "lowercase")]
+pub enum ResponseFormatText {
+    Text,
+}
+
+#[test]
+fn test_test() {
+    assert_eq!(
+        serde_json::to_string(&ResponseFormatText::Text).unwrap(),
+        "\"text\""
+    );
+}
