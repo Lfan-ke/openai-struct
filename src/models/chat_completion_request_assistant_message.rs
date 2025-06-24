@@ -32,6 +32,19 @@ pub struct ChatCompletionRequestAssistantMessage {
     pub tool_calls: Option<crate::models::ChatCompletionMessageToolCalls>,
 }
 
+impl Default for ChatCompletionRequestAssistantMessage {
+    fn default() -> Self {
+        Self {
+            audio: None,
+            content: None,
+            function_call: None,
+            name: None,
+            refusal: None,
+            tool_calls: None,
+        }
+    }
+}
+
 #[derive(Debug, Serialize, Deserialize, PartialEq)]
 #[serde(untagged)]
 pub enum ChatCompletionRequestAssistantMessageContent {
@@ -39,4 +52,10 @@ pub enum ChatCompletionRequestAssistantMessageContent {
     Text(String),
     /// An array of content parts with a defined type. Can be one or more of type `text`, or exactly one of type `refusal`.
     Array(Vec<crate::ChatCompletionRequestAssistantMessageContentPart>),
+}
+
+impl Default for ChatCompletionRequestAssistantMessageContent {
+    fn default() -> Self {
+        Self::Text(String::default())
+    }
 }

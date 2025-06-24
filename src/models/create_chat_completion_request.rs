@@ -98,21 +98,6 @@ pub struct CreateChatCompletionRequest {
     pub web_search_options: Option<crate::models::WebSearch>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
-#[serde(untagged)]
-pub enum CreateChatCompletionRequestFunctionCall {
-    Text(String),
-    FunctionCallOption(crate::ChatCompletionFunctionCallOption),
-}
-
-#[derive(Debug, Serialize, Deserialize)]
-#[serde(untagged)]
-pub enum CreateChatCompletionRequestResponseFormat {
-    Text(crate::ResponseFormatText),
-    JsonSchema(crate::ResponseFormatJsonSchema),
-    JsonObject(crate::ResponseFormatJsonObject),
-}
-
 impl Default for CreateChatCompletionRequest {
     fn default() -> CreateChatCompletionRequest {
         Self {
@@ -149,4 +134,19 @@ impl Default for CreateChatCompletionRequest {
             web_search_options: None,
         }
     }
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(untagged)]
+pub enum CreateChatCompletionRequestFunctionCall {
+    Text(String),
+    FunctionCallOption(crate::ChatCompletionFunctionCallOption),
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(untagged)]
+pub enum CreateChatCompletionRequestResponseFormat {
+    Text(crate::ResponseFormatText),
+    JsonSchema(crate::ResponseFormatJsonSchema),
+    JsonObject(crate::ResponseFormatJsonObject),
 }

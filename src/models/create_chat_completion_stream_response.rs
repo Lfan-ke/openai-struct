@@ -39,3 +39,18 @@ pub struct CreateChatCompletionStreamResponse {
     #[serde(rename = "usage")]
     pub usage: Option<crate::models::CompletionUsage>,
 }
+
+impl Default for CreateChatCompletionStreamResponse {
+    fn default() -> CreateChatCompletionStreamResponse {
+        Self {
+            choices: vec![],
+            created: 0,
+            id: "".to_string(),
+            model: "".to_string(),
+            object: "".to_string(),
+            service_tier: None,
+            system_fingerprint: None,
+            usage: None,
+        }
+    }
+}

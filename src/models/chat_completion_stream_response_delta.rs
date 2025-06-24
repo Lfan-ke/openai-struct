@@ -76,3 +76,15 @@ pub struct ChatCompletionStreamResponseDelta {
     #[serde(rename = "tool_calls")]
     pub tool_calls: Option<Vec<crate::models::ChatCompletionMessageToolCallChunk>>,
 }
+
+impl Default for ChatCompletionStreamResponseDelta {
+    fn default() -> Self {
+        Self {
+            content: None,
+            function_call: None,
+            refusal: None,
+            role: None,
+            tool_calls: None,
+        }
+    }
+}

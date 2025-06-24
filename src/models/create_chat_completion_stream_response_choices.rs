@@ -24,3 +24,14 @@ pub struct CreateChatCompletionStreamResponseChoices {
     #[serde(rename = "logprobs")]
     pub logprobs: Option<crate::models::CreateChatCompletionResponseLogprobs>,
 }
+
+impl Default for CreateChatCompletionStreamResponseChoices {
+    fn default() -> Self {
+        Self {
+            delta: Default::default(),
+            finish_reason: "".to_string(),
+            index: 0,
+            logprobs: None,
+        }
+    }
+}

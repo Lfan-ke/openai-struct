@@ -28,3 +28,14 @@ pub struct Model {
     #[serde(rename = "owned_by")]
     pub owned_by: String,
 }
+
+impl Default for Model {
+    fn default() -> Self {
+        Self {
+            created: 0,
+            id: "".to_string(),
+            object: "model".to_string(),
+            owned_by: "".to_string(),
+        }
+    }
+}
