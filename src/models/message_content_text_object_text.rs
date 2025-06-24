@@ -14,8 +14,15 @@ use serde_json::Value;
 #[derive(Debug, Serialize, Deserialize)]
 pub struct MessageContentTextObjectText {
     #[serde(rename = "annotations")]
-    pub annotations: Vec<Value>,
+    pub annotations: Vec<MessageContentTextObjectTextAnnotations>,
     /// The data that makes up the text.
     #[serde(rename = "value")]
     pub value: String,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(untagged)]
+pub enum MessageContentTextObjectTextAnnotations {
+    FileCitationObject(crate::MessageContentTextAnnotationsFileCitationObject),
+    FilePathObject(crate::MessageContentTextAnnotationsFilePathObject),
 }

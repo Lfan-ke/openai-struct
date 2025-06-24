@@ -207,7 +207,7 @@ pub struct AssistantObject {
     pub tool_resources: Option<crate::models::AssistantObjectToolResources>,
     /// A list of tool enabled on the assistant. There can be a maximum of 128 tools per assistant. Tools can be of types `code_interpreter`, `file_search`, or `function`.
     #[serde(rename = "tools")]
-    pub tools: Vec<Value>,
+    pub tools: Vec<AssistantObjectTool>,
     /// An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered.  We generally recommend altering this or temperature but not both.
     #[serde(rename = "top_p")]
     pub top_p: Option<f32>,
@@ -215,4 +215,12 @@ pub struct AssistantObject {
 
 fn default_object() -> String {
     "assistant".into()
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(untagged)]
+pub enum AssistantObjectTool {
+    Code(crate::AssistantToolsCode),
+    FileSearch(crate::AssistantToolsFileSearch),
+    Function(crate::AssistantToolsFunction),
 }

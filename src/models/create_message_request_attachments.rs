@@ -18,5 +18,12 @@ pub struct CreateMessageRequestAttachments {
     pub file_id: Option<String>,
     /// The tools to add this file to.
     #[serde(rename = "tools")]
-    pub tools: Option<Vec<Value>>,
+    pub tools: Option<Vec<CreateMessageRequestAttachmentsTool>>,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(untagged)]
+pub enum CreateMessageRequestAttachmentsTool {
+    Code(crate::AssistantToolsCode),
+    FileSearchTypeOnly(crate::AssistantToolsFileSearchTypeOnly),
 }

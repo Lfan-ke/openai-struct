@@ -4,3 +4,5 @@ pub enum StringOrNumber {
     Number(isize),
     String(String),
 }
+
+pub type IntegerOrString = StringOrNumber;
