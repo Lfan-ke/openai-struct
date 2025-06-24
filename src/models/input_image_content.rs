@@ -19,9 +19,9 @@ pub struct InputImageContent {
     #[serde(rename = "detail")]
     pub detail: String,
     #[serde(rename = "file_id")]
-    pub file_id: Option<Value>,
+    pub file_id: Option<String>,
     #[serde(rename = "image_url")]
-    pub image_url: Option<Value>,
+    pub image_url: Option<String>,
     /// The type of the input item. Always `input_image`.
     #[serde(rename = "type")]
     pub _type: String,

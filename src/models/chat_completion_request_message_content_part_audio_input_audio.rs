@@ -11,12 +11,12 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, PartialEq)]
 pub struct ChatCompletionRequestMessageContentPartAudioInputAudio {
     /// Base64 encoded audio data.
     #[serde(rename = "data")]
     pub data: String,
-    /// The format of the encoded audio data. Currently supports \"wav\" and \"mp3\".
+    /// The format of the encoded audio data. Currently, supports \"wav\" and \"mp3\".
     #[serde(rename = "format")]
     pub format: String,
 }

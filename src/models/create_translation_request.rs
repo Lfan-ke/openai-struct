@@ -17,8 +17,9 @@ pub struct CreateTranslationRequest {
     #[serde(rename = "file")]
     pub file: Vec<u8>,
     /// ID of the model to use. Only `whisper-1` (which is powered by our open source Whisper V2 model) is currently available.
+    /// enum: - whisper-1
     #[serde(rename = "model")]
-    pub model: Value,
+    pub model: String,
     /// An optional text to guide the model's style or continue a previous audio segment. The [prompt](/docs/guides/speech-to-text#prompting) should be in English.
     #[serde(rename = "prompt")]
     pub prompt: Option<String>,

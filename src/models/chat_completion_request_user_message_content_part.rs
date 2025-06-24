@@ -26,7 +26,7 @@ use crate::{
 ///     - $ref: "#/components/schemas/ChatCompletionRequestMessageContentPartAudio"
 ///     - $ref: "#/components/schemas/ChatCompletionRequestMessageContentPartFile"
 /// ```
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, PartialEq)]
 pub enum ChatCompletionRequestUserMessageContentPart {
     Text(ChatCompletionRequestMessageContentPartText),
     Image(ChatCompletionRequestMessageContentPartImage),

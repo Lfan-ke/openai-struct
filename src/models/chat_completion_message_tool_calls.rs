@@ -13,8 +13,6 @@ use crate::ChatCompletionMessageToolCall;
 
 #[allow(unused_imports)]
 use serde_json::Value;
-/// #[derive(Debug, Serialize, Deserialize, PartialEq)]
-/// pub struct ChatCompletionMessageToolCalls {}
 
 /// # on openapi.yaml
 ///

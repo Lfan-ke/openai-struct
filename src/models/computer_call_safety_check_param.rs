@@ -39,10 +39,10 @@ use serde_json::Value;
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ComputerCallSafetyCheckParam {
     #[serde(rename = "code")]
-    pub code: Option<Value>,
+    pub code: Option<String>,
     /// The ID of the pending safety check.
     #[serde(rename = "id")]
     pub id: String,
     #[serde(rename = "message")]
-    pub message: Option<Value>,
+    pub message: Option<String>,
 }

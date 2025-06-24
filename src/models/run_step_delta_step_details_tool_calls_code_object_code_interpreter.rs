@@ -20,5 +20,12 @@ pub struct RunStepDeltaStepDetailsToolCallsCodeObjectCodeInterpreter {
     pub input: Option<String>,
     /// The outputs from the Code Interpreter tool call. Code Interpreter can output one or more items, including text (`logs`) or images (`image`). Each of these are represented by a different object type.
     #[serde(rename = "outputs")]
-    pub outputs: Option<Vec<Value>>,
+    pub outputs: Option<Vec<RunStepDeltaStepDetailsToolCallsCodeObjectCodeInterpreterOutput>>,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(untagged)]
+pub enum RunStepDeltaStepDetailsToolCallsCodeObjectCodeInterpreterOutput {
+    Logs(crate::RunStepDeltaStepDetailsToolCallsCodeOutputLogsObject),
+    Image(crate::RunStepDeltaStepDetailsToolCallsCodeOutputImageObject),
 }

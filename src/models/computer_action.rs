@@ -46,6 +46,7 @@ pub enum ComputerAction {
     Screenshot(Screenshot),
     Scroll(Scroll),
     Wait(Wait),
+    // todo: 这俩类型没自动生成
     Type,
     Move,
 }

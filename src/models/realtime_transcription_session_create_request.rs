@@ -27,8 +27,9 @@ pub struct RealtimeTranscriptionSessionCreateRequest {
     pub input_audio_transcription:
         Option<crate::models::RealtimeTranscriptionSessionCreateRequestInputAudioTranscription>,
     /// The set of modalities the model can respond with. To disable audio, set this to [\"text\"].
+    /// Array can contain enum: - text  - audio
     #[serde(rename = "modalities")]
-    pub modalities: Option<Value>,
+    pub modalities: Option<Vec<String>>,
     #[serde(rename = "turn_detection")]
     pub turn_detection:
         Option<crate::models::RealtimeTranscriptionSessionCreateRequestTurnDetection>,

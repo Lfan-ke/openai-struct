@@ -11,7 +11,6 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-/// todo: 太长，之后看！
 #[derive(Debug, Serialize, Deserialize)]
 pub struct CreateChatCompletionRequest {
     #[serde(rename = "metadata")]
@@ -34,7 +33,7 @@ pub struct CreateChatCompletionRequest {
     pub frequency_penalty: Option<f32>,
     /// Deprecated in favor of `tool_choice`.  Controls which (if any) function is called by the model.  `none` means the model will not call a function and instead generates a message.  `auto` means the model can pick between generating a message or calling a function.  Specifying a particular function via `{\"name\": \"my_function\"}` forces the model to call that function.  `none` is the default when no functions are present. `auto` is the default if functions are present.
     #[serde(rename = "function_call")]
-    pub function_call: Option<Value>,
+    pub function_call: Option<CreateChatCompletionRequestFunctionCall>,
     /// Deprecated in favor of `tools`.  A list of functions the model may generate JSON inputs for.
     #[serde(rename = "functions")]
     pub functions: Option<Vec<crate::models::ChatCompletionFunctions>>,
@@ -65,7 +64,7 @@ pub struct CreateChatCompletionRequest {
     pub parallel_tool_calls: Option<crate::models::ParallelToolCalls>,
     /// Configuration for a [Predicted Output](/docs/guides/predicted-outputs), which can greatly improve response times when large parts of the model response are known ahead of time. This is most common when you are regenerating a file with only minor changes to most of the content.
     #[serde(rename = "prediction")]
-    pub prediction: Option<Value>,
+    pub prediction: Option<crate::PredictionContent>,
     /// Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.
     #[serde(rename = "presence_penalty")]
     pub presence_penalty: Option<f32>,
@@ -73,7 +72,7 @@ pub struct CreateChatCompletionRequest {
     pub reasoning_effort: Option<crate::models::ReasoningEffort>,
     /// An object specifying the format that the model must output.  Setting to `{ \"type\": \"json_schema\", \"json_schema\": {...} }` enables Structured Outputs which ensures the model will match your supplied JSON schema. Learn more in the [Structured Outputs guide](/docs/guides/structured-outputs).  Setting to `{ \"type\": \"json_object\" }` enables the older JSON mode, which ensures the message the model generates is valid JSON. Using `json_schema` is preferred for models that support it.
     #[serde(rename = "response_format")]
-    pub response_format: Option<Value>,
+    pub response_format: Option<CreateChatCompletionRequestResponseFormat>,
     /// This feature is in Beta. If specified, our system will make a best effort to sample deterministically, such that repeated requests with the same `seed` and parameters should return the same result. Determinism is not guaranteed, and you should refer to the `system_fingerprint` response parameter to monitor changes in the backend.
     #[serde(rename = "seed")]
     pub seed: Option<i32>,
@@ -97,4 +96,19 @@ pub struct CreateChatCompletionRequest {
     pub top_logprobs: Option<i32>,
     #[serde(rename = "web_search_options")]
     pub web_search_options: Option<crate::models::WebSearch>,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(untagged)]
+pub enum CreateChatCompletionRequestFunctionCall {
+    Text(String),
+    FunctionCallOption(crate::ChatCompletionFunctionCallOption),
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(untagged)]
+pub enum CreateChatCompletionRequestResponseFormat {
+    Text(crate::ResponseFormatText),
+    JsonSchema(crate::ResponseFormatJsonSchema),
+    JsonObject(crate::ResponseFormatJsonObject),
 }

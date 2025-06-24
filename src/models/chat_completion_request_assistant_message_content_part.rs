@@ -23,7 +23,7 @@ use crate::{
 ///     - $ref: "#/components/schemas/ChatCompletionRequestMessageContentPartText"
 ///     - $ref: "#/components/schemas/ChatCompletionRequestMessageContentPartRefusal"
 /// ```
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, PartialEq)]
 pub enum ChatCompletionRequestAssistantMessageContentPart {
     Text(ChatCompletionRequestMessageContentPartText),
     Refusal(ChatCompletionRequestMessageContentPartRefusal),

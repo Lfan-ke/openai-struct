@@ -23,5 +23,13 @@ pub struct ComparisonFilter {
     pub _type: String,
     /// The value to compare against the attribute key; supports string, number, or boolean types.
     #[serde(rename = "value")]
-    pub value: Value,
+    pub value: ComparisonFilterValue,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(untagged)]
+pub enum ComparisonFilterValue {
+    String(String),
+    Number(isize),
+    Boolean(bool),
 }

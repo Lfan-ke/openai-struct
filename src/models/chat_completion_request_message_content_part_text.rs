@@ -35,7 +35,7 @@ use serde_json::Value;
 ///     - type
 ///     - text
 /// ```
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, PartialEq)]
 pub struct ChatCompletionRequestMessageContentPartText {
     /// The text content.
     #[serde(rename = "text")]

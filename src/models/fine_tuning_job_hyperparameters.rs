@@ -17,11 +17,11 @@ use serde_json::Value;
 pub struct FineTuningJobHyperparameters {
     /// Number of examples in each batch. A larger batch size means that model parameters are updated less frequently, but with lower variance.
     #[serde(rename = "batch_size")]
-    pub batch_size: Option<Value>,
+    pub batch_size: Option<crate::StringOrNumber>,
     /// Scaling factor for the learning rate. A smaller learning rate may be useful to avoid overfitting.
     #[serde(rename = "learning_rate_multiplier")]
-    pub learning_rate_multiplier: Option<Value>,
+    pub learning_rate_multiplier: Option<crate::StringOrNumber>,
     /// The number of epochs to train the model for. An epoch refers to one full cycle through the training dataset.
     #[serde(rename = "n_epochs")]
-    pub n_epochs: Option<Value>,
+    pub n_epochs: Option<crate::StringOrNumber>,
 }

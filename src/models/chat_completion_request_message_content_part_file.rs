@@ -13,11 +13,16 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, PartialEq)]
 pub struct ChatCompletionRequestMessageContentPartFile {
     #[serde(rename = "file")]
     pub file: crate::models::ChatCompletionRequestMessageContentPartFileFile,
     /// The type of the content part. Always `file`.
     #[serde(rename = "type")]
+    #[serde(default = "default_type")]
     pub _type: String,
+}
+
+fn default_type() -> String {
+    "file".into()
 }

@@ -23,8 +23,9 @@ pub struct CreateFineTuningJobRequest {
     #[serde(rename = "method")]
     pub method: Option<crate::models::FineTuneMethod>,
     /// The name of the model to fine-tune. You can select one of the [supported models](/docs/guides/fine-tuning#which-models-can-be-fine-tuned).
+    /// enum: - babbage-002 - davinci-002 - gpt-3.5-turbo - gpt-4o-mini
     #[serde(rename = "model")]
-    pub model: Value,
+    pub model: String,
     /// The seed controls the reproducibility of the job. Passing in the same seed and job parameters should produce the same results, but may differ in rare cases. If a seed is not specified, one will be generated for you.
     #[serde(rename = "seed")]
     pub seed: Option<i32>,

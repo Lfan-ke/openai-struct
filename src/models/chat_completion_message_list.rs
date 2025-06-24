@@ -17,7 +17,7 @@ use serde_json::Value;
 pub struct ChatCompletionMessageList {
     /// An array of chat completion message objects.
     #[serde(rename = "data")]
-    pub data: Vec<Value>,
+    pub data: Vec<ChatCompletionMessageListData>,
     /// The identifier of the first chat message in the data array.
     #[serde(rename = "first_id")]
     pub first_id: String,
@@ -35,4 +35,17 @@ pub struct ChatCompletionMessageList {
 
 fn default_object() -> String {
     "list".into()
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+pub struct ChatCompletionMessageListId {
+    /// The identifier of the chat message.
+    pub id: String,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(untagged)]
+pub enum ChatCompletionMessageListData {
+    StringId(ChatCompletionMessageListId),
+    Message(crate::ChatCompletionResponseMessage),
 }

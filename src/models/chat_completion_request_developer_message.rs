@@ -13,12 +13,32 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
+use crate::ChatCompletionRequestMessageContentPartText;
+
 #[derive(Debug, Serialize, Deserialize, PartialEq)]
 pub struct ChatCompletionRequestDeveloperMessage {
     /// The contents of the developer message.
     #[serde(rename = "content")]
-    pub content: Value,
+    pub content: ChatCompletionRequestDeveloperMessageContent,
     /// An optional name for the participant. Provides the model information to differentiate between participants of the same role.
     #[serde(rename = "name")]
     pub name: Option<String>,
+}
+
+#[derive(Debug, Serialize, Deserialize, PartialEq)]
+#[serde(untagged)]
+pub enum ChatCompletionRequestDeveloperMessageContent {
+    Text(String),
+    Array(Vec<ChatCompletionRequestMessageContentPartText>),
+}
+
+#[test]
+fn test_message_developer_message_content() {
+    assert_eq!(
+        serde_json::to_string(&ChatCompletionRequestDeveloperMessageContent::Text(
+            "qwe".into()
+        ))
+        .unwrap(),
+        "\"qwe\"".to_string()
+    );
 }

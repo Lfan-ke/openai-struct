@@ -19,8 +19,8 @@ pub struct FineTunePreferenceRequestInput {
     pub input: Option<crate::models::FineTunePreferenceRequestInputInput>,
     /// The non-preferred completion message for the output.
     #[serde(rename = "non_preferred_completion")]
-    pub non_preferred_completion: Option<Vec<Value>>,
+    pub non_preferred_completion: Option<Vec<crate::ChatCompletionRequestAssistantMessage>>,
     /// The preferred completion message for the output.
     #[serde(rename = "preferred_completion")]
-    pub preferred_completion: Option<Vec<Value>>,
+    pub preferred_completion: Option<Vec<crate::ChatCompletionRequestAssistantMessage>>,
 }

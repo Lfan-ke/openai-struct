@@ -13,7 +13,7 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, PartialEq)]
 pub struct ChatCompletionRequestMessageContentPartImage {
     #[serde(rename = "image_url")]
     pub image_url: crate::models::ChatCompletionRequestMessageContentPartImageImageUrl,

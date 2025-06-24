@@ -20,7 +20,8 @@ use crate::ChatCompletionRequestMessageContentPartText;
 ///   oneOf:
 ///     - $ref: "#/components/schemas/ChatCompletionRequestMessageContentPartText"
 /// ```
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, PartialEq)]
+#[serde(untagged)]
 pub enum ChatCompletionRequestToolMessageContentPart {
     Text(ChatCompletionRequestMessageContentPartText),
 }

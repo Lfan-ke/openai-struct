@@ -57,8 +57,15 @@ use serde_json::Value;
 pub struct ChatCompletionRequestUserMessage {
     /// The contents of the user message.
     #[serde(rename = "content")]
-    pub content: Value,
+    pub content: ChatCompletionRequestUserMessageContent,
     /// An optional name for the participant. Provides the model information to differentiate between participants of the same role.
     #[serde(rename = "name")]
     pub name: Option<String>,
+}
+
+#[derive(Debug, Serialize, Deserialize, PartialEq)]
+#[serde(untagged)]
+pub enum ChatCompletionRequestUserMessageContent {
+    Text(String),
+    Array(Vec<crate::ChatCompletionRequestUserMessageContentPart>),
 }

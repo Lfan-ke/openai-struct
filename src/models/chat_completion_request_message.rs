@@ -35,10 +35,8 @@ pub enum ChatCompletionRequestMessage {
 
 #[test]
 fn test_serde_chat_completion_request_message() {
-    use serde_json::Value;
-
     let tmp = ChatCompletionRequestMessage::User(ChatCompletionRequestUserMessage {
-        content: Value::String("once upon a time".to_string()),
+        content: crate::ChatCompletionRequestUserMessageContent::Text("once upon a time".into()),
         name: None,
     });
 

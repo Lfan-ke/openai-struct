@@ -48,8 +48,15 @@ use serde_json::Value;
 pub struct CompoundFilter {
     /// Array of filters to combine. Items can be `ComparisonFilter` or `CompoundFilter`.
     #[serde(rename = "filters")]
-    pub filters: Vec<Value>, // 又一个`value`得改 - todo
+    pub filters: Vec<CompoundFilterItem>,
     /// Type of operation: `and` or `or`.
     #[serde(rename = "type")]
     pub _type: String,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(untagged)]
+pub enum CompoundFilterItem {
+    Comparison(crate::ComparisonFilter),
+    Compound(CompoundFilter),
 }

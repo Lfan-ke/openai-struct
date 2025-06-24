@@ -22,5 +22,5 @@ pub struct WebSearchPreviewTool {
     #[serde(rename = "type")]
     pub _type: String,
     #[serde(rename = "user_location")]
-    pub user_location: Option<Value>,
+    pub user_location: Option<crate::ApproximateLocation>,
 }
