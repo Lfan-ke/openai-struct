@@ -20,8 +20,10 @@ pub struct ResponseProperties {
     #[serde(rename = "max_output_tokens")]
     pub max_output_tokens: Option<i32>,
     /// Model ID used to generate the response, like `gpt-4o` or `o3`. OpenAI offers a wide range of models with different capabilities, performance characteristics, and price points. Refer to the [model guide](/docs/models) to browse and compare available models.
+    ///
+    /// ` crate::models::ModelIdsResponses `
     #[serde(rename = "model")]
-    pub model: Option<crate::models::ModelIdsResponses>,
+    pub model: Option<String>,
     /// The unique ID of the previous response to the model. Use this to create multi-turn conversations. Learn more about  [conversation state](/docs/guides/conversation-state).
     #[serde(rename = "previous_response_id")]
     pub previous_response_id: Option<String>,

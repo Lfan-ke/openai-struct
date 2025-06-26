@@ -28,8 +28,12 @@ pub struct CreateThreadAndRunRequest {
     #[serde(rename = "metadata")]
     pub metadata: Option<crate::models::Metadata>,
     /// The ID of the [Model](/docs/api-reference/models) to be used to execute this run. If a value is provided here, it will override the model associated with the assistant. If not, the model associated with the assistant will be used.
+    ///
+    /// 可参考
+    ///
+    /// ``` use crate::AssistantSupportedModels; ```
     #[serde(rename = "model")]
-    pub model: Option<crate::AssistantSupportedModels>,
+    pub model: Option<String>,
     #[serde(rename = "parallel_tool_calls")]
     pub parallel_tool_calls: Option<crate::models::ParallelToolCalls>,
     #[serde(rename = "response_format")]

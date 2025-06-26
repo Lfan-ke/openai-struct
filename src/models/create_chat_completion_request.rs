@@ -55,8 +55,12 @@ pub struct CreateChatCompletionRequest {
     #[serde(rename = "modalities")]
     pub modalities: Option<crate::models::ResponseModalities>,
     /// Model ID used to generate the response, like `gpt-4o` or `o3`. OpenAI offers a wide range of models with different capabilities, performance characteristics, and price points. Refer to the [model guide](/docs/models) to browse and compare available models.
+    ///
+    /// 可参考：
+    ///
+    /// ``` pub use crate::models::ModelIdsShared; ```
     #[serde(rename = "model")]
-    pub model: crate::models::ModelIdsShared,
+    pub model: String,
     /// How many chat completion choices to generate for each input message. Note that you will be charged based on the number of generated tokens across all of the choices. Keep `n` as `1` to minimize costs.
     #[serde(rename = "n")]
     pub n: Option<i32>,
@@ -116,7 +120,7 @@ impl Default for CreateChatCompletionRequest {
             max_tokens: None,
             messages: vec![],
             modalities: None,
-            model: crate::AssistantSupportedModels::Gpt4_1,
+            model: serde_json::to_string(&crate::ModelIdsShared::Gpt4_1).unwrap(),
             n: None,
             parallel_tool_calls: None,
             prediction: None,
